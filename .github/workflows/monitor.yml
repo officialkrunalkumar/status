@@ -1,0 +1,48 @@
+name: monitor
+
+on:
+  schedule:
+    # GitHub runs scheduled jobs on a best-effort basis — expect ~10–15 min
+    # between checks in practice, occasionally longer.
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+# Never let two runs commit over each other.
+concurrency:
+  group: monitor
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run checks
+        run: python3 monitor.py
+
+      - name: Commit data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "status: $(date -u +'%Y-%m-%d %H:%M') UTC [skip ci]"
+          git pull --rebase origin main
+          git push
+
+      # A failed run makes GitHub email the repo owner — free downtime alerts.
+      # Only a hard outage (home page unreachable) fails the run; a degraded
+      # state (blog/origin/cert warnings) just shows on the status page.
+      - name: Fail run when site is down
+        run: |
+          python3 - <<'EOF'
+          import json, sys
+          s = json.load(open('data/status.json'))
+          sys.exit(1 if s['overall'] == 'down' else 0)
+          EOF
