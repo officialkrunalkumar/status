@@ -1,0 +1,34 @@
+name: unstick-pages
+
+# Cancels a stuck GitHub Pages deployment that blocks all newer deploys with
+# "due to in progress deployment. Please cancel <id> first".
+# Runs once automatically when this file lands; afterwards it can be run
+# manually from the Actions tab with the stuck deployment's ID.
+
+on:
+  push:
+    paths: [".github/workflows/unstick-pages.yml"]
+  workflow_dispatch:
+    inputs:
+      deployment_id:
+        description: "Stuck Pages deployment ID (or commit SHA) to cancel"
+        required: false
+        default: "54ec05d0e7c1f327a49d2bdf3fb3227fad2435a9"
+
+permissions:
+  pages: write
+
+jobs:
+  cancel:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cancel stuck Pages deployment
+        env:
+          ID: ${{ github.event.inputs.deployment_id || '54ec05d0e7c1f327a49d2bdf3fb3227fad2435a9' }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          curl -sS -i -X POST \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/pages/deployments/$ID/cancel" \
+            | head -25
