@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-07T10:13:42+00:00",
+ "updated": "2026-08-07T11:10:06+00:00",
  "overall": "up",
  "checks": {
   "home": {
@@ -7,21 +7,21 @@
    "url": "https://krunalkumar.dpdns.org/",
    "ok": true,
    "code": 200,
-   "ms": 486
+   "ms": 178
   },
   "blog": {
    "label": "Website \u2014 blog",
    "url": "https://krunalkumar.dpdns.org/blog",
    "ok": true,
    "code": 200,
-   "ms": 426
+   "ms": 249
   },
   "vercel": {
    "label": "Vercel origin",
    "url": "https://krunalkumar.vercel.app/",
    "ok": true,
    "code": 308,
-   "ms": 85
+   "ms": 202
   }
  },
  "cert": {
