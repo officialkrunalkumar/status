@@ -1,0 +1,142 @@
+{
+ "updated": "2026-08-18T20:23:20+00:00",
+ "total": 87,
+ "ok": 87,
+ "failing": [],
+ "median_ms": 403,
+ "slowest": [
+  {
+   "url": "https://krunalkumar.dpdns.org/labs/cvss",
+   "path": "/labs/cvss",
+   "ok": true,
+   "code": 200,
+   "ms": 581
+  },
+  {
+   "url": "https://krunalkumar.dpdns.org/terms",
+   "path": "/terms",
+   "ok": true,
+   "code": 200,
+   "ms": 529
+  },
+  {
+   "url": "https://krunalkumar.dpdns.org/blog/security-compliance-explained",
+   "path": "/blog/security-compliance-explained",
+   "ok": true,
+   "code": 200,
+   "ms": 520
+  },
+  {
+   "url": "https://krunalkumar.dpdns.org/labs/perl",
+   "path": "/labs/perl",
+   "ok": true,
+   "code": 200,
+   "ms": 510
+  },
+  {
+   "url": "https://krunalkumar.dpdns.org/labs/hash-cracker",
+   "path": "/labs/hash-cracker",
+   "ok": true,
+   "code": 200,
+   "ms": 492
+  }
+ ],
+ "sections": [
+  {
+   "section": "labs",
+   "total": 57,
+   "ok": 57,
+   "median_ms": 406
+  },
+  {
+   "section": "blog",
+   "total": 16,
+   "ok": 16,
+   "median_ms": 411
+  },
+  {
+   "section": "home",
+   "total": 1,
+   "ok": 1,
+   "median_ms": 206
+  },
+  {
+   "section": "about",
+   "total": 1,
+   "ok": 1,
+   "median_ms": 229
+  },
+  {
+   "section": "services",
+   "total": 1,
+   "ok": 1,
+   "median_ms": 159
+  },
+  {
+   "section": "projects",
+   "total": 1,
+   "ok": 1,
+   "median_ms": 231
+  },
+  {
+   "section": "research",
+   "total": 1,
+   "ok": 1,
+   "median_ms": 211
+  },
+  {
+   "section": "client-reviews",
+   "total": 1,
+   "ok": 1,
+   "median_ms": 132
+  },
+  {
+   "section": "internships",
+   "total": 1,
+   "ok": 1,
+   "median_ms": 156
+  },
+  {
+   "section": "contact",
+   "total": 1,
+   "ok": 1,
+   "median_ms": 154
+  },
+  {
+   "section": "verify",
+   "total": 1,
+   "ok": 1,
+   "median_ms": 143
+  },
+  {
+   "section": "privacy",
+   "total": 1,
+   "ok": 1,
+   "median_ms": 411
+  },
+  {
+   "section": "terms",
+   "total": 1,
+   "ok": 1,
+   "median_ms": 529
+  },
+  {
+   "section": "refund",
+   "total": 1,
+   "ok": 1,
+   "median_ms": 351
+  },
+  {
+   "section": "llms.txt",
+   "total": 1,
+   "ok": 1,
+   "median_ms": 198
+  },
+  {
+   "section": "llms-full.txt",
+   "total": 1,
+   "ok": 1,
+   "median_ms": 411
+  }
+ ]
+}

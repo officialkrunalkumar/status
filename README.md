@@ -1,6 +1,10 @@
+<img src="logo.svg" alt="" width="56" align="left" hspace="12" />
+
 # status
 
 Self-built uptime monitor and status page for [krunalkumar.dpdns.org](https://krunalkumar.dpdns.org/).
+
+<br clear="left" />
 
 **Live page:** https://officialkrunalkumar.github.io/status/
 
@@ -14,30 +18,93 @@ reachable during an incident on either.
 
 ```
 GitHub Actions (cron, ~10 min)
-  └─ monitor.py            checks the site + blog + Vercel origin,
-     │                     measures response times, reads TLS cert expiry
-     ├─ data/status.json   current snapshot + uptime percentages
-     ├─ data/history.json  one row per run (pruned to 35 days)
-     └─ data/badge.json    shields.io endpoint for the badge above
+  └─ monitor.py              27 checks in parallel + DNS, TLS, security headers
+     │                       once a day, also sweeps every URL in the sitemap
+     ├─ data/status.json     current snapshot, grouped by section
+     ├─ data/history.json    one row per run, full detail, last 72 h
+     ├─ data/daily.json      one row per UTC day, last 90 days
+     ├─ data/incidents.json  log of degraded/down episodes
+     ├─ data/pages.json      last full sitemap sweep
+     └─ data/badge.json      shields.io endpoint for the badge above
         └─ committed back to this repo
-           └─ index.html   static page on GitHub Pages that renders the JSON
+           └─ index.html     static page on GitHub Pages that renders the JSON
 ```
 
-- **Checks** ([monitor.py](monitor.py)): home page, blog, and the
-  `*.vercel.app` origin without following redirects — the last one separates
-  "Vercel is down" from "the custom domain / DNS is broken", which are very
-  different incidents. Each check retries once after 5 s so a transient
-  network blip on the runner doesn't raise a false alarm.
-- **Alerting**: when the home page is unreachable, the workflow's last step
-  exits non-zero. GitHub emails the repo owner about failed runs — free
-  downtime alerts with zero configuration. Degraded states (blog or origin
-  failing, certificate expiring within 14 days) show on the page but don't
-  fail the run.
-- **Page** ([index.html](index.html)): dependency-free static HTML that
-  fetches the JSON and renders current status, per-check cards, certificate
-  countdown, 24 h / 7 d / 30 d uptime, a 30-day daily uptime strip (with a
-  plain table fallback), and a 24-hour response-time chart. Auto-refreshes
-  every minute.
+## What is checked
+
+Every run probes all 27 targets in parallel (stdlib `ThreadPoolExecutor`), so
+the whole thing still finishes in a few seconds. Each one retries once after
+5 s, so a transient blip on the runner doesn't raise a false alarm.
+
+| Group | Checks |
+| --- | --- |
+| **Site pages** | home, about, services, projects, research, internships, contact, client-reviews, verify |
+| **Writing & labs** | blog index, one article, labs index, one lab |
+| **Machine-readable** | sitemap.xml, feed.xml (RSS), atom.xml, llms.txt, robots.txt, site.webmanifest |
+| **Static assets** | main.css, boot.js, header partial, résumé PDF |
+| **Edge & routing** | Vercel origin, `www` → apex, HTTP → HTTPS, 404 route |
+
+Beyond plain reachability:
+
+- **Content assertions** — feeds and config files must actually contain what
+  makes them valid (`<loc>`, `<rss`, `Sitemap:`, `start_url`, `:root`). A file
+  that 200s with an empty or wrong body is a failure, not a pass.
+- **Redirects** are checked *without* following them, so the check proves the
+  redirect exists and returns 30x rather than silently landing on the target.
+  The `*.vercel.app` origin one separates "Vercel is down" from "the custom
+  domain / DNS is broken" — very different incidents.
+- **404 handling** asserts a missing path returns 404. A soft-404 (HTTP 200 on
+  a missing page) quietly wrecks search indexing and is invisible otherwise.
+- **TLS certificate** — days left, expiry date, issuer. Under 14 days is a
+  degraded state.
+- **DNS** — resolution time and the addresses returned.
+- **Security headers** — HSTS (plus its `max-age`), CSP, X-Content-Type-Options,
+  X-Frame-Options, Referrer-Policy, Permissions-Policy, COOP. Shown on the page
+  but deliberately not part of the overall state: a missing header is a
+  regression, not an outage.
+- **Full sitemap sweep** — about once a day the monitor pulls `sitemap.xml` and
+  GETs every URL in it (currently 87, including all 56 labs), rolled up by
+  section with the slowest pages listed. It schedules itself off the age of
+  `data/pages.json`, so it needs no second workflow.
+
+## Severity and alerting
+
+Each check carries a severity, which is what turns individual failures into an
+overall state:
+
+- `critical` (home) failing → **down**
+- anything else failing, or the certificate expiring within 14 days → **degraded**
+
+When the state is **down**, the workflow's last step exits non-zero and GitHub
+emails the repo owner about the failed run — free downtime alerts with zero
+configuration. Degraded states show on the page but don't fail the run.
+
+Episodes are recorded in `data/incidents.json`: an incident opens when the site
+leaves `up`, absorbs every check that fails while it's open, keeps the worst
+level it reached, and closes with a duration when the site recovers.
+
+## Data layout
+
+History is split in two on purpose. With ~27 checks per run, keeping 30 days of
+per-run detail would grow to megabytes on a page that refetches every minute —
+so detailed rows are kept for 72 h (charts, recent detail) and rolled into
+one row per UTC day for 90 days (uptime percentages, the daily strip).
+
+The daily buckets are rebuilt from history on every run rather than incremented,
+which makes today's partial bucket self-healing; days that have aged out of
+history keep their stored values.
+
+## The page
+
+[index.html](index.html) is dependency-free static HTML — no build, no
+framework, no external requests (the favicon and the KS_ mark are inlined), so
+it renders even if everything else is on fire. It shows current state, the four
+uptime windows, response/TLS/DNS/header vitals, all 27 checks grouped by
+section, a 30-day daily strip, a 24-hour response-time chart, the latest
+sitemap sweep and the incident log. Auto-refreshes every minute.
+
+The KS_ mark's cursor is tinted with the current overall state — green,
+amber, red — so the logo doubles as the status light.
 
 ## Notes
 
@@ -49,6 +116,8 @@ GitHub Actions (cron, ~10 min)
 - The `[skip ci]` marker in data commits (plus GitHub's own guard against
   `GITHUB_TOKEN`-triggered workflows) prevents the commit from re-triggering
   the workflow.
+- Adding a check is one line in `CHECKS` in [monitor.py](monitor.py); the page
+  picks it up automatically from `status.json`, including its group.
 
 ## Running locally
 

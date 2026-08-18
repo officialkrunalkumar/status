@@ -1,36 +1,371 @@
 {
- "updated": "2026-08-18T20:00:49+00:00",
+ "updated": "2026-08-18T20:28:11+00:00",
  "overall": "up",
+ "site": "https://krunalkumar.dpdns.org",
+ "groups": [
+  {
+   "key": "pages",
+   "label": "Site pages"
+  },
+  {
+   "key": "content",
+   "label": "Writing & labs"
+  },
+  {
+   "key": "feeds",
+   "label": "Machine-readable"
+  },
+  {
+   "key": "assets",
+   "label": "Static assets"
+  },
+  {
+   "key": "infra",
+   "label": "Edge & routing"
+  }
+ ],
+ "summary": {
+  "total": 27,
+  "ok": 27,
+  "failing": [],
+  "worst": null
+ },
  "checks": {
   "home": {
-   "label": "Website \u2014 home",
+   "label": "Home",
+   "group": "pages",
    "url": "https://krunalkumar.dpdns.org/",
+   "sev": "critical",
    "ok": true,
    "code": 200,
-   "ms": 196
+   "ms": 295,
+   "note": null,
+   "location": null
+  },
+  "about": {
+   "label": "About",
+   "group": "pages",
+   "url": "https://krunalkumar.dpdns.org/about",
+   "sev": "major",
+   "ok": true,
+   "code": 200,
+   "ms": 337,
+   "note": null,
+   "location": null
+  },
+  "services": {
+   "label": "Services",
+   "group": "pages",
+   "url": "https://krunalkumar.dpdns.org/services",
+   "sev": "major",
+   "ok": true,
+   "code": 200,
+   "ms": 241,
+   "note": null,
+   "location": null
+  },
+  "projects": {
+   "label": "Projects",
+   "group": "pages",
+   "url": "https://krunalkumar.dpdns.org/projects",
+   "sev": "major",
+   "ok": true,
+   "code": 200,
+   "ms": 222,
+   "note": null,
+   "location": null
+  },
+  "research": {
+   "label": "Research",
+   "group": "pages",
+   "url": "https://krunalkumar.dpdns.org/research",
+   "sev": "major",
+   "ok": true,
+   "code": 200,
+   "ms": 240,
+   "note": null,
+   "location": null
+  },
+  "internships": {
+   "label": "Internships",
+   "group": "pages",
+   "url": "https://krunalkumar.dpdns.org/internships",
+   "sev": "major",
+   "ok": true,
+   "code": 200,
+   "ms": 236,
+   "note": null,
+   "location": null
+  },
+  "contact": {
+   "label": "Contact",
+   "group": "pages",
+   "url": "https://krunalkumar.dpdns.org/contact",
+   "sev": "major",
+   "ok": true,
+   "code": 200,
+   "ms": 241,
+   "note": null,
+   "location": null
+  },
+  "reviews": {
+   "label": "Client reviews",
+   "group": "pages",
+   "url": "https://krunalkumar.dpdns.org/client-reviews",
+   "sev": "major",
+   "ok": true,
+   "code": 200,
+   "ms": 326,
+   "note": null,
+   "location": null
+  },
+  "verify": {
+   "label": "Credential verification",
+   "group": "pages",
+   "url": "https://krunalkumar.dpdns.org/verify",
+   "sev": "major",
+   "ok": true,
+   "code": 200,
+   "ms": 186,
+   "note": null,
+   "location": null
   },
   "blog": {
-   "label": "Website \u2014 blog",
+   "label": "Blog index",
+   "group": "content",
    "url": "https://krunalkumar.dpdns.org/blog",
+   "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 195
+   "ms": 222,
+   "note": null,
+   "location": null
+  },
+  "post": {
+   "label": "Blog article",
+   "group": "content",
+   "url": "https://krunalkumar.dpdns.org/blog/types-of-cyberattacks",
+   "sev": "major",
+   "ok": true,
+   "code": 200,
+   "ms": 196,
+   "note": null,
+   "location": null
+  },
+  "labs": {
+   "label": "Labs index",
+   "group": "content",
+   "url": "https://krunalkumar.dpdns.org/labs",
+   "sev": "major",
+   "ok": true,
+   "code": 200,
+   "ms": 189,
+   "note": null,
+   "location": null
+  },
+  "lab": {
+   "label": "Lab \u2014 hacklab",
+   "group": "content",
+   "url": "https://krunalkumar.dpdns.org/labs/hacklab",
+   "sev": "major",
+   "ok": true,
+   "code": 200,
+   "ms": 203,
+   "note": null,
+   "location": null
+  },
+  "sitemap": {
+   "label": "Sitemap",
+   "group": "feeds",
+   "url": "https://krunalkumar.dpdns.org/sitemap.xml",
+   "sev": "minor",
+   "ok": true,
+   "code": 200,
+   "ms": 130,
+   "note": null,
+   "location": null
+  },
+  "rss": {
+   "label": "RSS feed",
+   "group": "feeds",
+   "url": "https://krunalkumar.dpdns.org/feed.xml",
+   "sev": "minor",
+   "ok": true,
+   "code": 200,
+   "ms": 166,
+   "note": null,
+   "location": null
+  },
+  "atom": {
+   "label": "Atom feed",
+   "group": "feeds",
+   "url": "https://krunalkumar.dpdns.org/atom.xml",
+   "sev": "minor",
+   "ok": true,
+   "code": 200,
+   "ms": 163,
+   "note": null,
+   "location": null
+  },
+  "llms": {
+   "label": "llms.txt",
+   "group": "feeds",
+   "url": "https://krunalkumar.dpdns.org/llms.txt",
+   "sev": "minor",
+   "ok": true,
+   "code": 200,
+   "ms": 247,
+   "note": null,
+   "location": null
+  },
+  "robots": {
+   "label": "robots.txt",
+   "group": "feeds",
+   "url": "https://krunalkumar.dpdns.org/robots.txt",
+   "sev": "minor",
+   "ok": true,
+   "code": 200,
+   "ms": 196,
+   "note": null,
+   "location": null
+  },
+  "manifest": {
+   "label": "Web app manifest",
+   "group": "feeds",
+   "url": "https://krunalkumar.dpdns.org/site.webmanifest",
+   "sev": "minor",
+   "ok": true,
+   "code": 200,
+   "ms": 275,
+   "note": null,
+   "location": null
+  },
+  "css": {
+   "label": "Stylesheet",
+   "group": "assets",
+   "url": "https://krunalkumar.dpdns.org/assets/css/main.css",
+   "sev": "major",
+   "ok": true,
+   "code": 200,
+   "ms": 242,
+   "note": null,
+   "location": null
+  },
+  "js": {
+   "label": "Boot script",
+   "group": "assets",
+   "url": "https://krunalkumar.dpdns.org/assets/js/boot.js",
+   "sev": "major",
+   "ok": true,
+   "code": 200,
+   "ms": 176,
+   "note": null,
+   "location": null
+  },
+  "partials": {
+   "label": "Header partial",
+   "group": "assets",
+   "url": "https://krunalkumar.dpdns.org/partials/header",
+   "sev": "major",
+   "ok": true,
+   "code": 200,
+   "ms": 149,
+   "note": null,
+   "location": null
+  },
+  "resume": {
+   "label": "R\u00e9sum\u00e9 PDF",
+   "group": "assets",
+   "url": "https://krunalkumar.dpdns.org/assets/pdf/Krunalkumar-Shah-Resume.pdf",
+   "sev": "minor",
+   "ok": true,
+   "code": 200,
+   "ms": 142,
+   "note": null,
+   "location": null
   },
   "vercel": {
    "label": "Vercel origin",
+   "group": "infra",
    "url": "https://krunalkumar.vercel.app/",
+   "sev": "major",
    "ok": true,
    "code": 308,
-   "ms": 84
+   "ms": 251,
+   "note": null,
+   "location": "https://krunalkumar.dpdns.org/"
+  },
+  "www": {
+   "label": "www \u2192 apex redirect",
+   "group": "infra",
+   "url": "https://www.krunalkumar.dpdns.org/",
+   "sev": "minor",
+   "ok": true,
+   "code": 307,
+   "ms": 524,
+   "note": null,
+   "location": "https://krunalkumar.dpdns.org/"
+  },
+  "https": {
+   "label": "HTTP \u2192 HTTPS redirect",
+   "group": "infra",
+   "url": "http://krunalkumar.dpdns.org/",
+   "sev": "minor",
+   "ok": true,
+   "code": 308,
+   "ms": 120,
+   "note": null,
+   "location": "https://krunalkumar.dpdns.org/"
+  },
+  "notfound": {
+   "label": "404 handling",
+   "group": "infra",
+   "url": "https://krunalkumar.dpdns.org/_status-probe-404",
+   "sev": "minor",
+   "ok": true,
+   "code": 404,
+   "ms": 129,
+   "note": null,
+   "location": null
   }
  },
  "cert": {
   "days_left": 74,
-  "expires": "2026-11-01"
+  "expires": "2026-11-01",
+  "issuer": "Let's Encrypt"
+ },
+ "dns": {
+  "ms": 1,
+  "addresses": [
+   "216.198.79.1",
+   "64:ff9b::d8c6:4f01"
+  ]
+ },
+ "headers": {
+  "present": [
+   "HSTS",
+   "CSP",
+   "X-Content-Type-Options",
+   "X-Frame-Options",
+   "Referrer-Policy",
+   "Permissions-Policy",
+   "COOP"
+  ],
+  "missing": [],
+  "score": 7,
+  "total": 7,
+  "hsts_days": 730
  },
  "uptime": {
   "d1": 100.0,
   "d7": 100.0,
-  "d30": 100.0
- }
+  "d30": 100.0,
+  "d90": 100.0
+ },
+ "response": {
+  "p50": 271,
+  "p95": 683,
+  "n": 41
+ },
+ "open_incident": false
 }

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64"
+     role="img" aria-label="KS_ — status monitor for krunalkumar.dpdns.org">
+  <title>KS_ status monitor</title>
+  <!-- Standalone copy of the mark in index.html, for the README and anywhere
+       else it is needed as a file. On the page itself the mark is inlined and
+       its cursor is recoloured to the current status. -->
+  <defs>
+    <linearGradient id="ks-face" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1e2c47" />
+      <stop offset="1" stop-color="#121b2c" />
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="62" height="62" rx="15" fill="url(#ks-face)" stroke="#33507d" stroke-width="2" />
+  <text x="25" y="42" text-anchor="middle"
+        font-family="ui-monospace, Consolas, 'Cascadia Mono', monospace"
+        font-size="27" font-weight="700" fill="#7dd3fc">KS</text>
+  <rect x="42" y="36.5" width="13" height="5.5" rx="2.75" fill="#34d399" />
+</svg>

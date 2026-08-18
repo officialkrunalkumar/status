@@ -3,99 +3,147 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Live uptime and status for krunalkumar.dpdns.org — checked every ~10 minutes from GitHub Actions." />
+<meta name="description" content="Live uptime and status for krunalkumar.dpdns.org — every page, lab, feed and asset checked every ~10 minutes from GitHub Actions." />
 <meta name="robots" content="noindex" />
+<meta name="theme-color" content="#121b2c" />
 <title>Status — Krunalkumar Shah</title>
+<!-- Favicon is the same KS_ mark used in the header, inlined so the page has
+     zero external requests and still works when the site itself is down. -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23121b2c'/%3E%3Ctext x='25' y='42' text-anchor='middle' font-family='monospace' font-size='27' font-weight='700' fill='%237dd3fc'%3EKS%3C/text%3E%3Crect x='42' y='36.5' width='13' height='5.5' rx='2.75' fill='%2334d399'/%3E%3C/svg%3E" />
 <style>
   :root {
-    --bg: #0f172a;
-    --card: #16213b;
-    --border: #263752;
-    --ink: #e2e8f0;
-    --ink-2: #94a3b8;
-    --ink-3: #64748b;
+    /* Page colours track the site's own tokens (--bg-base #121b2c,
+       --accent #7dd3fc) so the monitor reads as part of the same product. */
+    --bg: #121b2c;
+    --card: #18243a;
+    --card-2: #1d2b44;
+    --border: #2a3c5c;
+    --ink: #f1f5f9;
+    --ink-2: #a8b8ce;
+    --ink-3: #6f819c;
     --accent: #7dd3fc;
     --up: #34d399;
     --warn: #fbbf24;
     --down: #f87171;
-    --nodata: #334155;
+    --nodata: #2c3c56;
+    --mono: ui-monospace, "Cascadia Mono", Consolas, "SF Mono", Menlo, monospace;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    background: var(--bg);
+    background:
+      radial-gradient(1100px 600px at 50% -10%, #1a2740 0%, transparent 70%),
+      var(--bg);
+    background-attachment: fixed;
     color: var(--ink);
     font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
   }
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
-  .wrap { max-width: 860px; margin: 0 auto; padding: 2rem 1.25rem 3rem; }
+  .wrap { max-width: 940px; margin: 0 auto; padding: 2rem 1.25rem 3rem; }
 
-  header.top { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.75rem; }
-  .brand { font-weight: 700; font-size: 1.05rem; color: var(--ink); }
-  .brand span { color: var(--ink-3); font-weight: 400; }
+  /* ---------- KS_ mark ---------- */
+  header.top { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+  .brand { display: flex; align-items: center; gap: .75rem; }
+  .logo { width: 44px; height: 44px; flex: none; }
+  .logo-text .name { font-weight: 700; font-size: 1.02rem; letter-spacing: -.01em; display: block; line-height: 1.25; }
+  .logo-text .kicker { color: var(--ink-3); font-size: .78rem; text-transform: uppercase; letter-spacing: .12em; font-family: var(--mono); }
+  #ks-cursor { transition: fill .4s ease; }
+  @keyframes ks-blink { 0%, 45% { opacity: 1; } 55%, 100% { opacity: .15; } }
+  .logo #ks-cursor { animation: ks-blink 1.25s steps(1, end) infinite; }
+  @media (prefers-reduced-motion: reduce) { .logo #ks-cursor { animation: none; } }
+  nav.top-links { display: flex; gap: 1rem; font-size: .9rem; flex-wrap: wrap; }
 
   .banner {
     display: none;
-    background: rgba(251, 191, 36, .12);
-    border: 1px solid rgba(251, 191, 36, .45);
-    color: var(--ink);
+    background: rgba(251, 191, 36, .1);
+    border: 1px solid rgba(251, 191, 36, .4);
     border-radius: 10px;
     padding: .65rem .9rem;
     font-size: .9rem;
     margin-bottom: 1rem;
   }
 
+  /* ---------- hero ---------- */
   .hero {
-    background: var(--card);
+    background: linear-gradient(180deg, var(--card-2), var(--card));
     border: 1px solid var(--border);
-    border-radius: 14px;
+    border-radius: 16px;
     padding: 1.4rem 1.5rem;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: .85rem;
     flex-wrap: wrap;
   }
-  .hero .dot { width: 16px; height: 16px; border-radius: 50%; flex: none; }
+  .hero .dot { width: 15px; height: 15px; border-radius: 50%; flex: none; box-shadow: 0 0 0 5px rgba(255,255,255,.05); }
   .hero h1 { font-size: 1.35rem; line-height: 1.3; }
+  .hero .pill {
+    margin-left: auto; font-family: var(--mono); font-size: .8rem;
+    color: var(--ink-2); background: rgba(125, 211, 252, .09);
+    border: 1px solid rgba(125, 211, 252, .25); border-radius: 999px; padding: .2rem .7rem;
+  }
   .hero .sub { width: 100%; color: var(--ink-2); font-size: .9rem; }
 
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: .9rem; margin-top: .9rem; }
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1rem 1.1rem;
+  /* ---------- tiles ---------- */
+  .tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: .75rem; margin-top: .75rem; }
+  .tile { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: .85rem 1rem; }
+  .tile .num { font-size: 1.4rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .tile .lbl { color: var(--ink-3); font-size: .76rem; text-transform: uppercase; letter-spacing: .05em; }
+
+  .vitals { display: grid; grid-template-columns: repeat(auto-fit, minmax(215px, 1fr)); gap: .75rem; margin-top: .75rem; }
+  .vital { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: .85rem 1rem; }
+  .vital h3 { font-size: .74rem; font-weight: 600; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-3); margin-bottom: .4rem; }
+  .vital .val { font-weight: 600; display: flex; align-items: center; gap: .5rem; }
+  .vital .val .dot { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+  .vital .meta { color: var(--ink-2); font-size: .82rem; margin-top: .15rem; font-variant-numeric: tabular-nums; }
+
+  /* ---------- sections ---------- */
+  section.panel { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 1.05rem 1.15rem; margin-top: .75rem; }
+  .panel-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: .75rem; }
+  .panel-head h2 { font-size: .8rem; font-weight: 600; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-3); }
+  .panel-head .count { font-family: var(--mono); font-size: .78rem; color: var(--ink-3); }
+
+  /* ---------- check rows ---------- */
+  .checks { display: grid; grid-template-columns: repeat(auto-fill, minmax(268px, 1fr)); gap: .4rem .9rem; }
+  .check {
+    display: flex; align-items: center; gap: .55rem;
+    padding: .4rem .1rem; border-bottom: 1px solid rgba(42, 60, 92, .5);
+    font-size: .9rem;
   }
-  .card h2 { font-size: .8rem; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-3); margin-bottom: .55rem; }
-  .row { display: flex; align-items: center; gap: .55rem; }
-  .row .dot { width: 10px; height: 10px; border-radius: 50%; flex: none; }
-  .row .state { font-weight: 600; }
-  .meta { color: var(--ink-2); font-size: .85rem; margin-top: .2rem; }
+  .check .dot { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+  .check .name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--ink); }
+  .check a.name:hover { color: var(--accent); }
+  .check .ms { font-family: var(--mono); font-size: .78rem; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+  .check.bad .name { color: var(--down); }
+  .check.bad .ms { color: var(--down); }
 
-  .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: .9rem; margin-top: .9rem; }
-  .tile { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: .9rem 1.1rem; }
-  .tile .num { font-size: 1.5rem; font-weight: 700; font-variant-numeric: tabular-nums; }
-  .tile .lbl { color: var(--ink-3); font-size: .8rem; }
+  .tag { font-family: var(--mono); font-size: .66rem; text-transform: uppercase; letter-spacing: .06em;
+         border-radius: 4px; padding: .05rem .3rem; border: 1px solid var(--border); color: var(--ink-3); }
 
-  section.chart { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1rem 1.1rem; margin-top: .9rem; }
-  section.chart h2 { font-size: .8rem; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-3); margin-bottom: .7rem; }
   .chart-note { color: var(--ink-2); font-size: .85rem; margin-top: .6rem; }
-  svg { display: block; width: 100%; height: auto; }
+  svg.plot { display: block; width: 100%; height: auto; }
+
+  /* ---------- sweep bars ---------- */
+  .sweep-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: .5rem .9rem; }
+  .sweep-row { font-size: .87rem; }
+  .sweep-row .top { display: flex; justify-content: space-between; gap: .5rem; }
+  .sweep-row .top b { font-weight: 600; }
+  .sweep-row .top span { font-family: var(--mono); font-size: .78rem; color: var(--ink-3); }
+  .bar { height: 5px; border-radius: 3px; background: var(--nodata); margin-top: .25rem; overflow: hidden; }
+  .bar i { display: block; height: 100%; background: var(--up); }
+
+  /* ---------- incidents ---------- */
+  .incident { display: flex; gap: .65rem; padding: .55rem 0; border-bottom: 1px solid rgba(42, 60, 92, .5); font-size: .88rem; }
+  .incident:last-child { border-bottom: 0; }
+  .incident .dot { width: 9px; height: 9px; border-radius: 50%; flex: none; margin-top: .45rem; }
+  .incident .when { color: var(--ink-3); font-size: .8rem; font-variant-numeric: tabular-nums; }
+  .empty { color: var(--ink-3); font-size: .88rem; }
 
   #tooltip {
-    position: fixed;
-    pointer-events: none;
-    background: #0b1222;
-    border: 1px solid var(--border);
-    color: var(--ink);
-    font-size: .8rem;
-    line-height: 1.4;
-    padding: .35rem .6rem;
-    border-radius: 8px;
-    white-space: nowrap;
-    z-index: 10;
-    display: none;
+    position: fixed; pointer-events: none;
+    background: #0b1222; border: 1px solid var(--border); color: var(--ink);
+    font-size: .8rem; line-height: 1.4; padding: .35rem .6rem;
+    border-radius: 8px; white-space: nowrap; z-index: 10; display: none;
   }
 
   details { margin-top: .8rem; color: var(--ink-2); font-size: .85rem; }
@@ -105,14 +153,35 @@
   th { color: var(--ink-3); font-weight: 600; }
 
   footer { margin-top: 2rem; color: var(--ink-3); font-size: .85rem; line-height: 1.7; }
-  @media (max-width: 560px) { .tiles { grid-template-columns: 1fr; } }
+  @media (max-width: 620px) { .tiles { grid-template-columns: repeat(2, 1fr); } }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header class="top">
-    <p class="brand">Krunalkumar Shah <span>/ status</span></p>
-    <nav><a href="https://krunalkumar.dpdns.org/">← back to the site</a></nav>
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 64 64" role="img" aria-label="KS underscore — status monitor mark">
+        <defs>
+          <linearGradient id="ks-face" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#1e2c47" />
+            <stop offset="1" stop-color="#121b2c" />
+          </linearGradient>
+        </defs>
+        <rect x="1" y="1" width="62" height="62" rx="15" fill="url(#ks-face)" stroke="#33507d" stroke-width="2" />
+        <text x="25" y="42" text-anchor="middle"
+              font-family="ui-monospace, Consolas, monospace"
+              font-size="27" font-weight="700" fill="#7dd3fc">KS</text>
+        <rect id="ks-cursor" x="42" y="36.5" width="13" height="5.5" rx="2.75" fill="#34d399" />
+      </svg>
+      <span class="logo-text">
+        <span class="name">Krunalkumar Shah</span>
+        <span class="kicker">status monitor</span>
+      </span>
+    </div>
+    <nav class="top-links">
+      <a href="https://krunalkumar.dpdns.org/">← the site</a>
+      <a href="https://github.com/officialkrunalkumar/status">source</a>
+    </nav>
   </header>
 
   <p class="banner" id="stale-banner">⚠ The monitor itself hasn't reported in a while — the data below may be out of date.
@@ -121,35 +190,58 @@
   <div class="hero">
     <span class="dot" id="overall-dot" aria-hidden="true"></span>
     <h1 id="overall-text">Loading current status…</h1>
+    <span class="pill" id="overall-count"></span>
     <p class="sub" id="updated"></p>
   </div>
 
-  <div class="grid" id="checks" aria-live="polite"></div>
-
   <div class="tiles" id="uptime-tiles"></div>
 
-  <section class="chart">
-    <h2>Last 30 days</h2>
+  <div class="vitals" id="vitals"></div>
+
+  <div id="check-groups"></div>
+
+  <section class="panel">
+    <div class="panel-head"><h2>Daily uptime — last 30 days</h2><span class="count" id="days-count"></span></div>
     <div id="days-chart"></div>
     <p class="chart-note" id="days-summary"></p>
     <details>
       <summary>Daily data table</summary>
       <table id="days-table">
-        <thead><tr><th scope="col">Date (UTC)</th><th scope="col">Uptime</th><th scope="col">Checks</th></tr></thead>
+        <thead><tr><th scope="col">Date (UTC)</th><th scope="col">Uptime</th><th scope="col">Checks</th><th scope="col">Avg</th></tr></thead>
         <tbody></tbody>
       </table>
     </details>
   </section>
 
-  <section class="chart">
-    <h2>Response time — home page, last 24 hours</h2>
+  <section class="panel">
+    <div class="panel-head"><h2>Response time — home page, last 24 hours</h2><span class="count" id="spark-count"></span></div>
     <div id="spark-chart"></div>
     <p class="chart-note" id="spark-summary"></p>
   </section>
 
+  <section class="panel" id="sweep-panel" hidden>
+    <div class="panel-head"><h2>Full site sweep</h2><span class="count" id="sweep-count"></span></div>
+    <div class="sweep-grid" id="sweep-sections"></div>
+    <p class="chart-note" id="sweep-summary"></p>
+    <details id="sweep-details">
+      <summary>Slowest pages</summary>
+      <table>
+        <thead><tr><th scope="col">Path</th><th scope="col">Status</th><th scope="col">Time</th></tr></thead>
+        <tbody id="sweep-slowest"></tbody>
+      </table>
+    </details>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><h2>Incident log</h2><span class="count" id="incident-count"></span></div>
+    <div id="incidents"></div>
+  </section>
+
   <footer>
-    <p>Checked every ~10 minutes by <a href="https://github.com/officialkrunalkumar/status">a GitHub Actions workflow</a>
-    from GitHub's servers — independent of the site's own hosting and DNS, so this page stays up during an incident.</p>
+    <p>Every page, lab, feed, asset and redirect is checked about every 10 minutes by
+      <a href="https://github.com/officialkrunalkumar/status">a GitHub Actions workflow</a> running on GitHub's
+      servers — independent of the site's own hosting and DNS, so this page stays up during an incident.
+      The whole sitemap is swept once a day.</p>
     <p>Built by <a href="https://krunalkumar.dpdns.org/">Krunalkumar Shah</a>. Times shown in your local timezone.</p>
   </footer>
 </div>
@@ -161,6 +253,7 @@
   'use strict';
 
   var COLOR = { up: 'var(--up)', degraded: 'var(--warn)', down: 'var(--down)' };
+  var HEX = { up: '#34d399', degraded: '#fbbf24', down: '#f87171' };
   var LABEL = {
     up: 'All systems operational',
     degraded: 'Degraded — partial issue detected',
@@ -169,12 +262,23 @@
   var STALE_MS = 30 * 60 * 1000;
   var tooltip = document.getElementById('tooltip');
 
+  function $(id) { return document.getElementById(id); }
+
   function fmtRel(iso) {
     var s = Math.round((Date.now() - new Date(iso).getTime()) / 1000);
     if (s < 90) return 'just now';
     if (s < 3600) return Math.round(s / 60) + ' min ago';
     if (s < 172800) return Math.round(s / 3600) + ' h ago';
     return Math.round(s / 86400) + ' days ago';
+  }
+
+  function pct(v) { return v == null ? '—' : (v >= 99.995 ? '100' : v.toFixed(v >= 99.9 ? 3 : 2)) + '%'; }
+
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;
+    return n;
   }
 
   function showTip(html, x, y) {
@@ -186,94 +290,166 @@
   }
   function hideTip() { tooltip.style.display = 'none'; }
 
-  function renderStatus(s) {
-    document.getElementById('overall-dot').style.background = COLOR[s.overall];
-    document.getElementById('overall-text').textContent = LABEL[s.overall];
-    document.getElementById('updated').textContent =
+  // ---------------------------------------------------------------- header
+
+  function renderHero(s) {
+    $('overall-dot').style.background = COLOR[s.overall];
+    $('overall-text').textContent = LABEL[s.overall];
+    // The mark's cursor carries the current state — the logo doubles as the
+    // status light, which is why it is a KS_ and not just a KS.
+    $('ks-cursor').setAttribute('fill', HEX[s.overall]);
+
+    var sum = s.summary || { ok: 0, total: 0 };
+    $('overall-count').textContent = sum.ok + '/' + sum.total + ' checks passing';
+    $('updated').textContent =
       'Last checked ' + fmtRel(s.updated) + ' (' + new Date(s.updated).toLocaleString() + ')';
-    document.getElementById('stale-banner').style.display =
+    $('stale-banner').style.display =
       (Date.now() - new Date(s.updated).getTime() > STALE_MS) ? 'block' : 'none';
+  }
 
-    var checks = document.getElementById('checks');
-    checks.innerHTML = '';
-    Object.keys(s.checks).forEach(function (k) {
-      var c = s.checks[k];
-      var card = document.createElement('div');
-      card.className = 'card';
-      card.innerHTML =
-        '<h2></h2>' +
-        '<p class="row"><span class="dot" style="background:' + (c.ok ? COLOR.up : COLOR.down) + '"></span>' +
-        '<span class="state">' + (c.ok ? 'Operational' : 'Failing') + '</span></p>' +
-        '<p class="meta">' + (c.ms != null ? c.ms + ' ms' : '—') +
-        (c.code != null ? ' · HTTP ' + c.code : ' · no response') + '</p>';
-      card.querySelector('h2').textContent = c.label;
-      checks.appendChild(card);
-    });
-
-    var cert = document.createElement('div');
-    cert.className = 'card';
-    var cd = s.cert.days_left;
-    var certOk = cd != null && cd >= 14;
-    cert.innerHTML =
-      '<h2>TLS certificate</h2>' +
-      '<p class="row"><span class="dot" style="background:' + (cd == null ? 'var(--nodata)' : certOk ? COLOR.up : COLOR.degraded) + '"></span>' +
-      '<span class="state">' + (cd == null ? 'Unknown' : cd + ' days left') + '</span></p>' +
-      '<p class="meta">' + (s.cert.expires ? 'expires ' + s.cert.expires : 'could not read certificate') + '</p>';
-    checks.appendChild(cert);
-
-    var tiles = document.getElementById('uptime-tiles');
+  function renderTiles(s) {
+    var tiles = $('uptime-tiles');
     tiles.innerHTML = '';
-    [['d1', 'Uptime — 24 hours'], ['d7', 'Uptime — 7 days'], ['d30', 'Uptime — 30 days']].forEach(function (t) {
-      var v = s.uptime[t[0]];
-      tiles.insertAdjacentHTML('beforeend',
-        '<div class="tile"><p class="num">' + (v == null ? '—' : v + '%') + '</p><p class="lbl">' + t[1] + '</p></div>');
+    [['d1', '24 hours'], ['d7', '7 days'], ['d30', '30 days'], ['d90', '90 days']].forEach(function (t) {
+      var box = el('div', 'tile');
+      box.appendChild(el('p', 'num', pct(s.uptime[t[0]])));
+      box.appendChild(el('p', 'lbl', 'Uptime · ' + t[1]));
+      tiles.appendChild(box);
     });
   }
 
-  function dayKey(d) { return d.toISOString().slice(0, 10); }
+  function vital(host, title, dotColor, value, meta) {
+    var box = el('div', 'vital');
+    box.appendChild(el('h3', null, title));
+    var val = el('p', 'val');
+    if (dotColor) {
+      var d = el('span', 'dot');
+      d.style.background = dotColor;
+      val.appendChild(d);
+    }
+    val.appendChild(el('span', null, value));
+    box.appendChild(val);
+    box.appendChild(el('p', 'meta', meta));
+    host.appendChild(box);
+  }
 
-  function renderDays(history) {
-    var byDay = {};
-    history.forEach(function (r) {
-      if (!r.r.home) return;
-      var k = r.t.slice(0, 10);
-      (byDay[k] = byDay[k] || { up: 0, n: 0 });
-      byDay[k].n++;
-      if (r.r.home[0]) byDay[k].up++;
+  function renderVitals(s) {
+    var host = $('vitals');
+    host.innerHTML = '';
+
+    var r = s.response || {};
+    vital(host, 'Response time', null,
+      r.p50 == null ? '—' : r.p50 + ' ms',
+      r.p95 == null ? 'no samples yet' : 'p95 ' + r.p95 + ' ms · ' + r.n + ' checks / 24 h');
+
+    var cd = s.cert.days_left;
+    vital(host, 'TLS certificate',
+      cd == null ? 'var(--nodata)' : cd >= 14 ? COLOR.up : COLOR.degraded,
+      cd == null ? 'Unknown' : cd + ' days left',
+      s.cert.expires
+        ? 'expires ' + s.cert.expires + (s.cert.issuer ? ' · ' + s.cert.issuer : '')
+        : 'could not read certificate');
+
+    var h = s.headers || { score: 0, total: 0, missing: [] };
+    vital(host, 'Security headers',
+      h.score === h.total ? COLOR.up : h.score >= h.total - 1 ? COLOR.degraded : COLOR.down,
+      h.score + '/' + h.total + ' present',
+      h.missing.length ? 'missing: ' + h.missing.join(', ')
+        : 'HSTS, CSP, COOP and frame/type guards all set'
+          + (h.hsts_days ? ' · HSTS ' + h.hsts_days + ' d' : ''));
+
+    var d = s.dns || {};
+    vital(host, 'DNS resolution',
+      d.ms == null ? COLOR.down : COLOR.up,
+      d.ms == null ? 'Failed' : d.ms + ' ms',
+      (d.addresses && d.addresses.length ? d.addresses.join(' · ') : 'no addresses returned'));
+  }
+
+  // ---------------------------------------------------------------- checks
+
+  function renderChecks(s) {
+    var host = $('check-groups');
+    host.innerHTML = '';
+    var groups = s.groups || [];
+
+    groups.forEach(function (g) {
+      var keys = Object.keys(s.checks).filter(function (k) { return s.checks[k].group === g.key; });
+      if (!keys.length) return;
+      // Failing checks float to the top of their group so an incident is
+      // visible without reading every row.
+      keys.sort(function (a, b) { return (s.checks[a].ok ? 1 : 0) - (s.checks[b].ok ? 1 : 0); });
+      var okCount = keys.filter(function (k) { return s.checks[k].ok; }).length;
+
+      var panel = el('section', 'panel');
+      var head = el('div', 'panel-head');
+      head.appendChild(el('h2', null, g.label));
+      head.appendChild(el('span', 'count', okCount + '/' + keys.length + ' operational'));
+      panel.appendChild(head);
+
+      var grid = el('div', 'checks');
+      keys.forEach(function (k) {
+        var c = s.checks[k];
+        var row = el('div', 'check' + (c.ok ? '' : ' bad'));
+        var dot = el('span', 'dot');
+        dot.style.background = c.ok ? COLOR.up : (c.sev === 'minor' ? COLOR.degraded : COLOR.down);
+        row.appendChild(dot);
+
+        var name = document.createElement('a');
+        name.className = 'name';
+        name.href = c.url;
+        name.rel = 'noopener';
+        name.textContent = c.label;
+        name.title = c.url;
+        row.appendChild(name);
+
+        if (!c.ok && c.sev === 'minor') row.appendChild(el('span', 'tag', 'minor'));
+        row.appendChild(el('span', 'ms',
+          c.ok ? c.ms + ' ms' : (c.note || (c.code != null ? 'HTTP ' + c.code : 'no response'))));
+        grid.appendChild(row);
+      });
+      panel.appendChild(grid);
+      host.appendChild(panel);
     });
+  }
+
+  // ---------------------------------------------------------------- charts
+
+  function renderDays(daily) {
+    var byDay = {};
+    daily.forEach(function (d) { if (d.r.home) byDay[d.d] = d.r.home; });
 
     var days = [];
     for (var i = 29; i >= 0; i--) {
-      var d = new Date(Date.now() - i * 86400000);
-      days.push(dayKey(d));
+      days.push(new Date(Date.now() - i * 86400000).toISOString().slice(0, 10));
     }
 
     var W = 30 * 26, H = 40, bw = 22;
-    var parts = [];
-    var tbody = [];
+    var parts = [], tbody = [];
     var incidents = 0, covered = 0;
+
     days.forEach(function (k, idx) {
-      var d = byDay[k];
-      var pct = d ? 100 * d.up / d.n : null;
-      var fill = pct == null ? 'var(--nodata)'
-        : pct >= 99.5 ? 'var(--up)'
-        : pct >= 95 ? 'var(--warn)'
+      var d = byDay[k];                       // [up, total, avg_ms]
+      var p = d && d[1] ? 100 * d[0] / d[1] : null;
+      var fill = p == null ? 'var(--nodata)'
+        : p >= 99.5 ? 'var(--up)'
+        : p >= 95 ? 'var(--warn)'
         : 'var(--down)';
-      if (pct != null) { covered++; if (pct < 99.5) incidents++; }
-      var label = k + (pct == null ? ' · no data' : ' · ' + pct.toFixed(1) + '% · ' + d.n + ' checks');
+      if (p != null) { covered++; if (p < 99.5) incidents++; }
+      var label = k + (p == null ? ' · no data'
+        : ' · ' + p.toFixed(1) + '% · ' + d[1] + ' checks · avg ' + d[2] + ' ms');
       parts.push('<rect x="' + (idx * 26) + '" y="0" width="' + bw + '" height="' + H +
         '" rx="4" fill="' + fill + '" data-tip="' + label + '"><title>' + label + '</title></rect>');
-      tbody.push('<tr><td>' + k + '</td><td>' + (pct == null ? '—' : pct.toFixed(1) + '%') +
-        '</td><td>' + (d ? d.n : 0) + '</td></tr>');
+      tbody.push('<tr><td>' + k + '</td><td>' + (p == null ? '—' : p.toFixed(1) + '%') +
+        '</td><td>' + (d ? d[1] : 0) + '</td><td>' + (d && d[2] ? d[2] + ' ms' : '—') + '</td></tr>');
     });
 
-    document.getElementById('days-chart').innerHTML =
-      '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Daily uptime for the last 30 days">' +
+    $('days-chart').innerHTML =
+      '<svg class="plot" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Daily uptime for the last 30 days">' +
       parts.join('') + '</svg>';
-    document.getElementById('days-summary').textContent =
+    $('days-count').textContent = covered + (covered === 1 ? ' day' : ' days') + ' of data';
+    $('days-summary').textContent =
       covered === 0 ? 'No data yet — the monitor just started.'
-        : covered + (covered === 1 ? ' day' : ' days') + ' of data · ' +
-          (covered - incidents) + ' fully operational · ' +
+        : (covered - incidents) + ' fully operational · ' +
           incidents + (incidents === 1 ? ' day' : ' days') + ' with downtime.';
     document.querySelector('#days-table tbody').innerHTML = tbody.reverse().join('');
 
@@ -291,10 +467,11 @@
       return { t: new Date(r.t).getTime(), ok: !!r.r.home[0], ms: r.r.home[1] };
     });
 
-    var el = document.getElementById('spark-chart');
+    var host = $('spark-chart');
     if (pts.length < 2) {
-      el.innerHTML = '';
-      document.getElementById('spark-summary').textContent = 'Not enough data yet — check back after a few runs.';
+      host.innerHTML = '';
+      $('spark-count').textContent = '';
+      $('spark-summary').textContent = 'Not enough data yet — check back after a few runs.';
       return;
     }
 
@@ -316,8 +493,8 @@
         '" r="4" fill="var(--down)"><title>failed check</title></circle>';
     }).join('');
 
-    el.innerHTML =
-      '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Home page response time over the last 24 hours">' +
+    host.innerHTML =
+      '<svg class="plot" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Home page response time over the last 24 hours">' +
       '<path d="' + area + '" fill="var(--accent)" opacity="0.12"/>' +
       '<path d="' + line + '" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/>' +
       fails +
@@ -325,13 +502,13 @@
       '</svg>';
 
     var msList = okPts.map(function (p) { return p.ms; }).sort(function (a, b) { return a - b; });
-    var median = msList[Math.floor(msList.length / 2)];
-    document.getElementById('spark-summary').textContent =
-      pts.length + ' checks · median ' + median + ' ms · slowest ' + maxMs + ' ms' +
+    $('spark-count').textContent = pts.length + ' checks';
+    $('spark-summary').textContent =
+      'median ' + msList[Math.floor(msList.length / 2)] + ' ms · slowest ' + maxMs + ' ms' +
       (pts.length - okPts.length ? ' · ' + (pts.length - okPts.length) + ' failed (red dots)' : '');
 
-    var svg = el.querySelector('svg');
-    var cross = el.querySelector('#spark-cross');
+    var svg = host.querySelector('svg');
+    var cross = host.querySelector('#spark-cross');
     svg.addEventListener('mousemove', function (e) {
       var rect = svg.getBoundingClientRect();
       var t = minT + (maxT - minT) * Math.min(1, Math.max(0, (e.clientX - rect.left) / rect.width));
@@ -345,17 +522,125 @@
     svg.addEventListener('mouseleave', function () { cross.setAttribute('opacity', '0'); hideTip(); });
   }
 
+  // ----------------------------------------------------------- sitemap sweep
+
+  function renderSweep(p) {
+    if (!p || !p.total) return;
+    $('sweep-panel').hidden = false;
+    $('sweep-count').textContent = p.ok + '/' + p.total + ' URLs OK';
+
+    var host = $('sweep-sections');
+    host.innerHTML = '';
+
+    // Most top-level paths are a single page (/about, /terms, …). Those get
+    // their own check above, so here they are rolled into one row and the
+    // bars are kept for the sections that actually have depth.
+    var bars = p.sections.filter(function (s) { return s.total > 1; });
+    var singles = p.sections.filter(function (s) { return s.total === 1; });
+    if (singles.length) {
+      bars = bars.concat([{
+        section: singles.length + ' single pages',
+        total: singles.length,
+        ok: singles.filter(function (s) { return s.ok; }).length,
+        median_ms: null,
+        flat: true
+      }]);
+    }
+
+    bars.forEach(function (s) {
+      var row = el('div', 'sweep-row');
+      var top = el('div', 'top');
+      top.appendChild(el('b', null,
+        s.flat ? s.section : s.section === 'home' ? '/' : '/' + s.section));
+      top.appendChild(el('span', null, s.ok + '/' + s.total +
+        (s.median_ms != null ? ' · ' + s.median_ms + ' ms' : '')));
+      row.appendChild(top);
+      var bar = el('div', 'bar');
+      var fill = el('i');
+      fill.style.width = (100 * s.ok / s.total) + '%';
+      if (s.ok < s.total) fill.style.background = 'var(--down)';
+      bar.appendChild(fill);
+      row.appendChild(bar);
+      host.appendChild(row);
+    });
+
+    var failing = p.failing || [];
+    $('sweep-summary').textContent =
+      'Every URL in the sitemap, swept ' + fmtRel(p.updated) +
+      (p.median_ms != null ? ' · median ' + p.median_ms + ' ms' : '') +
+      (failing.length
+        ? ' · failing: ' + failing.map(function (f) { return f.path; }).join(', ')
+        : ' · no broken links.');
+
+    $('sweep-slowest').innerHTML = (p.slowest || []).map(function (r) {
+      return '<tr><td>' + r.path + '</td><td>' + (r.ok ? 'HTTP ' + r.code : 'failed') +
+        '</td><td>' + r.ms + ' ms</td></tr>';
+    }).join('');
+  }
+
+  // -------------------------------------------------------------- incidents
+
+  function renderIncidents(list, checks) {
+    var host = $('incidents');
+    host.innerHTML = '';
+    var recent = list.slice().reverse();
+    $('incident-count').textContent = recent.length ? recent.length + ' recorded' : '';
+
+    if (!recent.length) {
+      host.appendChild(el('p', 'empty', 'No incidents recorded since the monitor started.'));
+      return;
+    }
+
+    recent.forEach(function (inc) {
+      var row = el('div', 'incident');
+      var dot = el('span', 'dot');
+      dot.style.background = COLOR[inc.level];
+      row.appendChild(dot);
+
+      var body = el('div');
+      var names = inc.checks.map(function (k) {
+        return (checks && checks[k] ? checks[k].label : k);
+      }).join(', ');
+      body.appendChild(el('p', null,
+        (inc.level === 'down' ? 'Outage' : 'Degraded') +
+        (inc.end ? ' · ' + inc.minutes + ' min' : ' · ongoing') +
+        (names ? ' — ' + names : '')));
+      body.appendChild(el('p', 'when',
+        new Date(inc.start).toLocaleString() +
+        (inc.end ? ' → ' + new Date(inc.end).toLocaleTimeString() : ' → now')));
+      row.appendChild(body);
+      host.appendChild(row);
+    });
+  }
+
+  // ------------------------------------------------------------------- load
+
+  function getJSON(name, fallback) {
+    return fetch(name + '?t=' + Date.now())
+      .then(function (r) { return r.ok ? r.json() : fallback; })
+      .catch(function () { return fallback; });
+  }
+
   function load() {
-    var bust = '?t=' + Date.now();
     Promise.all([
-      fetch('data/status.json' + bust).then(function (r) { return r.json(); }),
-      fetch('data/history.json' + bust).then(function (r) { return r.json(); })
-    ]).then(function (both) {
-      renderStatus(both[0]);
-      renderDays(both[1]);
-      renderSpark(both[1]);
+      getJSON('data/status.json', null),
+      getJSON('data/history.json', []),
+      getJSON('data/daily.json', []),
+      getJSON('data/incidents.json', []),
+      getJSON('data/pages.json', null)
+    ]).then(function (d) {
+      var status = d[0];
+      if (!status) throw new Error('no status');
+      renderHero(status);
+      renderTiles(status);
+      renderVitals(status);
+      renderChecks(status);
+      renderDays(d[2]);
+      renderSpark(d[1]);
+      renderIncidents(d[3], status.checks);
+      renderSweep(d[4]);
     }).catch(function () {
-      document.getElementById('overall-text').textContent = 'Could not load status data.';
+      $('overall-text').textContent = 'Could not load status data.';
     });
   }
 
