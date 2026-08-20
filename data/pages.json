@@ -1,44 +1,44 @@
 {
- "updated": "2026-08-19T16:43:18+00:00",
+ "updated": "2026-08-20T13:34:53+00:00",
  "total": 90,
  "ok": 90,
  "failing": [],
- "median_ms": 190,
+ "median_ms": 154,
  "slowest": [
   {
-   "url": "https://krunalkumar.dpdns.org/labs/lua",
-   "path": "/labs/lua",
+   "url": "https://krunalkumar.dpdns.org/labs/jwt",
+   "path": "/labs/jwt",
    "ok": true,
    "code": 200,
-   "ms": 401
+   "ms": 753
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/sql",
-   "path": "/labs/sql",
+   "url": "https://krunalkumar.dpdns.org/labs/ct-log",
+   "path": "/labs/ct-log",
    "ok": true,
    "code": 200,
-   "ms": 381
+   "ms": 472
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/linux",
-   "path": "/labs/linux",
+   "url": "https://krunalkumar.dpdns.org/blog/which-ai-tool-for-which-job",
+   "path": "/blog/which-ai-tool-for-which-job",
    "ok": true,
    "code": 200,
-   "ms": 377
+   "ms": 352
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/security-compliance-explained",
-   "path": "/blog/security-compliance-explained",
+   "url": "https://krunalkumar.dpdns.org/blog/what-running-internship-cohorts-taught-me-about-mentorship",
+   "path": "/blog/what-running-internship-cohorts-taught-me-about-mentorship",
    "ok": true,
    "code": 200,
-   "ms": 339
+   "ms": 306
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/c",
-   "path": "/labs/c",
+   "url": "https://krunalkumar.dpdns.org/labs/perl",
+   "path": "/labs/perl",
    "ok": true,
    "code": 200,
-   "ms": 338
+   "ms": 295
   }
  ],
  "sections": [
@@ -46,103 +46,103 @@
    "section": "labs",
    "total": 59,
    "ok": 59,
-   "median_ms": 190
+   "median_ms": 154
   },
   {
    "section": "blog",
    "total": 16,
    "ok": 16,
-   "median_ms": 235
+   "median_ms": 209
   },
   {
    "section": "home",
    "total": 1,
    "ok": 1,
-   "median_ms": 56
+   "median_ms": 100
   },
   {
    "section": "about",
    "total": 1,
    "ok": 1,
-   "median_ms": 131
+   "median_ms": 79
   },
   {
    "section": "services",
    "total": 1,
    "ok": 1,
-   "median_ms": 121
+   "median_ms": 132
   },
   {
    "section": "projects",
    "total": 1,
    "ok": 1,
-   "median_ms": 117
+   "median_ms": 93
   },
   {
    "section": "research",
    "total": 1,
    "ok": 1,
-   "median_ms": 113
+   "median_ms": 76
   },
   {
    "section": "client-reviews",
    "total": 1,
    "ok": 1,
-   "median_ms": 101
+   "median_ms": 136
   },
   {
    "section": "internships",
    "total": 1,
    "ok": 1,
-   "median_ms": 67
+   "median_ms": 102
   },
   {
    "section": "contact",
    "total": 1,
    "ok": 1,
-   "median_ms": 82
+   "median_ms": 91
   },
   {
    "section": "verify",
    "total": 1,
    "ok": 1,
-   "median_ms": 118
+   "median_ms": 70
   },
   {
    "section": "privacy",
    "total": 1,
    "ok": 1,
-   "median_ms": 207
+   "median_ms": 132
   },
   {
    "section": "terms",
    "total": 1,
    "ok": 1,
-   "median_ms": 189
+   "median_ms": 223
   },
   {
    "section": "refund",
    "total": 1,
    "ok": 1,
-   "median_ms": 202
+   "median_ms": 188
   },
   {
    "section": "llms.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 54
+   "median_ms": 137
   },
   {
    "section": "llms-full.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 276
+   "median_ms": 181
   },
   {
    "section": "buddha",
    "total": 1,
    "ok": 1,
-   "median_ms": 180
+   "median_ms": 113
   }
  ]
 }
