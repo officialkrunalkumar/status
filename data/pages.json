@@ -1,148 +1,160 @@
 {
- "updated": "2026-08-21T09:55:15+00:00",
- "total": 90,
- "ok": 90,
+ "updated": "2026-08-22T06:02:51+00:00",
+ "total": 95,
+ "ok": 95,
  "failing": [],
- "median_ms": 146,
+ "median_ms": 189,
  "slowest": [
   {
-   "url": "https://krunalkumar.dpdns.org/labs/memory-strings",
-   "path": "/labs/memory-strings",
+   "url": "https://krunalkumar.dpdns.org/labs/javascript",
+   "path": "/labs/javascript",
    "ok": true,
    "code": 200,
-   "ms": 336
+   "ms": 559
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/algorithm-visualizer",
-   "path": "/labs/algorithm-visualizer",
+   "url": "https://krunalkumar.dpdns.org/labs/linux",
+   "path": "/labs/linux",
    "ok": true,
    "code": 200,
-   "ms": 281
+   "ms": 506
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/registry-viewer",
-   "path": "/labs/registry-viewer",
+   "url": "https://krunalkumar.dpdns.org/labs/typescript",
+   "path": "/labs/typescript",
    "ok": true,
    "code": 200,
-   "ms": 275
+   "ms": 486
   },
   {
-   "url": "https://krunalkumar.dpdns.org/privacy",
-   "path": "/privacy",
+   "url": "https://krunalkumar.dpdns.org/blog/india-it-act-explained",
+   "path": "/blog/india-it-act-explained",
    "ok": true,
    "code": 200,
-   "ms": 272
+   "ms": 483
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/hash-cracker",
-   "path": "/labs/hash-cracker",
+   "url": "https://krunalkumar.dpdns.org/labs/lua",
+   "path": "/labs/lua",
    "ok": true,
    "code": 200,
-   "ms": 269
+   "ms": 443
   }
  ],
  "sections": [
   {
    "section": "labs",
-   "total": 59,
-   "ok": 59,
-   "median_ms": 143
+   "total": 60,
+   "ok": 60,
+   "median_ms": 194
   },
   {
    "section": "blog",
-   "total": 16,
-   "ok": 16,
-   "median_ms": 148
+   "total": 18,
+   "ok": 18,
+   "median_ms": 242
   },
   {
    "section": "home",
    "total": 1,
    "ok": 1,
-   "median_ms": 34
+   "median_ms": 179
   },
   {
    "section": "about",
    "total": 1,
    "ok": 1,
-   "median_ms": 47
+   "median_ms": 135
   },
   {
    "section": "services",
    "total": 1,
    "ok": 1,
-   "median_ms": 111
+   "median_ms": 109
   },
   {
    "section": "projects",
    "total": 1,
    "ok": 1,
-   "median_ms": 43
+   "median_ms": 157
   },
   {
    "section": "research",
    "total": 1,
    "ok": 1,
-   "median_ms": 33
+   "median_ms": 133
   },
   {
    "section": "client-reviews",
    "total": 1,
    "ok": 1,
-   "median_ms": 23
+   "median_ms": 182
   },
   {
    "section": "internships",
    "total": 1,
    "ok": 1,
-   "median_ms": 32
+   "median_ms": 103
   },
   {
    "section": "contact",
    "total": 1,
    "ok": 1,
-   "median_ms": 203
+   "median_ms": 211
   },
   {
    "section": "verify",
    "total": 1,
    "ok": 1,
-   "median_ms": 168
+   "median_ms": 171
   },
   {
    "section": "privacy",
    "total": 1,
    "ok": 1,
-   "median_ms": 272
+   "median_ms": 186
   },
   {
    "section": "terms",
    "total": 1,
    "ok": 1,
-   "median_ms": 261
+   "median_ms": 160
   },
   {
    "section": "refund",
    "total": 1,
    "ok": 1,
-   "median_ms": 254
+   "median_ms": 166
   },
   {
    "section": "llms.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 97
+   "median_ms": 103
   },
   {
    "section": "llms-full.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 215
+   "median_ms": 160
+  },
+  {
+   "section": "party",
+   "total": 1,
+   "ok": 1,
+   "median_ms": 191
+  },
+  {
+   "section": "colophon",
+   "total": 1,
+   "ok": 1,
+   "median_ms": 166
   },
   {
    "section": "buddha",
    "total": 1,
    "ok": 1,
-   "median_ms": 178
+   "median_ms": 191
   }
  ]
 }
