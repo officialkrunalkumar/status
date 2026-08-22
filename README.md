@@ -6,7 +6,7 @@ Self-built uptime monitor and status page for [krunalkumar.dpdns.org](https://kr
 
 <br clear="left" />
 
-**Live page:** https://officialkrunalkumar.github.io/status/
+**Live page:** https://status.krunalkumar.dpdns.org
 
 ![site status](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fofficialkrunalkumar%2Fstatus%2Fmain%2Fdata%2Fbadge.json)
 
