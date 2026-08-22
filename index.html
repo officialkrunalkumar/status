@@ -179,8 +179,7 @@
       </span>
     </div>
     <nav class="top-links">
-      <a href="https://krunalkumar.dpdns.org/">← the site</a>
-      <a href="https://github.com/officialkrunalkumar/status">source</a>
+      <a href="https://krunalkumar.dpdns.org/">← go back to site</a>
     </nav>
   </header>
 
@@ -239,7 +238,7 @@
 
   <footer>
     <p>Every page, lab, feed, asset and redirect is checked about every 10 minutes by
-      <a href="https://github.com/officialkrunalkumar/status">a GitHub Actions workflow</a> running on GitHub's
+      a GitHub Actions workflow running on GitHub's
       servers — independent of the site's own hosting and DNS, so this page stays up during an incident.
       The whole sitemap is swept once a day.</p>
     <p>Built by <a href="https://krunalkumar.dpdns.org/">Krunalkumar Shah</a>. Times shown in your local timezone.</p>
@@ -615,32 +614,85 @@
 
   // ------------------------------------------------------------------- load
 
-  function getJSON(name, fallback) {
-    return fetch(name + '?t=' + Date.now())
-      .then(function (r) { return r.ok ? r.json() : fallback; })
-      .catch(function () { return fallback; });
+  // Last known-good payload. A background refresh that fails must never wipe
+  // out what is already on screen — the numbers just keep ageing, and the stale
+  // banner takes over once they are genuinely too old to trust. Only a page
+  // that has never rendered anything is allowed to show an error.
+  var cache = { status: null, history: [], daily: [], incidents: [], pages: null };
+  var rendered = false;
+  var inflight = false;
+  var attempts = 0;
+  var retryTimer = null;
+
+  // Resolves to a { value: … } box on success and to null on any failure, so
+  // "fetched an empty list" and "could not fetch" stay distinguishable.
+  function getJSON(name) {
+    return fetch(name + '?t=' + Date.now(), { cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (v) { return v == null ? null : { value: v }; })
+      .catch(function () { return null; });
+  }
+
+  function keep(box, prev) { return box ? box.value : prev; }
+
+  function draw() {
+    renderHero(cache.status);
+    renderTiles(cache.status);
+    renderVitals(cache.status);
+    renderChecks(cache.status);
+    renderDays(cache.daily);
+    renderSpark(cache.history);
+    renderIncidents(cache.incidents, cache.status.checks);
+    renderSweep(cache.pages);
+  }
+
+  function retry(ms) {
+    clearTimeout(retryTimer);
+    retryTimer = setTimeout(load, ms);
+  }
+
+  function failed() {
+    if (rendered) return;  // an ageing but real status beats an error message
+    attempts++;
+    if (attempts < 4) {
+      retry(attempts * 2000);
+    } else {
+      $('overall-text').textContent = 'Could not load status data — retrying…';
+      retry(15000);
+    }
   }
 
   function load() {
+    if (inflight) return;
+    inflight = true;
     Promise.all([
-      getJSON('data/status.json', null),
-      getJSON('data/history.json', []),
-      getJSON('data/daily.json', []),
-      getJSON('data/incidents.json', []),
-      getJSON('data/pages.json', null)
+      getJSON('data/status.json'),
+      getJSON('data/history.json'),
+      getJSON('data/daily.json'),
+      getJSON('data/incidents.json'),
+      getJSON('data/pages.json')
     ]).then(function (d) {
-      var status = d[0];
-      if (!status) throw new Error('no status');
-      renderHero(status);
-      renderTiles(status);
-      renderVitals(status);
-      renderChecks(status);
-      renderDays(d[2]);
-      renderSpark(d[1]);
-      renderIncidents(d[3], status.checks);
-      renderSweep(d[4]);
-    }).catch(function () {
-      $('overall-text').textContent = 'Could not load status data.';
+      inflight = false;
+      var status = keep(d[0], cache.status);
+      if (!status) { failed(); return; }
+
+      cache.status    = status;
+      cache.history   = keep(d[1], cache.history);
+      cache.daily     = keep(d[2], cache.daily);
+      cache.incidents = keep(d[3], cache.incidents);
+      cache.pages     = keep(d[4], cache.pages);
+
+      try {
+        draw();
+        rendered = true;
+        attempts = 0;
+        clearTimeout(retryTimer);
+      } catch (e) {
+        failed();
+      }
+    }, function () {
+      inflight = false;
+      failed();
     });
   }
 
@@ -649,6 +701,7 @@
   document.addEventListener('visibilitychange', function () {
     if (!document.hidden) load();
   });
+  window.addEventListener('online', load);
 })();
 </script>
 </body>
