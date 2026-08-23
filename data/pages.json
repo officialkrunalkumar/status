@@ -1,160 +1,160 @@
 {
- "updated": "2026-08-23T02:43:34+00:00",
- "total": 99,
- "ok": 99,
+ "updated": "2026-08-23T23:01:02+00:00",
+ "total": 100,
+ "ok": 100,
  "failing": [],
- "median_ms": 196,
+ "median_ms": 301,
  "slowest": [
   {
    "url": "https://krunalkumar.dpdns.org/labs/biodata-maker",
    "path": "/labs/biodata-maker",
    "ok": true,
    "code": 200,
-   "ms": 457
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/labs/cryptography",
-   "path": "/labs/cryptography",
-   "ok": true,
-   "code": 200,
-   "ms": 433
+   "ms": 4136
   },
   {
    "url": "https://krunalkumar.dpdns.org/labs/tcp-congestion",
    "path": "/labs/tcp-congestion",
    "ok": true,
    "code": 200,
-   "ms": 427
+   "ms": 4114
   },
   {
    "url": "https://krunalkumar.dpdns.org/labs/buffer-overflow",
    "path": "/labs/buffer-overflow",
    "ok": true,
    "code": 200,
-   "ms": 422
+   "ms": 4079
   },
   {
    "url": "https://krunalkumar.dpdns.org/labs/regex-engine",
    "path": "/labs/regex-engine",
    "ok": true,
    "code": 200,
-   "ms": 403
+   "ms": 4079
+  },
+  {
+   "url": "https://krunalkumar.dpdns.org/labs/cryptography",
+   "path": "/labs/cryptography",
+   "ok": true,
+   "code": 200,
+   "ms": 4069
   }
  ],
  "sections": [
   {
    "section": "labs",
-   "total": 62,
-   "ok": 62,
-   "median_ms": 169
+   "total": 63,
+   "ok": 63,
+   "median_ms": 252
   },
   {
    "section": "blog",
    "total": 20,
    "ok": 20,
-   "median_ms": 271
+   "median_ms": 248
   },
   {
    "section": "home",
    "total": 1,
    "ok": 1,
-   "median_ms": 263
+   "median_ms": 134
   },
   {
    "section": "about",
    "total": 1,
    "ok": 1,
-   "median_ms": 265
+   "median_ms": 194
   },
   {
    "section": "services",
    "total": 1,
    "ok": 1,
-   "median_ms": 241
+   "median_ms": 115
   },
   {
    "section": "projects",
    "total": 1,
    "ok": 1,
-   "median_ms": 226
+   "median_ms": 167
   },
   {
    "section": "research",
    "total": 1,
    "ok": 1,
-   "median_ms": 246
+   "median_ms": 136
   },
   {
    "section": "client-reviews",
    "total": 1,
    "ok": 1,
-   "median_ms": 200
+   "median_ms": 2069
   },
   {
    "section": "internships",
    "total": 1,
    "ok": 1,
-   "median_ms": 196
+   "median_ms": 2049
   },
   {
    "section": "contact",
    "total": 1,
    "ok": 1,
-   "median_ms": 180
+   "median_ms": 1982
   },
   {
    "section": "verify",
    "total": 1,
    "ok": 1,
-   "median_ms": 191
+   "median_ms": 1996
   },
   {
    "section": "privacy",
    "total": 1,
    "ok": 1,
-   "median_ms": 213
+   "median_ms": 2092
   },
   {
    "section": "terms",
    "total": 1,
    "ok": 1,
-   "median_ms": 210
+   "median_ms": 2052
   },
   {
    "section": "refund",
    "total": 1,
    "ok": 1,
-   "median_ms": 314
+   "median_ms": 2046
   },
   {
    "section": "llms.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 126
+   "median_ms": 2020
   },
   {
    "section": "llms-full.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 217
+   "median_ms": 1960
   },
   {
    "section": "party",
    "total": 1,
    "ok": 1,
-   "median_ms": 369
+   "median_ms": 4007
   },
   {
    "section": "colophon",
    "total": 1,
    "ok": 1,
-   "median_ms": 318
+   "median_ms": 3920
   },
   {
    "section": "buddha",
    "total": 1,
    "ok": 1,
-   "median_ms": 203
+   "median_ms": 328
   }
  ]
 }
