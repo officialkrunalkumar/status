@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-23T22:18:19+00:00",
+ "updated": "2026-08-23T22:42:38+00:00",
  "overall": "up",
  "site": "https://krunalkumar.dpdns.org",
  "groups": [
@@ -38,7 +38,7 @@
    "sev": "critical",
    "ok": true,
    "code": 200,
-   "ms": 602,
+   "ms": 1363,
    "note": null,
    "location": null
   },
@@ -49,7 +49,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 636,
+   "ms": 1356,
    "note": null,
    "location": null
   },
@@ -60,7 +60,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 595,
+   "ms": 1423,
    "note": null,
    "location": null
   },
@@ -71,7 +71,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 611,
+   "ms": 1390,
    "note": null,
    "location": null
   },
@@ -82,7 +82,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 589,
+   "ms": 1362,
    "note": null,
    "location": null
   },
@@ -93,7 +93,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 604,
+   "ms": 1415,
    "note": null,
    "location": null
   },
@@ -104,7 +104,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 597,
+   "ms": 1367,
    "note": null,
    "location": null
   },
@@ -115,7 +115,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 670,
+   "ms": 1353,
    "note": null,
    "location": null
   },
@@ -126,7 +126,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 155,
+   "ms": 678,
    "note": null,
    "location": null
   },
@@ -137,7 +137,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 112,
+   "ms": 625,
    "note": null,
    "location": null
   },
@@ -148,7 +148,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 107,
+   "ms": 602,
    "note": null,
    "location": null
   },
@@ -159,7 +159,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 99,
+   "ms": 539,
    "note": null,
    "location": null
   },
@@ -170,7 +170,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 106,
+   "ms": 575,
    "note": null,
    "location": null
   },
@@ -181,7 +181,7 @@
    "sev": "minor",
    "ok": true,
    "code": 200,
-   "ms": 98,
+   "ms": 552,
    "note": null,
    "location": null
   },
@@ -192,7 +192,7 @@
    "sev": "minor",
    "ok": true,
    "code": 200,
-   "ms": 102,
+   "ms": 550,
    "note": null,
    "location": null
   },
@@ -203,7 +203,7 @@
    "sev": "minor",
    "ok": true,
    "code": 200,
-   "ms": 79,
+   "ms": 542,
    "note": null,
    "location": null
   },
@@ -214,7 +214,7 @@
    "sev": "minor",
    "ok": true,
    "code": 200,
-   "ms": 117,
+   "ms": 794,
    "note": null,
    "location": null
   },
@@ -225,7 +225,7 @@
    "sev": "minor",
    "ok": true,
    "code": 200,
-   "ms": 74,
+   "ms": 455,
    "note": null,
    "location": null
   },
@@ -236,7 +236,7 @@
    "sev": "minor",
    "ok": true,
    "code": 200,
-   "ms": 107,
+   "ms": 506,
    "note": null,
    "location": null
   },
@@ -247,7 +247,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 143,
+   "ms": 466,
    "note": null,
    "location": null
   },
@@ -258,7 +258,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 127,
+   "ms": 433,
    "note": null,
    "location": null
   },
@@ -269,7 +269,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 107,
+   "ms": 457,
    "note": null,
    "location": null
   },
@@ -280,7 +280,7 @@
    "sev": "minor",
    "ok": true,
    "code": 200,
-   "ms": 108,
+   "ms": 435,
    "note": null,
    "location": null
   },
@@ -291,7 +291,7 @@
    "sev": "major",
    "ok": true,
    "code": 308,
-   "ms": 123,
+   "ms": 164,
    "note": null,
    "location": "https://krunalkumar.dpdns.org/"
   },
@@ -302,7 +302,7 @@
    "sev": "minor",
    "ok": true,
    "code": 307,
-   "ms": 341,
+   "ms": 304,
    "note": null,
    "location": "https://krunalkumar.dpdns.org/"
   },
@@ -313,7 +313,7 @@
    "sev": "minor",
    "ok": true,
    "code": 308,
-   "ms": 257,
+   "ms": 179,
    "note": null,
    "location": "https://krunalkumar.dpdns.org/"
   },
@@ -324,7 +324,7 @@
    "sev": "minor",
    "ok": true,
    "code": 404,
-   "ms": 113,
+   "ms": 232,
    "note": null,
    "location": null
   }
@@ -335,7 +335,7 @@
   "issuer": "Let's Encrypt"
  },
  "dns": {
-  "ms": 112,
+  "ms": 101,
   "addresses": [
    "216.198.79.1"
   ]
