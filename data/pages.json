@@ -1,44 +1,44 @@
 {
- "updated": "2026-08-24T19:27:32+00:00",
+ "updated": "2026-08-25T15:51:44+00:00",
  "total": 100,
  "ok": 100,
  "failing": [],
- "median_ms": 177,
+ "median_ms": 119,
  "slowest": [
   {
-   "url": "https://krunalkumar.dpdns.org/labs/postgres",
-   "path": "/labs/postgres",
+   "url": "https://krunalkumar.dpdns.org/blog/automating-email-replies-with-n8n",
+   "path": "/blog/automating-email-replies-with-n8n",
    "ok": true,
    "code": 200,
-   "ms": 521
+   "ms": 329
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/pcap-analyzer",
-   "path": "/labs/pcap-analyzer",
+   "url": "https://krunalkumar.dpdns.org/blog/which-ai-tool-for-which-job",
+   "path": "/blog/which-ai-tool-for-which-job",
    "ok": true,
    "code": 200,
-   "ms": 439
+   "ms": 267
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/perl",
-   "path": "/labs/perl",
+   "url": "https://krunalkumar.dpdns.org/blog/what-a-marriage-biodata-leaks",
+   "path": "/blog/what-a-marriage-biodata-leaks",
    "ok": true,
    "code": 200,
-   "ms": 438
+   "ms": 256
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/archive-inspector",
-   "path": "/labs/archive-inspector",
+   "url": "https://krunalkumar.dpdns.org/labs/url-inspector",
+   "path": "/labs/url-inspector",
    "ok": true,
    "code": 200,
-   "ms": 432
+   "ms": 231
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/memory-strings",
-   "path": "/labs/memory-strings",
+   "url": "https://krunalkumar.dpdns.org/blog/the-resume-builder-paywall-trick",
+   "path": "/blog/the-resume-builder-paywall-trick",
    "ok": true,
    "code": 200,
-   "ms": 407
+   "ms": 221
   }
  ],
  "sections": [
@@ -46,115 +46,115 @@
    "section": "labs",
    "total": 63,
    "ok": 63,
-   "median_ms": 200
+   "median_ms": 70
   },
   {
    "section": "blog",
    "total": 20,
    "ok": 20,
-   "median_ms": 149
+   "median_ms": 145
   },
   {
    "section": "home",
    "total": 1,
    "ok": 1,
-   "median_ms": 135
+   "median_ms": 131
   },
   {
    "section": "about",
    "total": 1,
    "ok": 1,
-   "median_ms": 96
+   "median_ms": 114
   },
   {
    "section": "services",
    "total": 1,
    "ok": 1,
-   "median_ms": 155
+   "median_ms": 100
   },
   {
    "section": "projects",
    "total": 1,
    "ok": 1,
-   "median_ms": 95
+   "median_ms": 83
   },
   {
    "section": "research",
    "total": 1,
    "ok": 1,
-   "median_ms": 138
+   "median_ms": 129
   },
   {
    "section": "client-reviews",
    "total": 1,
    "ok": 1,
-   "median_ms": 106
+   "median_ms": 20
   },
   {
    "section": "internships",
    "total": 1,
    "ok": 1,
-   "median_ms": 102
+   "median_ms": 20
   },
   {
    "section": "contact",
    "total": 1,
    "ok": 1,
-   "median_ms": 98
+   "median_ms": 17
   },
   {
    "section": "verify",
    "total": 1,
    "ok": 1,
-   "median_ms": 102
+   "median_ms": 40
   },
   {
    "section": "privacy",
    "total": 1,
    "ok": 1,
-   "median_ms": 233
+   "median_ms": 193
   },
   {
    "section": "terms",
    "total": 1,
    "ok": 1,
-   "median_ms": 293
+   "median_ms": 134
   },
   {
    "section": "refund",
    "total": 1,
    "ok": 1,
-   "median_ms": 229
+   "median_ms": 148
   },
   {
    "section": "llms.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 95
+   "median_ms": 17
   },
   {
    "section": "llms-full.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 221
+   "median_ms": 215
   },
   {
    "section": "party",
    "total": 1,
    "ok": 1,
-   "median_ms": 333
+   "median_ms": 17
   },
   {
    "section": "colophon",
    "total": 1,
    "ok": 1,
-   "median_ms": 103
+   "median_ms": 123
   },
   {
    "section": "buddha",
    "total": 1,
    "ok": 1,
-   "median_ms": 173
+   "median_ms": 143
   }
  ]
 }
