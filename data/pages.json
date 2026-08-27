@@ -1,44 +1,44 @@
 {
- "updated": "2026-08-26T12:19:34+00:00",
+ "updated": "2026-08-27T12:51:26+00:00",
  "total": 100,
  "ok": 100,
  "failing": [],
- "median_ms": 186,
+ "median_ms": 209,
  "slowest": [
   {
-   "url": "https://krunalkumar.dpdns.org/labs/resume-maker",
-   "path": "/labs/resume-maker",
+   "url": "https://krunalkumar.dpdns.org/llms-full.txt",
+   "path": "/llms-full.txt",
    "ok": true,
    "code": 200,
-   "ms": 521
+   "ms": 2360
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/biodata-maker",
-   "path": "/labs/biodata-maker",
+   "url": "https://krunalkumar.dpdns.org/buddha",
+   "path": "/buddha",
    "ok": true,
    "code": 200,
-   "ms": 505
+   "ms": 2296
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/tcp-congestion",
-   "path": "/labs/tcp-congestion",
+   "url": "https://krunalkumar.dpdns.org/labs/lua",
+   "path": "/labs/lua",
    "ok": true,
    "code": 200,
-   "ms": 451
+   "ms": 2285
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/os-algorithms",
-   "path": "/labs/os-algorithms",
+   "url": "https://krunalkumar.dpdns.org/labs/javascript",
+   "path": "/labs/javascript",
    "ok": true,
    "code": 200,
-   "ms": 448
+   "ms": 2273
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/regex-engine",
-   "path": "/labs/regex-engine",
+   "url": "https://krunalkumar.dpdns.org/llms.txt",
+   "path": "/llms.txt",
    "ok": true,
    "code": 200,
-   "ms": 444
+   "ms": 2246
   }
  ],
  "sections": [
@@ -46,115 +46,115 @@
    "section": "labs",
    "total": 63,
    "ok": 63,
-   "median_ms": 200
+   "median_ms": 217
   },
   {
    "section": "blog",
    "total": 20,
    "ok": 20,
-   "median_ms": 197
+   "median_ms": 175
   },
   {
    "section": "home",
    "total": 1,
    "ok": 1,
-   "median_ms": 170
+   "median_ms": 187
   },
   {
    "section": "about",
    "total": 1,
    "ok": 1,
-   "median_ms": 113
+   "median_ms": 149
   },
   {
    "section": "services",
    "total": 1,
    "ok": 1,
-   "median_ms": 170
+   "median_ms": 99
   },
   {
    "section": "projects",
    "total": 1,
    "ok": 1,
-   "median_ms": 118
+   "median_ms": 114
   },
   {
    "section": "research",
    "total": 1,
    "ok": 1,
-   "median_ms": 139
+   "median_ms": 100
   },
   {
    "section": "client-reviews",
    "total": 1,
    "ok": 1,
-   "median_ms": 165
+   "median_ms": 458
   },
   {
    "section": "internships",
    "total": 1,
    "ok": 1,
-   "median_ms": 152
+   "median_ms": 438
   },
   {
    "section": "contact",
    "total": 1,
    "ok": 1,
-   "median_ms": 168
+   "median_ms": 462
   },
   {
    "section": "verify",
    "total": 1,
    "ok": 1,
-   "median_ms": 137
+   "median_ms": 427
   },
   {
    "section": "privacy",
    "total": 1,
    "ok": 1,
-   "median_ms": 217
+   "median_ms": 461
   },
   {
    "section": "terms",
    "total": 1,
    "ok": 1,
-   "median_ms": 169
+   "median_ms": 449
   },
   {
    "section": "refund",
    "total": 1,
    "ok": 1,
-   "median_ms": 155
+   "median_ms": 437
   },
   {
    "section": "llms.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 118
+   "median_ms": 2246
   },
   {
    "section": "llms-full.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 110
+   "median_ms": 2360
   },
   {
    "section": "party",
    "total": 1,
    "ok": 1,
-   "median_ms": 415
+   "median_ms": 2246
   },
   {
    "section": "colophon",
    "total": 1,
    "ok": 1,
-   "median_ms": 186
+   "median_ms": 2216
   },
   {
    "section": "buddha",
    "total": 1,
    "ok": 1,
-   "median_ms": 90
+   "median_ms": 2296
   }
  ]
 }
