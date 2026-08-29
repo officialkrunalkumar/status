@@ -2,9 +2,12 @@ name: monitor
 
 on:
   schedule:
-    # GitHub runs scheduled jobs on a best-effort basis — expect ~10–15 min
-    # between checks in practice, occasionally longer.
-    - cron: "*/10 * * * *"
+    # 5 minutes is the shortest interval GitHub accepts, and it is a request
+    # rather than a promise: scheduled jobs run on a best-effort basis and get
+    # dropped entirely when the runner pool is busy, so the real gap between
+    # checks is routinely several times this. The status page raises a banner
+    # once its data is more than 30 minutes old.
+    - cron: "*/5 * * * *"
   workflow_dispatch:
   push:
     branches: [main]

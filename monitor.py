@@ -15,7 +15,7 @@ headers, then writes the JSON the status page (index.html) renders:
 
 Splitting history (short, detailed) from daily (long, aggregated) is what
 keeps 90 days of uptime on a page that refetches every minute: the detailed
-rows would otherwise grow to megabytes now that there are ~30 checks per run.
+rows would otherwise grow to megabytes now that there are ~33 checks per run.
 
 Stdlib only — no dependencies, so the Actions run stays fast.
 """
@@ -46,6 +46,7 @@ CRITICAL, MAJOR, MINOR = "critical", "major", "minor"
 GROUPS = [
     ("pages", "Site pages"),
     ("content", "Writing & labs"),
+    ("games", "Games"),
     ("feeds", "Machine-readable"),
     ("assets", "Static assets"),
     ("infra", "Edge & routing"),
@@ -72,6 +73,17 @@ CHECKS = [
     ("labs", "Labs index", "content", SITE + "/labs", MAJOR, True, None, None),
     ("lab", "Lab — hacklab", "content", SITE + "/labs/hacklab", MAJOR, True, None, None),
 
+    # /games is the largest section of the site now (67 games), which is why it
+    # gets a group of its own rather than being folded in with the labs.
+    # Sampling follows the same reasoning as the lab check above: the games run
+    # on two shells, so one game from each stands in for all 67 — snake sits
+    # directly on game-shell.js, the terminal games layer term-shell.js over it.
+    # The daily sitemap sweep still covers every game page individually.
+    ("games", "Games hub", "games", SITE + "/games", MAJOR, True, None, None),
+    ("game", "Game — Snake", "games", SITE + "/games/snake", MAJOR, True, None, None),
+    ("gameterm", "Game — cmatrix", "games",
+     SITE + "/games/cmatrix", MAJOR, True, None, None),
+
     ("sitemap", "Sitemap", "feeds", SITE + "/sitemap.xml", MINOR, True, None, "<loc>"),
     ("rss", "RSS feed", "feeds", SITE + "/feed.xml", MINOR, True, None, "<rss"),
     ("atom", "Atom feed", "feeds", SITE + "/atom.xml", MINOR, True, None, "<feed"),
@@ -82,6 +94,17 @@ CHECKS = [
 
     ("css", "Stylesheet", "assets", SITE + "/assets/css/main.css", MAJOR, True, None, ":root"),
     ("js", "Boot script", "assets", SITE + "/assets/js/boot.js", MAJOR, True, None, None),
+    # Every game page loads game-shell.js, so losing it breaks all 67 of them
+    # while each page still returns a perfectly healthy 200 — precisely the
+    # failure the page checks above cannot see. Same for the section's CSS.
+    ("gameshell", "Game shell runtime", "assets",
+     SITE + "/assets/js/games/game-shell.js", MAJOR, True, None, "GameShell"),
+    ("gamescss", "Games stylesheet", "assets",
+     SITE + "/assets/css/games.css", MAJOR, True, None, ".game-grid"),
+    # The hub's grid is in the HTML; hub.js only adds filtering and best scores
+    # on top, so losing it degrades /games rather than breaking it.
+    ("gamehub", "Games hub script", "assets",
+     SITE + "/assets/js/games/hub.js", MINOR, True, None, None),
     ("partials", "Header partial", "assets", SITE + "/partials/header", MAJOR, True, None, None),
     ("resume", "Résumé PDF", "assets",
      SITE + "/assets/pdf/Krunalkumar-Shah-Resume.pdf", MINOR, True, None, None),
@@ -118,7 +141,7 @@ TIMEOUT = 15          # seconds per request
 RETRY_WAIT = 5        # seconds before the single retry
 WORKERS = 8           # parallel probes — the whole run finishes in a few seconds
 BODY_LIMIT = 65536    # bytes read when a check asserts on content
-HISTORY_HOURS = 72    # keep detailed per-run rows this long
+HISTORY_HOURS = 36    # detailed per-run rows: the 24 h windows, plus headroom
 DAILY_DAYS = 90       # keep per-day aggregates this long
 INCIDENTS = 25        # keep this many past incidents
 SWEEP_HOURS = 20      # re-sweep the whole sitemap at most this often
@@ -228,7 +251,7 @@ def rebuild_daily(daily, history):
     """Recompute the day buckets covered by `history`, keep the older ones.
 
     History is short (HISTORY_HOURS) and daily is long (DAILY_DAYS), so every
-    day still present in history is recomputed from scratch — which makes
+    day still fully present in history is recomputed from scratch — which makes
     today's partial bucket self-healing — while days that have aged out of
     history keep whatever was stored for them. Rows are
     [up, total, mean_ms] per check key.
@@ -244,7 +267,17 @@ def rebuild_daily(daily, history):
                 slot[2].append(pair[1])
 
     by_day = {d["d"]: d for d in daily}
+    # The oldest day in the window is only *partly* covered by history — the
+    # earlier part of it has already been pruned — so recomputing that one from
+    # scratch would silently shrink the bucket that was written back while the
+    # whole day was still there. Keep the stored value for it instead. Every
+    # other day in history is complete, and the newest one is today, which has
+    # to keep being recomputed for the self-healing above to work.
+    oldest = history[0]["t"][:10] if history else None
+    newest = history[-1]["t"][:10] if history else None
     for day, checks in fresh.items():
+        if day == oldest and day != newest and day in by_day:
+            continue
         by_day[day] = {"d": day, "r": {
             k: [v[0], v[1], round(sum(v[2]) / len(v[2])) if v[2] else 0]
             for k, v in checks.items()}}
