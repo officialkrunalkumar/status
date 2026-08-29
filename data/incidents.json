@@ -1,1 +1,12 @@
-[]
+[
+ {
+  "start": "2026-08-29T18:53:30+00:00",
+  "last": "2026-08-29T18:53:30+00:00",
+  "end": null,
+  "minutes": null,
+  "level": "degraded",
+  "checks": [
+   "gameshell"
+  ]
+ }
+]
