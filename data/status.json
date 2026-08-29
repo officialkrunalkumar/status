@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-29T08:55:55+00:00",
+ "updated": "2026-08-29T11:10:31+00:00",
  "overall": "up",
  "site": "https://krunalkumar.dpdns.org",
  "groups": [
@@ -10,6 +10,10 @@
   {
    "key": "content",
    "label": "Writing & labs"
+  },
+  {
+   "key": "games",
+   "label": "Games"
   },
   {
    "key": "feeds",
@@ -25,8 +29,8 @@
   }
  ],
  "summary": {
-  "total": 27,
-  "ok": 27,
+  "total": 33,
+  "ok": 33,
   "failing": [],
   "worst": null
  },
@@ -38,7 +42,7 @@
    "sev": "critical",
    "ok": true,
    "code": 200,
-   "ms": 285,
+   "ms": 172,
    "note": null,
    "location": null
   },
@@ -49,7 +53,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 296,
+   "ms": 180,
    "note": null,
    "location": null
   },
@@ -60,7 +64,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 319,
+   "ms": 198,
    "note": null,
    "location": null
   },
@@ -71,7 +75,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 499,
+   "ms": 101,
    "note": null,
    "location": null
   },
@@ -82,7 +86,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 273,
+   "ms": 171,
    "note": null,
    "location": null
   },
@@ -93,7 +97,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 376,
+   "ms": 143,
    "note": null,
    "location": null
   },
@@ -104,7 +108,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 434,
+   "ms": 124,
    "note": null,
    "location": null
   },
@@ -115,7 +119,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 277,
+   "ms": 179,
    "note": null,
    "location": null
   },
@@ -126,7 +130,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 333,
+   "ms": 186,
    "note": null,
    "location": null
   },
@@ -137,7 +141,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 368,
+   "ms": 182,
    "note": null,
    "location": null
   },
@@ -148,7 +152,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 333,
+   "ms": 138,
    "note": null,
    "location": null
   },
@@ -159,7 +163,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 359,
+   "ms": 154,
    "note": null,
    "location": null
   },
@@ -170,7 +174,40 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 322,
+   "ms": 243,
+   "note": null,
+   "location": null
+  },
+  "games": {
+   "label": "Games hub",
+   "group": "games",
+   "url": "https://krunalkumar.dpdns.org/games",
+   "sev": "major",
+   "ok": true,
+   "code": 200,
+   "ms": 131,
+   "note": null,
+   "location": null
+  },
+  "game": {
+   "label": "Game \u2014 Snake",
+   "group": "games",
+   "url": "https://krunalkumar.dpdns.org/games/snake",
+   "sev": "major",
+   "ok": true,
+   "code": 200,
+   "ms": 92,
+   "note": null,
+   "location": null
+  },
+  "gameterm": {
+   "label": "Game \u2014 cmatrix",
+   "group": "games",
+   "url": "https://krunalkumar.dpdns.org/games/cmatrix",
+   "sev": "major",
+   "ok": true,
+   "code": 200,
+   "ms": 78,
    "note": null,
    "location": null
   },
@@ -181,7 +218,7 @@
    "sev": "minor",
    "ok": true,
    "code": 200,
-   "ms": 275,
+   "ms": 668,
    "note": null,
    "location": null
   },
@@ -192,7 +229,7 @@
    "sev": "minor",
    "ok": true,
    "code": 200,
-   "ms": 389,
+   "ms": 550,
    "note": null,
    "location": null
   },
@@ -203,7 +240,7 @@
    "sev": "minor",
    "ok": true,
    "code": 200,
-   "ms": 356,
+   "ms": 543,
    "note": null,
    "location": null
   },
@@ -214,7 +251,7 @@
    "sev": "minor",
    "ok": true,
    "code": 200,
-   "ms": 241,
+   "ms": 724,
    "note": null,
    "location": null
   },
@@ -225,7 +262,7 @@
    "sev": "minor",
    "ok": true,
    "code": 200,
-   "ms": 358,
+   "ms": 510,
    "note": null,
    "location": null
   },
@@ -236,7 +273,7 @@
    "sev": "minor",
    "ok": true,
    "code": 200,
-   "ms": 398,
+   "ms": 520,
    "note": null,
    "location": null
   },
@@ -247,7 +284,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 391,
+   "ms": 566,
    "note": null,
    "location": null
   },
@@ -258,7 +295,40 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 375,
+   "ms": 454,
+   "note": null,
+   "location": null
+  },
+  "gameshell": {
+   "label": "Game shell runtime",
+   "group": "assets",
+   "url": "https://krunalkumar.dpdns.org/assets/js/games/game-shell.js",
+   "sev": "major",
+   "ok": true,
+   "code": 200,
+   "ms": 245,
+   "note": null,
+   "location": null
+  },
+  "gamescss": {
+   "label": "Games stylesheet",
+   "group": "assets",
+   "url": "https://krunalkumar.dpdns.org/assets/css/games.css",
+   "sev": "major",
+   "ok": true,
+   "code": 200,
+   "ms": 262,
+   "note": null,
+   "location": null
+  },
+  "gamehub": {
+   "label": "Games hub script",
+   "group": "assets",
+   "url": "https://krunalkumar.dpdns.org/assets/js/games/hub.js",
+   "sev": "minor",
+   "ok": true,
+   "code": 200,
+   "ms": 202,
    "note": null,
    "location": null
   },
@@ -269,7 +339,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 333,
+   "ms": 222,
    "note": null,
    "location": null
   },
@@ -280,7 +350,7 @@
    "sev": "minor",
    "ok": true,
    "code": 200,
-   "ms": 738,
+   "ms": 198,
    "note": null,
    "location": null
   },
@@ -291,7 +361,7 @@
    "sev": "major",
    "ok": true,
    "code": 308,
-   "ms": 112,
+   "ms": 57,
    "note": null,
    "location": "https://krunalkumar.dpdns.org/"
   },
@@ -302,7 +372,7 @@
    "sev": "minor",
    "ok": true,
    "code": 307,
-   "ms": 269,
+   "ms": 896,
    "note": null,
    "location": "https://krunalkumar.dpdns.org/"
   },
@@ -313,7 +383,7 @@
    "sev": "minor",
    "ok": true,
    "code": 308,
-   "ms": 350,
+   "ms": 9,
    "note": null,
    "location": "https://krunalkumar.dpdns.org/"
   },
@@ -324,7 +394,7 @@
    "sev": "minor",
    "ok": true,
    "code": 404,
-   "ms": 334,
+   "ms": 120,
    "note": null,
    "location": null
   }
@@ -335,7 +405,7 @@
   "issuer": "Let's Encrypt"
  },
  "dns": {
-  "ms": 4,
+  "ms": 3,
   "addresses": [
    "216.198.79.1"
   ]
@@ -364,7 +434,7 @@
  "response": {
   "p50": 256,
   "p95": 285,
-  "n": 3
+  "n": 4
  },
  "open_incident": false
 }
