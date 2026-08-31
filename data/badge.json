@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
  "label": "site",
- "message": "degraded",
- "color": "#fbbf24"
+ "message": "up",
+ "color": "#34d399"
 }

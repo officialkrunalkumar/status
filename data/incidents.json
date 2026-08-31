@@ -2,8 +2,8 @@
  {
   "start": "2026-08-29T18:53:30+00:00",
   "last": "2026-08-31T16:58:14+00:00",
-  "end": null,
-  "minutes": null,
+  "end": "2026-08-31T17:10:33+00:00",
+  "minutes": 2777,
   "level": "degraded",
   "checks": [
    "gameshell"
