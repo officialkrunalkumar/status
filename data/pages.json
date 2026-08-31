@@ -1,172 +1,172 @@
 {
- "updated": "2026-08-30T13:13:14+00:00",
- "total": 177,
- "ok": 177,
+ "updated": "2026-08-31T14:29:26+00:00",
+ "total": 231,
+ "ok": 231,
  "failing": [],
- "median_ms": 147,
+ "median_ms": 194,
  "slowest": [
   {
-   "url": "https://krunalkumar.dpdns.org/labs/har-analyzer",
-   "path": "/labs/har-analyzer",
+   "url": "https://krunalkumar.dpdns.org/blog/what-a-marriage-biodata-leaks",
+   "path": "/blog/what-a-marriage-biodata-leaks",
    "ok": true,
    "code": 200,
-   "ms": 442
+   "ms": 2804
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/cvss",
-   "path": "/labs/cvss",
+   "url": "https://krunalkumar.dpdns.org/blog/ai-driven-human-assisted",
+   "path": "/blog/ai-driven-human-assisted",
    "ok": true,
    "code": 200,
-   "ms": 411
+   "ms": 2665
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/rdap",
-   "path": "/labs/rdap",
+   "url": "https://krunalkumar.dpdns.org/blog/what-a-security-review-actually-finds",
+   "path": "/blog/what-a-security-review-actually-finds",
    "ok": true,
    "code": 200,
-   "ms": 408
+   "ms": 2597
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/breach-check",
-   "path": "/labs/breach-check",
+   "url": "https://krunalkumar.dpdns.org/blog/how-i-vibe-coded-my-website",
+   "path": "/blog/how-i-vibe-coded-my-website",
    "ok": true,
    "code": 200,
-   "ms": 407
+   "ms": 2566
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/sqlite-browser",
-   "path": "/labs/sqlite-browser",
+   "url": "https://krunalkumar.dpdns.org/blog/types-of-cyberattacks",
+   "path": "/blog/types-of-cyberattacks",
    "ok": true,
    "code": 200,
-   "ms": 391
+   "ms": 2543
   }
  ],
  "sections": [
   {
-   "section": "games",
-   "total": 68,
-   "ok": 68,
-   "median_ms": 88
+   "section": "labs",
+   "total": 92,
+   "ok": 92,
+   "median_ms": 199
   },
   {
-   "section": "labs",
-   "total": 63,
-   "ok": 63,
-   "median_ms": 279
+   "section": "games",
+   "total": 76,
+   "ok": 76,
+   "median_ms": 189
   },
   {
    "section": "blog",
-   "total": 28,
-   "ok": 28,
-   "median_ms": 165
+   "total": 45,
+   "ok": 45,
+   "median_ms": 205
   },
   {
    "section": "home",
    "total": 1,
    "ok": 1,
-   "median_ms": 99
+   "median_ms": 75
   },
   {
    "section": "about",
    "total": 1,
    "ok": 1,
-   "median_ms": 128
+   "median_ms": 70
   },
   {
    "section": "services",
    "total": 1,
    "ok": 1,
-   "median_ms": 85
+   "median_ms": 81
   },
   {
    "section": "projects",
    "total": 1,
    "ok": 1,
-   "median_ms": 56
+   "median_ms": 94
   },
   {
    "section": "research",
    "total": 1,
    "ok": 1,
-   "median_ms": 71
+   "median_ms": 69
   },
   {
    "section": "client-reviews",
    "total": 1,
    "ok": 1,
-   "median_ms": 25
+   "median_ms": 88
   },
   {
    "section": "internships",
    "total": 1,
    "ok": 1,
-   "median_ms": 45
+   "median_ms": 88
   },
   {
    "section": "contact",
    "total": 1,
    "ok": 1,
-   "median_ms": 53
+   "median_ms": 75
   },
   {
    "section": "verify",
    "total": 1,
    "ok": 1,
-   "median_ms": 112
+   "median_ms": 77
   },
   {
    "section": "privacy",
    "total": 1,
    "ok": 1,
-   "median_ms": 169
+   "median_ms": 191
   },
   {
    "section": "terms",
    "total": 1,
    "ok": 1,
-   "median_ms": 115
+   "median_ms": 172
   },
   {
    "section": "refund",
    "total": 1,
    "ok": 1,
-   "median_ms": 83
+   "median_ms": 296
   },
   {
    "section": "llms.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 96
+   "median_ms": 87
   },
   {
    "section": "llms-full.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 137
+   "median_ms": 222
   },
   {
    "section": "party",
    "total": 1,
    "ok": 1,
-   "median_ms": 116
+   "median_ms": 199
   },
   {
    "section": "glossary",
    "total": 1,
    "ok": 1,
-   "median_ms": 90
+   "median_ms": 235
   },
   {
    "section": "colophon",
    "total": 1,
    "ok": 1,
-   "median_ms": 386
+   "median_ms": 182
   },
   {
    "section": "buddha",
    "total": 1,
    "ok": 1,
-   "median_ms": 52
+   "median_ms": 230
   }
  ]
 }
