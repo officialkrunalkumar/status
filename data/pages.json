@@ -1,172 +1,172 @@
 {
- "updated": "2026-09-01T14:35:11+00:00",
- "total": 280,
- "ok": 280,
+ "updated": "2026-09-02T14:24:25+00:00",
+ "total": 279,
+ "ok": 279,
  "failing": [],
- "median_ms": 135,
+ "median_ms": 141,
  "slowest": [
   {
-   "url": "https://krunalkumar.dpdns.org/games/chess",
-   "path": "/games/chess",
+   "url": "https://krunalkumar.dpdns.org/labs/fractal-explorer",
+   "path": "/labs/fractal-explorer",
    "ok": true,
    "code": 200,
-   "ms": 570
+   "ms": 554
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/leak",
-   "path": "/labs/leak",
+   "url": "https://krunalkumar.dpdns.org/blog/what-running-internship-cohorts-taught-me-about-mentorship",
+   "path": "/blog/what-running-internship-cohorts-taught-me-about-mentorship",
    "ok": true,
    "code": 200,
-   "ms": 288
+   "ms": 519
   },
   {
-   "url": "https://krunalkumar.dpdns.org/games/regex-golf",
-   "path": "/games/regex-golf",
+   "url": "https://krunalkumar.dpdns.org/games/personality-test",
+   "path": "/games/personality-test",
    "ok": true,
    "code": 200,
-   "ms": 263
+   "ms": 373
   },
   {
-   "url": "https://krunalkumar.dpdns.org/privacy",
-   "path": "/privacy",
+   "url": "https://krunalkumar.dpdns.org/games/dev-personality",
+   "path": "/games/dev-personality",
    "ok": true,
    "code": 200,
-   "ms": 249
+   "ms": 311
   },
   {
-   "url": "https://krunalkumar.dpdns.org/games/reaction-time",
-   "path": "/games/reaction-time",
+   "url": "https://krunalkumar.dpdns.org/games/rain",
+   "path": "/games/rain",
    "ok": true,
    "code": 200,
-   "ms": 247
+   "ms": 303
   }
  ],
  "sections": [
   {
    "section": "labs",
-   "total": 113,
-   "ok": 113,
-   "median_ms": 134
+   "total": 112,
+   "ok": 112,
+   "median_ms": 140
   },
   {
    "section": "games",
    "total": 89,
    "ok": 89,
-   "median_ms": 142
+   "median_ms": 138
   },
   {
    "section": "blog",
    "total": 60,
    "ok": 60,
-   "median_ms": 79
+   "median_ms": 151
   },
   {
    "section": "home",
    "total": 1,
    "ok": 1,
-   "median_ms": 218
+   "median_ms": 72
   },
   {
    "section": "about",
    "total": 1,
    "ok": 1,
-   "median_ms": 147
+   "median_ms": 69
   },
   {
    "section": "services",
    "total": 1,
    "ok": 1,
-   "median_ms": 134
+   "median_ms": 181
   },
   {
    "section": "projects",
    "total": 1,
    "ok": 1,
-   "median_ms": 146
+   "median_ms": 165
   },
   {
    "section": "research",
    "total": 1,
    "ok": 1,
-   "median_ms": 197
+   "median_ms": 188
   },
   {
    "section": "client-reviews",
    "total": 1,
    "ok": 1,
-   "median_ms": 120
+   "median_ms": 148
   },
   {
    "section": "internships",
    "total": 1,
    "ok": 1,
-   "median_ms": 100
+   "median_ms": 130
   },
   {
    "section": "contact",
    "total": 1,
    "ok": 1,
-   "median_ms": 107
+   "median_ms": 135
   },
   {
    "section": "verify",
    "total": 1,
    "ok": 1,
-   "median_ms": 87
+   "median_ms": 122
   },
   {
    "section": "privacy",
    "total": 1,
    "ok": 1,
-   "median_ms": 249
+   "median_ms": 120
   },
   {
    "section": "terms",
    "total": 1,
    "ok": 1,
-   "median_ms": 170
+   "median_ms": 172
   },
   {
    "section": "refund",
    "total": 1,
    "ok": 1,
-   "median_ms": 163
+   "median_ms": 107
   },
   {
    "section": "llms.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 73
+   "median_ms": 64
   },
   {
    "section": "llms-full.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 172
+   "median_ms": 128
   },
   {
    "section": "party",
    "total": 1,
    "ok": 1,
-   "median_ms": 140
+   "median_ms": 209
   },
   {
    "section": "glossary",
    "total": 1,
    "ok": 1,
-   "median_ms": 245
+   "median_ms": 190
   },
   {
    "section": "colophon",
    "total": 1,
    "ok": 1,
-   "median_ms": 158
+   "median_ms": 192
   },
   {
    "section": "buddha",
    "total": 1,
    "ok": 1,
-   "median_ms": 169
+   "median_ms": 139
   }
  ]
 }
