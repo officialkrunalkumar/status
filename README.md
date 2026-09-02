@@ -18,7 +18,7 @@ reachable during an incident on either.
 
 ```
 GitHub Actions (cron, every 5 min)
-  └─ monitor.py              33 checks in parallel + DNS, TLS, security headers
+  └─ monitor.py              36 checks in parallel + DNS, TLS, security headers
      │                       once a day, also sweeps every URL in the sitemap
      ├─ data/status.json     current snapshot, grouped by section
      ├─ data/history.json    one row per run, full detail, last 36 h
@@ -32,7 +32,7 @@ GitHub Actions (cron, every 5 min)
 
 ## What is checked
 
-Every run probes all 33 targets in parallel (stdlib `ThreadPoolExecutor`), so
+Every run probes all 36 targets in parallel (stdlib `ThreadPoolExecutor`), so
 the whole thing still finishes in a few seconds. Each one retries once after
 5 s, so a transient blip on the runner doesn't raise a false alarm.
 
@@ -41,6 +41,7 @@ the whole thing still finishes in a few seconds. Each one retries once after
 | **Site pages** | home, about, services, projects, research, internships, contact, client-reviews, verify |
 | **Writing & labs** | blog index, one article, labs index, one lab |
 | **Games** | games hub, one canvas game (snake), one terminal game (cmatrix) |
+| **Mayuri assistant** | home page embeds her script, her runtime (`particle-bg.js`), her styles in `main.css` |
 | **Machine-readable** | sitemap.xml, feed.xml (RSS), atom.xml, llms.txt, robots.txt, site.webmanifest |
 | **Static assets** | main.css, boot.js, game-shell.js, games.css, hub.js, header partial, résumé PDF |
 | **Edge & routing** | Vercel origin, `www` → apex, HTTP → HTTPS, 404 route |
@@ -60,6 +61,12 @@ Beyond plain reachability:
   those are checked directly rather than inferred from a game page. If the
   shell 404s every game breaks while every game page still returns 200, which
   no page-level check would ever notice.
+- **Mayuri** — the help-menu assistant docked in the corner of every page has
+  no page or API of her own: `particle-bg.js` builds her at runtime and
+  `main.css` styles her. So she gets three checks of her own — the home page
+  still embeds her script, the script is served and still contains her, and
+  her rules are still in the stylesheet. Any of those can break while every
+  page keeps returning 200.
 - **TLS certificate** — days left, expiry date, issuer. Under 14 days is a
   degraded state.
 - **DNS** — resolution time and the addresses returned.
@@ -91,7 +98,7 @@ level it reached, and closes with a duration when the site recovers.
 
 ## Data layout
 
-History is split in two on purpose. With ~33 checks per run, keeping 30 days of
+History is split in two on purpose. With ~36 checks per run, keeping 30 days of
 per-run detail would grow to megabytes on a page that refetches every minute —
 so detailed rows are kept for 36 h (charts, recent detail) and rolled into
 one row per UTC day for 90 days (uptime percentages, the daily strip).
@@ -110,7 +117,7 @@ history keep their stored values.
 [index.html](index.html) is dependency-free static HTML — no build, no
 framework, no external requests (the favicon and the KS_ mark are inlined), so
 it renders even if everything else is on fire. It shows current state, the four
-uptime windows, response/TLS/DNS/header vitals, all 33 checks grouped by
+uptime windows, response/TLS/DNS/header vitals, all 36 checks grouped by
 section, a 30-day daily strip, a 24-hour response-time chart, the latest
 sitemap sweep and the incident log. Auto-refreshes every minute.
 

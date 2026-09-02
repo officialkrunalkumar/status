@@ -15,7 +15,7 @@ headers, then writes the JSON the status page (index.html) renders:
 
 Splitting history (short, detailed) from daily (long, aggregated) is what
 keeps 90 days of uptime on a page that refetches every minute: the detailed
-rows would otherwise grow to megabytes now that there are ~33 checks per run.
+rows would otherwise grow to megabytes now that there are ~36 checks per run.
 
 Stdlib only — no dependencies, so the Actions run stays fast.
 """
@@ -47,6 +47,7 @@ GROUPS = [
     ("pages", "Site pages"),
     ("content", "Writing & labs"),
     ("games", "Games"),
+    ("mayuri", "Mayuri assistant"),
     ("feeds", "Machine-readable"),
     ("assets", "Static assets"),
     ("infra", "Edge & routing"),
@@ -83,6 +84,21 @@ CHECKS = [
     ("game", "Game — Snake", "games", SITE + "/games/snake", MAJOR, True, None, None),
     ("gameterm", "Game — cmatrix", "games",
      SITE + "/games/cmatrix", MAJOR, True, None, None),
+
+    # Mayuri, the help-menu assistant docked in the corner of every page, has
+    # no page or API of her own: particle-bg.js builds her at runtime and
+    # main.css styles her. Either file breaking takes her off every page at
+    # once while each page keeps returning 200, so the checks go after the
+    # files themselves: the home page still embeds her script, the script is
+    # served and still contains her, and her rules are still in the
+    # stylesheet (whether the stylesheet is served at all is the "css" check
+    # under assets, which is why the styles check is only minor).
+    ("mayurihome", "Mayuri on the home page", "mayuri", SITE + "/",
+     MAJOR, True, None, "/assets/js/particle-bg.js"),
+    ("mayuri", "Mayuri runtime", "mayuri",
+     SITE + "/assets/js/particle-bg.js", MAJOR, True, None, "mayuri-panel"),
+    ("mayuricss", "Mayuri styles", "mayuri",
+     SITE + "/assets/css/main.css", MINOR, True, None, ".mayuri-button"),
 
     ("sitemap", "Sitemap", "feeds", SITE + "/sitemap.xml", MINOR, True, None, "<loc>"),
     ("rss", "RSS feed", "feeds", SITE + "/feed.xml", MINOR, True, None, "<rss"),
