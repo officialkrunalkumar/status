@@ -1,348 +1,172 @@
 {
- "updated": "2026-09-04T10:22:37+00:00",
+ "updated": "2026-09-05T08:35:46+00:00",
  "total": 279,
- "ok": 254,
- "failing": [
-  {
-   "url": "https://krunalkumar.dpdns.org/labs/jwt",
-   "path": "/labs/jwt",
-   "ok": false,
-   "code": null,
-   "ms": 15017
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/labs/url-inspector",
-   "path": "/labs/url-inspector",
-   "ok": false,
-   "code": null,
-   "ms": 15014
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/labs/password",
-   "path": "/labs/password",
-   "ok": false,
-   "code": null,
-   "ms": 15012
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/labs/breach-check",
-   "path": "/labs/breach-check",
-   "ok": false,
-   "code": null,
-   "ms": 15019
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/labs/hacklab",
-   "path": "/labs/hacklab",
-   "ok": false,
-   "code": null,
-   "ms": 15016
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/labs/har-analyzer",
-   "path": "/labs/har-analyzer",
-   "ok": false,
-   "code": null,
-   "ms": 15180
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/labs/memory-strings",
-   "path": "/labs/memory-strings",
-   "ok": false,
-   "code": null,
-   "ms": 15020
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/labs/registry-viewer",
-   "path": "/labs/registry-viewer",
-   "ok": false,
-   "code": null,
-   "ms": 15020
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/games/2048",
-   "path": "/games/2048",
-   "ok": false,
-   "code": null,
-   "ms": 15332
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/games/minesweeper",
-   "path": "/games/minesweeper",
-   "ok": false,
-   "code": null,
-   "ms": 15348
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/games/typing-trainer",
-   "path": "/games/typing-trainer",
-   "ok": false,
-   "code": null,
-   "ms": 7
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/games/moon-buggy",
-   "path": "/games/moon-buggy",
-   "ok": false,
-   "code": null,
-   "ms": 3117
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/games/robots",
-   "path": "/games/robots",
-   "ok": false,
-   "code": null,
-   "ms": 15022
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/games/typespeed",
-   "path": "/games/typespeed",
-   "ok": false,
-   "code": null,
-   "ms": 15144
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/games/boids",
-   "path": "/games/boids",
-   "ok": false,
-   "code": null,
-   "ms": 15018
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/games/chess",
-   "path": "/games/chess",
-   "ok": false,
-   "code": null,
-   "ms": 5112
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/games/carrom",
-   "path": "/games/carrom",
-   "ok": false,
-   "code": null,
-   "ms": 15
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/games/cyber-hygiene",
-   "path": "/games/cyber-hygiene",
-   "ok": false,
-   "code": null,
-   "ms": 15018
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/games/cmatrix",
-   "path": "/games/cmatrix",
-   "ok": false,
-   "code": null,
-   "ms": 15019
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/games/phishing-or-not",
-   "path": "/games/phishing-or-not",
-   "ok": false,
-   "code": null,
-   "ms": 15017
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/games/snakes-ladders",
-   "path": "/games/snakes-ladders",
-   "ok": false,
-   "code": null,
-   "ms": 15027
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/games/hangman",
-   "path": "/games/hangman",
-   "ok": false,
-   "code": null,
-   "ms": 15018
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/labs/csp-playground",
-   "path": "/labs/csp-playground",
-   "ok": false,
-   "code": null,
-   "ms": 6
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/games/assembly-golf",
-   "path": "/games/assembly-golf",
-   "ok": false,
-   "code": null,
-   "ms": 15018
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/games/cache-game",
-   "path": "/games/cache-game",
-   "ok": false,
-   "code": null,
-   "ms": 15017
-  }
- ],
- "median_ms": 82,
+ "ok": 279,
+ "failing": [],
+ "median_ms": 226,
  "slowest": [
   {
-   "url": "https://krunalkumar.dpdns.org/games/minesweeper",
-   "path": "/games/minesweeper",
-   "ok": false,
-   "code": null,
-   "ms": 15348
+   "url": "https://krunalkumar.dpdns.org/labs/compiler",
+   "path": "/labs/compiler",
+   "ok": true,
+   "code": 200,
+   "ms": 457
   },
   {
-   "url": "https://krunalkumar.dpdns.org/games/2048",
-   "path": "/games/2048",
-   "ok": false,
-   "code": null,
-   "ms": 15332
+   "url": "https://krunalkumar.dpdns.org/labs/http-versions",
+   "path": "/labs/http-versions",
+   "ok": true,
+   "code": 200,
+   "ms": 448
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/har-analyzer",
-   "path": "/labs/har-analyzer",
-   "ok": false,
-   "code": null,
-   "ms": 15180
+   "url": "https://krunalkumar.dpdns.org/labs/tcp-congestion",
+   "path": "/labs/tcp-congestion",
+   "ok": true,
+   "code": 200,
+   "ms": 448
   },
   {
-   "url": "https://krunalkumar.dpdns.org/games/typespeed",
-   "path": "/games/typespeed",
-   "ok": false,
-   "code": null,
-   "ms": 15144
+   "url": "https://krunalkumar.dpdns.org/labs/resume-maker",
+   "path": "/labs/resume-maker",
+   "ok": true,
+   "code": 200,
+   "ms": 423
   },
   {
-   "url": "https://krunalkumar.dpdns.org/games/snakes-ladders",
-   "path": "/games/snakes-ladders",
-   "ok": false,
-   "code": null,
-   "ms": 15027
+   "url": "https://krunalkumar.dpdns.org/blog/what-66-games-taught-me-about-software",
+   "path": "/blog/what-66-games-taught-me-about-software",
+   "ok": true,
+   "code": 200,
+   "ms": 401
   }
  ],
  "sections": [
   {
    "section": "labs",
    "total": 112,
-   "ok": 103,
-   "median_ms": 92
+   "ok": 112,
+   "median_ms": 224
   },
   {
    "section": "games",
    "total": 89,
-   "ok": 73,
-   "median_ms": 29
+   "ok": 89,
+   "median_ms": 220
   },
   {
    "section": "blog",
    "total": 60,
    "ok": 60,
-   "median_ms": 146
+   "median_ms": 264
   },
   {
    "section": "home",
    "total": 1,
    "ok": 1,
-   "median_ms": 158
+   "median_ms": 85
   },
   {
    "section": "about",
    "total": 1,
    "ok": 1,
-   "median_ms": 145
+   "median_ms": 172
   },
   {
    "section": "services",
    "total": 1,
    "ok": 1,
-   "median_ms": 137
+   "median_ms": 145
   },
   {
    "section": "projects",
    "total": 1,
    "ok": 1,
-   "median_ms": 130
+   "median_ms": 153
   },
   {
    "section": "research",
    "total": 1,
    "ok": 1,
-   "median_ms": 165
+   "median_ms": 149
   },
   {
    "section": "client-reviews",
    "total": 1,
    "ok": 1,
-   "median_ms": 27
+   "median_ms": 85
   },
   {
    "section": "internships",
    "total": 1,
    "ok": 1,
-   "median_ms": 87
+   "median_ms": 81
   },
   {
    "section": "contact",
    "total": 1,
    "ok": 1,
-   "median_ms": 232
+   "median_ms": 94
   },
   {
    "section": "verify",
    "total": 1,
    "ok": 1,
-   "median_ms": 241
+   "median_ms": 82
   },
   {
    "section": "privacy",
    "total": 1,
    "ok": 1,
-   "median_ms": 222
+   "median_ms": 220
   },
   {
    "section": "terms",
    "total": 1,
    "ok": 1,
-   "median_ms": 241
+   "median_ms": 219
   },
   {
    "section": "refund",
    "total": 1,
    "ok": 1,
-   "median_ms": 221
+   "median_ms": 263
   },
   {
    "section": "llms.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 216
+   "median_ms": 170
   },
   {
    "section": "llms-full.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 256
+   "median_ms": 298
   },
   {
    "section": "party",
    "total": 1,
    "ok": 1,
-   "median_ms": 259
+   "median_ms": 213
   },
   {
    "section": "glossary",
    "total": 1,
    "ok": 1,
-   "median_ms": 264
+   "median_ms": 277
   },
   {
    "section": "colophon",
    "total": 1,
    "ok": 1,
-   "median_ms": 401
+   "median_ms": 201
   },
   {
    "section": "buddha",
    "total": 1,
    "ok": 1,
-   "median_ms": 45
+   "median_ms": 256
   }
  ]
 }
