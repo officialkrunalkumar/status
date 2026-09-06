@@ -1,44 +1,44 @@
 {
- "updated": "2026-09-05T08:35:46+00:00",
+ "updated": "2026-09-06T05:34:10+00:00",
  "total": 279,
  "ok": 279,
  "failing": [],
- "median_ms": 226,
+ "median_ms": 218,
  "slowest": [
   {
-   "url": "https://krunalkumar.dpdns.org/labs/compiler",
-   "path": "/labs/compiler",
+   "url": "https://krunalkumar.dpdns.org/labs/passkeys",
+   "path": "/labs/passkeys",
    "ok": true,
    "code": 200,
-   "ms": 457
+   "ms": 761
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/http-versions",
-   "path": "/labs/http-versions",
+   "url": "https://krunalkumar.dpdns.org/labs/pdf-tools",
+   "path": "/labs/pdf-tools",
    "ok": true,
    "code": 200,
-   "ms": 448
+   "ms": 734
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/tcp-congestion",
-   "path": "/labs/tcp-congestion",
+   "url": "https://krunalkumar.dpdns.org/labs/periodic-table",
+   "path": "/labs/periodic-table",
    "ok": true,
    "code": 200,
-   "ms": 448
+   "ms": 705
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/resume-maker",
-   "path": "/labs/resume-maker",
+   "url": "https://krunalkumar.dpdns.org/labs/phishing-dissector",
+   "path": "/labs/phishing-dissector",
    "ok": true,
    "code": 200,
-   "ms": 423
+   "ms": 684
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/what-66-games-taught-me-about-software",
-   "path": "/blog/what-66-games-taught-me-about-software",
+   "url": "https://krunalkumar.dpdns.org/labs/python",
+   "path": "/labs/python",
    "ok": true,
    "code": 200,
-   "ms": 401
+   "ms": 671
   }
  ],
  "sections": [
@@ -46,127 +46,127 @@
    "section": "labs",
    "total": 112,
    "ok": 112,
-   "median_ms": 224
+   "median_ms": 220
   },
   {
    "section": "games",
    "total": 89,
    "ok": 89,
-   "median_ms": 220
+   "median_ms": 208
   },
   {
    "section": "blog",
    "total": 60,
    "ok": 60,
-   "median_ms": 264
+   "median_ms": 225
   },
   {
    "section": "home",
    "total": 1,
    "ok": 1,
-   "median_ms": 85
+   "median_ms": 99
   },
   {
    "section": "about",
    "total": 1,
    "ok": 1,
-   "median_ms": 172
+   "median_ms": 96
   },
   {
    "section": "services",
    "total": 1,
    "ok": 1,
-   "median_ms": 145
+   "median_ms": 72
   },
   {
    "section": "projects",
    "total": 1,
    "ok": 1,
-   "median_ms": 153
+   "median_ms": 91
   },
   {
    "section": "research",
    "total": 1,
    "ok": 1,
-   "median_ms": 149
+   "median_ms": 70
   },
   {
    "section": "client-reviews",
    "total": 1,
    "ok": 1,
-   "median_ms": 85
+   "median_ms": 82
   },
   {
    "section": "internships",
    "total": 1,
    "ok": 1,
-   "median_ms": 81
+   "median_ms": 87
   },
   {
    "section": "contact",
    "total": 1,
    "ok": 1,
-   "median_ms": 94
+   "median_ms": 85
   },
   {
    "section": "verify",
    "total": 1,
    "ok": 1,
-   "median_ms": 82
+   "median_ms": 96
   },
   {
    "section": "privacy",
    "total": 1,
    "ok": 1,
-   "median_ms": 220
+   "median_ms": 284
   },
   {
    "section": "terms",
    "total": 1,
    "ok": 1,
-   "median_ms": 219
+   "median_ms": 261
   },
   {
    "section": "refund",
    "total": 1,
    "ok": 1,
-   "median_ms": 263
+   "median_ms": 330
   },
   {
    "section": "llms.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 170
+   "median_ms": 460
   },
   {
    "section": "llms-full.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 298
+   "median_ms": 370
   },
   {
    "section": "party",
    "total": 1,
    "ok": 1,
-   "median_ms": 213
+   "median_ms": 179
   },
   {
    "section": "glossary",
    "total": 1,
    "ok": 1,
-   "median_ms": 277
+   "median_ms": 562
   },
   {
    "section": "colophon",
    "total": 1,
    "ok": 1,
-   "median_ms": 201
+   "median_ms": 227
   },
   {
    "section": "buddha",
    "total": 1,
    "ok": 1,
-   "median_ms": 256
+   "median_ms": 225
   }
  ]
 }
