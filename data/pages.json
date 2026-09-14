@@ -1,214 +1,178 @@
 {
- "updated": "2026-09-13T10:39:07+00:00",
+ "updated": "2026-09-14T10:36:58+00:00",
  "total": 289,
- "ok": 284,
- "failing": [
-  {
-   "url": "https://krunalkumar.dpdns.org/blog/how-to-brief-a-security-consultant",
-   "path": "/blog/how-to-brief-a-security-consultant",
-   "ok": false,
-   "code": null,
-   "ms": 15017
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/blog/how-to-read-a-privacy-policy-in-five-minutes",
-   "path": "/blog/how-to-read-a-privacy-policy-in-five-minutes",
-   "ok": false,
-   "code": null,
-   "ms": 15018
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/games/overflow-puzzle",
-   "path": "/games/overflow-puzzle",
-   "ok": false,
-   "code": null,
-   "ms": 15017
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/games/social-engineering",
-   "path": "/games/social-engineering",
-   "ok": false,
-   "code": null,
-   "ms": 15008
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/labs/incident-timeline",
-   "path": "/labs/incident-timeline",
-   "ok": false,
-   "code": null,
-   "ms": 15017
-  }
- ],
- "median_ms": 106,
+ "ok": 289,
+ "failing": [],
+ "median_ms": 25,
  "slowest": [
   {
-   "url": "https://krunalkumar.dpdns.org/blog/how-to-read-a-privacy-policy-in-five-minutes",
-   "path": "/blog/how-to-read-a-privacy-policy-in-five-minutes",
-   "ok": false,
-   "code": null,
-   "ms": 15018
+   "url": "https://krunalkumar.dpdns.org/labs/ssh-keys",
+   "path": "/labs/ssh-keys",
+   "ok": true,
+   "code": 200,
+   "ms": 341
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/how-to-brief-a-security-consultant",
-   "path": "/blog/how-to-brief-a-security-consultant",
-   "ok": false,
-   "code": null,
-   "ms": 15017
+   "url": "https://krunalkumar.dpdns.org/labs/contrast",
+   "path": "/labs/contrast",
+   "ok": true,
+   "code": 200,
+   "ms": 254
   },
   {
-   "url": "https://krunalkumar.dpdns.org/games/overflow-puzzle",
-   "path": "/games/overflow-puzzle",
-   "ok": false,
-   "code": null,
-   "ms": 15017
+   "url": "https://krunalkumar.dpdns.org/labs/sql",
+   "path": "/labs/sql",
+   "ok": true,
+   "code": 200,
+   "ms": 245
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/incident-timeline",
-   "path": "/labs/incident-timeline",
-   "ok": false,
-   "code": null,
-   "ms": 15017
+   "url": "https://krunalkumar.dpdns.org/games/guess-the-algorithm",
+   "path": "/games/guess-the-algorithm",
+   "ok": true,
+   "code": 200,
+   "ms": 227
   },
   {
-   "url": "https://krunalkumar.dpdns.org/games/social-engineering",
-   "path": "/games/social-engineering",
-   "ok": false,
-   "code": null,
-   "ms": 15008
+   "url": "https://krunalkumar.dpdns.org/games/git-quest",
+   "path": "/games/git-quest",
+   "ok": true,
+   "code": 200,
+   "ms": 217
   }
  ],
  "sections": [
   {
    "section": "labs",
    "total": 118,
-   "ok": 117,
-   "median_ms": 145
+   "ok": 118,
+   "median_ms": 24
   },
   {
    "section": "games",
    "total": 92,
-   "ok": 90,
-   "median_ms": 68
+   "ok": 92,
+   "median_ms": 24
   },
   {
    "section": "blog",
    "total": 60,
-   "ok": 58,
-   "median_ms": 142
+   "ok": 60,
+   "median_ms": 36
   },
   {
    "section": "home",
    "total": 1,
    "ok": 1,
-   "median_ms": 169
+   "median_ms": 42
   },
   {
    "section": "about",
    "total": 1,
    "ok": 1,
-   "median_ms": 140
+   "median_ms": 56
   },
   {
    "section": "services",
    "total": 1,
    "ok": 1,
-   "median_ms": 124
+   "median_ms": 24
   },
   {
    "section": "projects",
    "total": 1,
    "ok": 1,
-   "median_ms": 162
+   "median_ms": 40
   },
   {
    "section": "research",
    "total": 1,
    "ok": 1,
-   "median_ms": 207
+   "median_ms": 28
   },
   {
    "section": "client-reviews",
    "total": 1,
    "ok": 1,
-   "median_ms": 89
+   "median_ms": 20
   },
   {
    "section": "internships",
    "total": 1,
    "ok": 1,
-   "median_ms": 89
+   "median_ms": 20
   },
   {
    "section": "contact",
    "total": 1,
    "ok": 1,
-   "median_ms": 70
+   "median_ms": 20
   },
   {
    "section": "verify",
    "total": 1,
    "ok": 1,
-   "median_ms": 61
+   "median_ms": 23
   },
   {
    "section": "privacy",
    "total": 1,
    "ok": 1,
-   "median_ms": 43
+   "median_ms": 127
   },
   {
    "section": "terms",
    "total": 1,
    "ok": 1,
-   "median_ms": 44
+   "median_ms": 26
   },
   {
    "section": "refund",
    "total": 1,
    "ok": 1,
-   "median_ms": 52
+   "median_ms": 28
   },
   {
    "section": "llms.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 41
+   "median_ms": 17
   },
   {
    "section": "llms-full.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 224
+   "median_ms": 18
   },
   {
    "section": "party",
    "total": 1,
    "ok": 1,
-   "median_ms": 30
+   "median_ms": 22
   },
   {
    "section": "glossary",
    "total": 1,
    "ok": 1,
-   "median_ms": 28
+   "median_ms": 73
   },
   {
    "section": "colophon",
    "total": 1,
    "ok": 1,
-   "median_ms": 28
+   "median_ms": 123
   },
   {
    "section": "changelog",
    "total": 1,
    "ok": 1,
-   "median_ms": 85
+   "median_ms": 24
   },
   {
    "section": "buddha",
    "total": 1,
    "ok": 1,
-   "median_ms": 30
+   "median_ms": 28
   }
  ]
 }
