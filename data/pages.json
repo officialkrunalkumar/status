@@ -1,44 +1,44 @@
 {
- "updated": "2026-09-14T10:36:58+00:00",
+ "updated": "2026-09-15T06:57:04+00:00",
  "total": 289,
  "ok": 289,
  "failing": [],
- "median_ms": 25,
+ "median_ms": 145,
  "slowest": [
   {
-   "url": "https://krunalkumar.dpdns.org/labs/ssh-keys",
-   "path": "/labs/ssh-keys",
+   "url": "https://krunalkumar.dpdns.org/blog/india-it-act-explained",
+   "path": "/blog/india-it-act-explained",
    "ok": true,
    "code": 200,
-   "ms": 341
+   "ms": 393
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/contrast",
-   "path": "/labs/contrast",
+   "url": "https://krunalkumar.dpdns.org/blog/security-compliance-explained",
+   "path": "/blog/security-compliance-explained",
    "ok": true,
    "code": 200,
-   "ms": 254
+   "ms": 283
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/sql",
-   "path": "/labs/sql",
+   "url": "https://krunalkumar.dpdns.org/blog/the-real-cost-of-a-manual-process",
+   "path": "/blog/the-real-cost-of-a-manual-process",
    "ok": true,
    "code": 200,
-   "ms": 245
+   "ms": 279
   },
   {
-   "url": "https://krunalkumar.dpdns.org/games/guess-the-algorithm",
-   "path": "/games/guess-the-algorithm",
+   "url": "https://krunalkumar.dpdns.org/blog/the-mentee-mistakes-that-cost-the-most-time",
+   "path": "/blog/the-mentee-mistakes-that-cost-the-most-time",
    "ok": true,
    "code": 200,
-   "ms": 227
+   "ms": 261
   },
   {
-   "url": "https://krunalkumar.dpdns.org/games/git-quest",
-   "path": "/games/git-quest",
+   "url": "https://krunalkumar.dpdns.org/blog/which-ai-tool-for-which-job",
+   "path": "/blog/which-ai-tool-for-which-job",
    "ok": true,
    "code": 200,
-   "ms": 217
+   "ms": 260
   }
  ],
  "sections": [
@@ -46,133 +46,133 @@
    "section": "labs",
    "total": 118,
    "ok": 118,
-   "median_ms": 24
+   "median_ms": 148
   },
   {
    "section": "games",
    "total": 92,
    "ok": 92,
-   "median_ms": 24
+   "median_ms": 138
   },
   {
    "section": "blog",
    "total": 60,
    "ok": 60,
-   "median_ms": 36
+   "median_ms": 162
   },
   {
    "section": "home",
    "total": 1,
    "ok": 1,
-   "median_ms": 42
+   "median_ms": 70
   },
   {
    "section": "about",
    "total": 1,
    "ok": 1,
-   "median_ms": 56
+   "median_ms": 73
   },
   {
    "section": "services",
    "total": 1,
    "ok": 1,
-   "median_ms": 24
+   "median_ms": 68
   },
   {
    "section": "projects",
    "total": 1,
    "ok": 1,
-   "median_ms": 40
+   "median_ms": 68
   },
   {
    "section": "research",
    "total": 1,
    "ok": 1,
-   "median_ms": 28
+   "median_ms": 67
   },
   {
    "section": "client-reviews",
    "total": 1,
    "ok": 1,
-   "median_ms": 20
+   "median_ms": 69
   },
   {
    "section": "internships",
    "total": 1,
    "ok": 1,
-   "median_ms": 20
+   "median_ms": 72
   },
   {
    "section": "contact",
    "total": 1,
    "ok": 1,
-   "median_ms": 20
+   "median_ms": 69
   },
   {
    "section": "verify",
    "total": 1,
    "ok": 1,
-   "median_ms": 23
+   "median_ms": 71
   },
   {
    "section": "privacy",
    "total": 1,
    "ok": 1,
-   "median_ms": 127
+   "median_ms": 159
   },
   {
    "section": "terms",
    "total": 1,
    "ok": 1,
-   "median_ms": 26
+   "median_ms": 139
   },
   {
    "section": "refund",
    "total": 1,
    "ok": 1,
-   "median_ms": 28
+   "median_ms": 118
   },
   {
    "section": "llms.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 17
+   "median_ms": 71
   },
   {
    "section": "llms-full.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 18
+   "median_ms": 162
   },
   {
    "section": "party",
    "total": 1,
    "ok": 1,
-   "median_ms": 22
+   "median_ms": 120
   },
   {
    "section": "glossary",
    "total": 1,
    "ok": 1,
-   "median_ms": 73
+   "median_ms": 214
   },
   {
    "section": "colophon",
    "total": 1,
    "ok": 1,
-   "median_ms": 123
+   "median_ms": 139
   },
   {
    "section": "changelog",
    "total": 1,
    "ok": 1,
-   "median_ms": 24
+   "median_ms": 175
   },
   {
    "section": "buddha",
    "total": 1,
    "ok": 1,
-   "median_ms": 28
+   "median_ms": 183
   }
  ]
 }
