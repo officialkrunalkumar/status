@@ -1,178 +1,242 @@
 {
- "updated": "2026-09-17T05:29:45+00:00",
+ "updated": "2026-09-18T04:55:18+00:00",
  "total": 289,
- "ok": 289,
- "failing": [],
- "median_ms": 113,
+ "ok": 280,
+ "failing": [
+  {
+   "url": "https://krunalkumar.dpdns.org/games/which-attack",
+   "path": "/games/which-attack",
+   "ok": false,
+   "code": null,
+   "ms": 15018
+  },
+  {
+   "url": "https://krunalkumar.dpdns.org/games/asteroids",
+   "path": "/games/asteroids",
+   "ok": false,
+   "code": null,
+   "ms": 15019
+  },
+  {
+   "url": "https://krunalkumar.dpdns.org/games/tty-solitaire",
+   "path": "/games/tty-solitaire",
+   "ok": false,
+   "code": null,
+   "ms": 15018
+  },
+  {
+   "url": "https://krunalkumar.dpdns.org/labs/indian-ids",
+   "path": "/labs/indian-ids",
+   "ok": false,
+   "code": null,
+   "ms": 15026
+  },
+  {
+   "url": "https://krunalkumar.dpdns.org/labs/rainbow-tables",
+   "path": "/labs/rainbow-tables",
+   "ok": false,
+   "code": null,
+   "ms": 15018
+  },
+  {
+   "url": "https://krunalkumar.dpdns.org/labs/timezones",
+   "path": "/labs/timezones",
+   "ok": false,
+   "code": null,
+   "ms": 15019
+  },
+  {
+   "url": "https://krunalkumar.dpdns.org/blog/the-password-advice-that-stopped-being-true",
+   "path": "/blog/the-password-advice-that-stopped-being-true",
+   "ok": false,
+   "code": null,
+   "ms": 15006
+  },
+  {
+   "url": "https://krunalkumar.dpdns.org/games/assembly-golf",
+   "path": "/games/assembly-golf",
+   "ok": false,
+   "code": null,
+   "ms": 15018
+  },
+  {
+   "url": "https://krunalkumar.dpdns.org/blog/writing-comments-that-survive",
+   "path": "/blog/writing-comments-that-survive",
+   "ok": false,
+   "code": null,
+   "ms": 15005
+  }
+ ],
+ "median_ms": 116,
  "slowest": [
   {
-   "url": "https://krunalkumar.dpdns.org/blog/how-to-stand-out-in-an-internship-interview",
-   "path": "/blog/how-to-stand-out-in-an-internship-interview",
-   "ok": true,
-   "code": 200,
-   "ms": 2745
+   "url": "https://krunalkumar.dpdns.org/labs/indian-ids",
+   "path": "/labs/indian-ids",
+   "ok": false,
+   "code": null,
+   "ms": 15026
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/what-running-internship-cohorts-taught-me-about-mentorship",
-   "path": "/blog/what-running-internship-cohorts-taught-me-about-mentorship",
-   "ok": true,
-   "code": 200,
-   "ms": 2738
+   "url": "https://krunalkumar.dpdns.org/games/asteroids",
+   "path": "/games/asteroids",
+   "ok": false,
+   "code": null,
+   "ms": 15019
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/smart-feedback-how-to-give-and-receive-it",
-   "path": "/blog/smart-feedback-how-to-give-and-receive-it",
-   "ok": true,
-   "code": 200,
-   "ms": 2721
+   "url": "https://krunalkumar.dpdns.org/labs/timezones",
+   "path": "/labs/timezones",
+   "ok": false,
+   "code": null,
+   "ms": 15019
   },
   {
-   "url": "https://krunalkumar.dpdns.org/client-reviews",
-   "path": "/client-reviews",
-   "ok": true,
-   "code": 200,
-   "ms": 2679
+   "url": "https://krunalkumar.dpdns.org/games/which-attack",
+   "path": "/games/which-attack",
+   "ok": false,
+   "code": null,
+   "ms": 15018
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/automating-email-replies-with-n8n",
-   "path": "/blog/automating-email-replies-with-n8n",
-   "ok": true,
-   "code": 200,
-   "ms": 2663
+   "url": "https://krunalkumar.dpdns.org/games/tty-solitaire",
+   "path": "/games/tty-solitaire",
+   "ok": false,
+   "code": null,
+   "ms": 15018
   }
  ],
  "sections": [
   {
    "section": "labs",
    "total": 118,
-   "ok": 118,
-   "median_ms": 164
+   "ok": 115,
+   "median_ms": 134
   },
   {
    "section": "games",
    "total": 92,
-   "ok": 92,
-   "median_ms": 83
+   "ok": 88,
+   "median_ms": 45
   },
   {
    "section": "blog",
    "total": 60,
-   "ok": 60,
-   "median_ms": 139
+   "ok": 58,
+   "median_ms": 129
   },
   {
    "section": "home",
    "total": 1,
    "ok": 1,
-   "median_ms": 2445
+   "median_ms": 46
   },
   {
    "section": "about",
    "total": 1,
    "ok": 1,
-   "median_ms": 2449
+   "median_ms": 26
   },
   {
    "section": "services",
    "total": 1,
    "ok": 1,
-   "median_ms": 2434
+   "median_ms": 133
   },
   {
    "section": "projects",
    "total": 1,
    "ok": 1,
-   "median_ms": 2428
+   "median_ms": 36
   },
   {
    "section": "research",
    "total": 1,
    "ok": 1,
-   "median_ms": 2437
+   "median_ms": 28
   },
   {
    "section": "client-reviews",
    "total": 1,
    "ok": 1,
-   "median_ms": 2679
+   "median_ms": 92
   },
   {
    "section": "internships",
    "total": 1,
    "ok": 1,
-   "median_ms": 20
+   "median_ms": 76
   },
   {
    "section": "contact",
    "total": 1,
    "ok": 1,
-   "median_ms": 32
+   "median_ms": 77
   },
   {
    "section": "verify",
    "total": 1,
    "ok": 1,
-   "median_ms": 41
+   "median_ms": 120
   },
   {
    "section": "privacy",
    "total": 1,
    "ok": 1,
-   "median_ms": 102
+   "median_ms": 56
   },
   {
    "section": "terms",
    "total": 1,
    "ok": 1,
-   "median_ms": 98
+   "median_ms": 48
   },
   {
    "section": "refund",
    "total": 1,
    "ok": 1,
-   "median_ms": 61
+   "median_ms": 162
   },
   {
    "section": "llms.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 96
+   "median_ms": 158
   },
   {
    "section": "llms-full.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 45
+   "median_ms": 24
   },
   {
    "section": "party",
    "total": 1,
    "ok": 1,
-   "median_ms": 1811
+   "median_ms": 152
   },
   {
    "section": "glossary",
    "total": 1,
    "ok": 1,
-   "median_ms": 2485
+   "median_ms": 28
   },
   {
    "section": "colophon",
    "total": 1,
    "ok": 1,
-   "median_ms": 52
+   "median_ms": 146
   },
   {
    "section": "changelog",
    "total": 1,
    "ok": 1,
-   "median_ms": 2497
+   "median_ms": 147
   },
   {
    "section": "buddha",
    "total": 1,
    "ok": 1,
-   "median_ms": 2478
+   "median_ms": 156
   }
  ]
 }
