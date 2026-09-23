@@ -1,44 +1,44 @@
 {
- "updated": "2026-09-22T18:06:53+00:00",
+ "updated": "2026-09-23T17:29:19+00:00",
  "total": 289,
  "ok": 289,
  "failing": [],
- "median_ms": 99,
+ "median_ms": 93,
  "slowest": [
   {
-   "url": "https://krunalkumar.dpdns.org/blog/what-happens-after-we-die",
-   "path": "/blog/what-happens-after-we-die",
+   "url": "https://krunalkumar.dpdns.org/games/aquarium",
+   "path": "/games/aquarium",
    "ok": true,
    "code": 200,
-   "ms": 583
+   "ms": 419
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/tls-handshake",
-   "path": "/labs/tls-handshake",
+   "url": "https://krunalkumar.dpdns.org/labs/log-analyser",
+   "path": "/labs/log-analyser",
    "ok": true,
    "code": 200,
-   "ms": 463
+   "ms": 366
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/which-ai-tool-for-which-job",
-   "path": "/blog/which-ai-tool-for-which-job",
+   "url": "https://krunalkumar.dpdns.org/blog/the-real-cost-of-a-manual-process",
+   "path": "/blog/the-real-cost-of-a-manual-process",
    "ok": true,
    "code": 200,
-   "ms": 426
+   "ms": 311
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/cipher",
-   "path": "/labs/cipher",
+   "url": "https://krunalkumar.dpdns.org/blog/types-of-love-and-choosing-a-life-partner",
+   "path": "/blog/types-of-love-and-choosing-a-life-partner",
    "ok": true,
    "code": 200,
-   "ms": 398
+   "ms": 311
   },
   {
-   "url": "https://krunalkumar.dpdns.org/games/word-of-the-day",
-   "path": "/games/word-of-the-day",
+   "url": "https://krunalkumar.dpdns.org/blog/digital-arrest-scam-explained",
+   "path": "/blog/digital-arrest-scam-explained",
    "ok": true,
    "code": 200,
-   "ms": 391
+   "ms": 305
   }
  ],
  "sections": [
@@ -46,133 +46,133 @@
    "section": "labs",
    "total": 118,
    "ok": 118,
-   "median_ms": 98
+   "median_ms": 93
   },
   {
    "section": "games",
    "total": 92,
    "ok": 92,
-   "median_ms": 97
+   "median_ms": 93
   },
   {
    "section": "blog",
    "total": 60,
    "ok": 60,
-   "median_ms": 157
+   "median_ms": 93
   },
   {
    "section": "home",
    "total": 1,
    "ok": 1,
-   "median_ms": 308
+   "median_ms": 86
   },
   {
    "section": "about",
    "total": 1,
    "ok": 1,
-   "median_ms": 286
+   "median_ms": 86
   },
   {
    "section": "services",
    "total": 1,
    "ok": 1,
-   "median_ms": 278
+   "median_ms": 91
   },
   {
    "section": "projects",
    "total": 1,
    "ok": 1,
-   "median_ms": 312
+   "median_ms": 133
   },
   {
    "section": "research",
    "total": 1,
    "ok": 1,
-   "median_ms": 281
+   "median_ms": 99
   },
   {
    "section": "client-reviews",
    "total": 1,
    "ok": 1,
-   "median_ms": 97
+   "median_ms": 93
   },
   {
    "section": "internships",
    "total": 1,
    "ok": 1,
-   "median_ms": 72
+   "median_ms": 86
   },
   {
    "section": "contact",
    "total": 1,
    "ok": 1,
-   "median_ms": 58
+   "median_ms": 95
   },
   {
    "section": "verify",
    "total": 1,
    "ok": 1,
-   "median_ms": 73
+   "median_ms": 99
   },
   {
    "section": "privacy",
    "total": 1,
    "ok": 1,
-   "median_ms": 29
+   "median_ms": 91
   },
   {
    "section": "terms",
    "total": 1,
    "ok": 1,
-   "median_ms": 91
+   "median_ms": 93
   },
   {
    "section": "refund",
    "total": 1,
    "ok": 1,
-   "median_ms": 91
+   "median_ms": 179
   },
   {
    "section": "llms.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 77
+   "median_ms": 85
   },
   {
    "section": "llms-full.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 78
+   "median_ms": 92
   },
   {
    "section": "party",
    "total": 1,
    "ok": 1,
-   "median_ms": 95
+   "median_ms": 101
   },
   {
    "section": "glossary",
    "total": 1,
    "ok": 1,
-   "median_ms": 65
+   "median_ms": 88
   },
   {
    "section": "colophon",
    "total": 1,
    "ok": 1,
-   "median_ms": 27
+   "median_ms": 177
   },
   {
    "section": "changelog",
    "total": 1,
    "ok": 1,
-   "median_ms": 20
+   "median_ms": 87
   },
   {
    "section": "buddha",
    "total": 1,
    "ok": 1,
-   "median_ms": 174
+   "median_ms": 86
   }
  ]
 }
