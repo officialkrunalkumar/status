@@ -1,44 +1,44 @@
 {
- "updated": "2026-09-23T17:29:19+00:00",
+ "updated": "2026-09-24T17:23:12+00:00",
  "total": 289,
  "ok": 289,
  "failing": [],
- "median_ms": 93,
+ "median_ms": 96,
  "slowest": [
   {
-   "url": "https://krunalkumar.dpdns.org/games/aquarium",
-   "path": "/games/aquarium",
+   "url": "https://krunalkumar.dpdns.org/labs/pcap-analyzer",
+   "path": "/labs/pcap-analyzer",
    "ok": true,
    "code": 200,
-   "ms": 419
+   "ms": 535
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/log-analyser",
-   "path": "/labs/log-analyser",
+   "url": "https://krunalkumar.dpdns.org/labs/memory-strings",
+   "path": "/labs/memory-strings",
    "ok": true,
    "code": 200,
-   "ms": 366
+   "ms": 527
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/the-real-cost-of-a-manual-process",
-   "path": "/blog/the-real-cost-of-a-manual-process",
+   "url": "https://krunalkumar.dpdns.org/labs/archive-inspector",
+   "path": "/labs/archive-inspector",
    "ok": true,
    "code": 200,
-   "ms": 311
+   "ms": 521
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/types-of-love-and-choosing-a-life-partner",
-   "path": "/blog/types-of-love-and-choosing-a-life-partner",
+   "url": "https://krunalkumar.dpdns.org/labs/registry-viewer",
+   "path": "/labs/registry-viewer",
    "ok": true,
    "code": 200,
-   "ms": 311
+   "ms": 502
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/digital-arrest-scam-explained",
-   "path": "/blog/digital-arrest-scam-explained",
+   "url": "https://krunalkumar.dpdns.org/labs/salary-breakdown",
+   "path": "/labs/salary-breakdown",
    "ok": true,
    "code": 200,
-   "ms": 305
+   "ms": 501
   }
  ],
  "sections": [
@@ -46,133 +46,133 @@
    "section": "labs",
    "total": 118,
    "ok": 118,
-   "median_ms": 93
+   "median_ms": 135
   },
   {
    "section": "games",
    "total": 92,
    "ok": 92,
-   "median_ms": 93
+   "median_ms": 44
   },
   {
    "section": "blog",
    "total": 60,
    "ok": 60,
-   "median_ms": 93
+   "median_ms": 150
   },
   {
    "section": "home",
    "total": 1,
    "ok": 1,
-   "median_ms": 86
+   "median_ms": 243
   },
   {
    "section": "about",
    "total": 1,
    "ok": 1,
-   "median_ms": 86
+   "median_ms": 191
   },
   {
    "section": "services",
    "total": 1,
    "ok": 1,
-   "median_ms": 91
+   "median_ms": 176
   },
   {
    "section": "projects",
    "total": 1,
    "ok": 1,
-   "median_ms": 133
+   "median_ms": 140
   },
   {
    "section": "research",
    "total": 1,
    "ok": 1,
-   "median_ms": 99
+   "median_ms": 164
   },
   {
    "section": "client-reviews",
    "total": 1,
    "ok": 1,
-   "median_ms": 93
+   "median_ms": 194
   },
   {
    "section": "internships",
    "total": 1,
    "ok": 1,
-   "median_ms": 86
+   "median_ms": 40
   },
   {
    "section": "contact",
    "total": 1,
    "ok": 1,
-   "median_ms": 95
+   "median_ms": 163
   },
   {
    "section": "verify",
    "total": 1,
    "ok": 1,
-   "median_ms": 99
+   "median_ms": 195
   },
   {
    "section": "privacy",
    "total": 1,
    "ok": 1,
-   "median_ms": 91
+   "median_ms": 184
   },
   {
    "section": "terms",
    "total": 1,
    "ok": 1,
-   "median_ms": 93
+   "median_ms": 157
   },
   {
    "section": "refund",
    "total": 1,
    "ok": 1,
-   "median_ms": 179
+   "median_ms": 149
   },
   {
    "section": "llms.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 85
+   "median_ms": 141
   },
   {
    "section": "llms-full.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 92
+   "median_ms": 155
   },
   {
    "section": "party",
    "total": 1,
    "ok": 1,
-   "median_ms": 101
+   "median_ms": 44
   },
   {
    "section": "glossary",
    "total": 1,
    "ok": 1,
-   "median_ms": 88
+   "median_ms": 187
   },
   {
    "section": "colophon",
    "total": 1,
    "ok": 1,
-   "median_ms": 177
+   "median_ms": 196
   },
   {
    "section": "changelog",
    "total": 1,
    "ok": 1,
-   "median_ms": 87
+   "median_ms": 165
   },
   {
    "section": "buddha",
    "total": 1,
    "ok": 1,
-   "median_ms": 86
+   "median_ms": 156
   }
  ]
 }
