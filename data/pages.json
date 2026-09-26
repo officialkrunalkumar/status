@@ -1,44 +1,44 @@
 {
- "updated": "2026-09-25T17:34:46+00:00",
+ "updated": "2026-09-26T16:40:31+00:00",
  "total": 289,
  "ok": 289,
  "failing": [],
- "median_ms": 203,
+ "median_ms": 79,
  "slowest": [
   {
-   "url": "https://krunalkumar.dpdns.org/blog/n8n-make-or-zapier-an-honest-comparison",
-   "path": "/blog/n8n-make-or-zapier-an-honest-comparison",
+   "url": "https://krunalkumar.dpdns.org/blog/automating-email-replies-with-n8n",
+   "path": "/blog/automating-email-replies-with-n8n",
    "ok": true,
    "code": 200,
-   "ms": 835
+   "ms": 268
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/cpp",
-   "path": "/labs/cpp",
+   "url": "https://krunalkumar.dpdns.org/glossary",
+   "path": "/glossary",
    "ok": true,
    "code": 200,
-   "ms": 778
+   "ms": 262
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/the-interview-questions-i-ask",
-   "path": "/blog/the-interview-questions-i-ask",
+   "url": "https://krunalkumar.dpdns.org/labs/compiler",
+   "path": "/labs/compiler",
    "ok": true,
    "code": 200,
-   "ms": 771
+   "ms": 256
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/the-mentee-mistakes-that-cost-the-most-time",
-   "path": "/blog/the-mentee-mistakes-that-cost-the-most-time",
+   "url": "https://krunalkumar.dpdns.org/labs/ansi-escapes",
+   "path": "/labs/ansi-escapes",
    "ok": true,
    "code": 200,
-   "ms": 769
+   "ms": 245
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/qr",
-   "path": "/labs/qr",
+   "url": "https://krunalkumar.dpdns.org/blog/first-week-of-an-automation-engagement",
+   "path": "/blog/first-week-of-an-automation-engagement",
    "ok": true,
    "code": 200,
-   "ms": 731
+   "ms": 236
   }
  ],
  "sections": [
@@ -46,133 +46,133 @@
    "section": "labs",
    "total": 118,
    "ok": 118,
-   "median_ms": 225
+   "median_ms": 79
   },
   {
    "section": "games",
    "total": 92,
    "ok": 92,
-   "median_ms": 192
+   "median_ms": 78
   },
   {
    "section": "blog",
    "total": 60,
    "ok": 60,
-   "median_ms": 226
+   "median_ms": 87
   },
   {
    "section": "home",
    "total": 1,
    "ok": 1,
-   "median_ms": 130
+   "median_ms": 191
   },
   {
    "section": "about",
    "total": 1,
    "ok": 1,
-   "median_ms": 129
+   "median_ms": 219
   },
   {
    "section": "services",
    "total": 1,
    "ok": 1,
-   "median_ms": 105
+   "median_ms": 166
   },
   {
    "section": "projects",
    "total": 1,
    "ok": 1,
-   "median_ms": 90
+   "median_ms": 159
   },
   {
    "section": "research",
    "total": 1,
    "ok": 1,
-   "median_ms": 106
+   "median_ms": 168
   },
   {
    "section": "client-reviews",
    "total": 1,
    "ok": 1,
-   "median_ms": 56
+   "median_ms": 75
   },
   {
    "section": "internships",
    "total": 1,
    "ok": 1,
-   "median_ms": 56
+   "median_ms": 77
   },
   {
    "section": "contact",
    "total": 1,
    "ok": 1,
-   "median_ms": 54
+   "median_ms": 76
   },
   {
    "section": "verify",
    "total": 1,
    "ok": 1,
-   "median_ms": 52
+   "median_ms": 69
   },
   {
    "section": "privacy",
    "total": 1,
    "ok": 1,
-   "median_ms": 160
+   "median_ms": 78
   },
   {
    "section": "terms",
    "total": 1,
    "ok": 1,
-   "median_ms": 239
+   "median_ms": 74
   },
   {
    "section": "refund",
    "total": 1,
    "ok": 1,
-   "median_ms": 232
+   "median_ms": 72
   },
   {
    "section": "llms.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 97
+   "median_ms": 74
   },
   {
    "section": "llms-full.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 288
+   "median_ms": 80
   },
   {
    "section": "party",
    "total": 1,
    "ok": 1,
-   "median_ms": 182
+   "median_ms": 93
   },
   {
    "section": "glossary",
    "total": 1,
    "ok": 1,
-   "median_ms": 255
+   "median_ms": 262
   },
   {
    "section": "colophon",
    "total": 1,
    "ok": 1,
-   "median_ms": 185
+   "median_ms": 87
   },
   {
    "section": "changelog",
    "total": 1,
    "ok": 1,
-   "median_ms": 240
+   "median_ms": 81
   },
   {
    "section": "buddha",
    "total": 1,
    "ok": 1,
-   "median_ms": 210
+   "median_ms": 71
   }
  ]
 }
