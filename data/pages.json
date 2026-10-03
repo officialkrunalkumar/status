@@ -1,44 +1,44 @@
 {
- "updated": "2026-10-02T13:05:54+00:00",
+ "updated": "2026-10-03T12:09:57+00:00",
  "total": 289,
  "ok": 289,
  "failing": [],
- "median_ms": 124,
+ "median_ms": 106,
  "slowest": [
   {
-   "url": "https://krunalkumar.dpdns.org/refund",
-   "path": "/refund",
+   "url": "https://krunalkumar.dpdns.org/llms-full.txt",
+   "path": "/llms-full.txt",
    "ok": true,
    "code": 200,
-   "ms": 489
+   "ms": 455
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/threat-model",
-   "path": "/labs/threat-model",
+   "url": "https://krunalkumar.dpdns.org/games/arithmetic",
+   "path": "/games/arithmetic",
    "ok": true,
    "code": 200,
-   "ms": 439
+   "ms": 421
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/digital-arrest-scam-explained",
-   "path": "/blog/digital-arrest-scam-explained",
-   "ok": true,
-   "code": 200,
-   "ms": 428
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/blog/what-deepfake-detection-can-and-cannot-do",
-   "path": "/blog/what-deepfake-detection-can-and-cannot-do",
+   "url": "https://krunalkumar.dpdns.org/verify",
+   "path": "/verify",
    "ok": true,
    "code": 200,
    "ms": 417
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/what-consent-actually-means-under-dpdp",
-   "path": "/blog/what-consent-actually-means-under-dpdp",
+   "url": "https://krunalkumar.dpdns.org/games/asciijump",
+   "path": "/games/asciijump",
    "ok": true,
    "code": 200,
-   "ms": 408
+   "ms": 395
+  },
+  {
+   "url": "https://krunalkumar.dpdns.org/contact",
+   "path": "/contact",
+   "ok": true,
+   "code": 200,
+   "ms": 393
   }
  ],
  "sections": [
@@ -46,133 +46,133 @@
    "section": "labs",
    "total": 118,
    "ok": 118,
-   "median_ms": 132
+   "median_ms": 111
   },
   {
    "section": "games",
    "total": 92,
    "ok": 92,
-   "median_ms": 94
+   "median_ms": 49
   },
   {
    "section": "blog",
    "total": 60,
    "ok": 60,
-   "median_ms": 171
+   "median_ms": 115
   },
   {
    "section": "home",
    "total": 1,
    "ok": 1,
-   "median_ms": 361
+   "median_ms": 191
   },
   {
    "section": "about",
    "total": 1,
    "ok": 1,
-   "median_ms": 326
+   "median_ms": 189
   },
   {
    "section": "services",
    "total": 1,
    "ok": 1,
-   "median_ms": 361
+   "median_ms": 147
   },
   {
    "section": "projects",
    "total": 1,
    "ok": 1,
-   "median_ms": 331
+   "median_ms": 142
   },
   {
    "section": "research",
    "total": 1,
    "ok": 1,
-   "median_ms": 332
+   "median_ms": 146
   },
   {
    "section": "client-reviews",
    "total": 1,
    "ok": 1,
-   "median_ms": 173
+   "median_ms": 123
   },
   {
    "section": "internships",
    "total": 1,
    "ok": 1,
-   "median_ms": 175
+   "median_ms": 81
   },
   {
    "section": "contact",
    "total": 1,
    "ok": 1,
-   "median_ms": 21
+   "median_ms": 393
   },
   {
    "section": "verify",
    "total": 1,
    "ok": 1,
-   "median_ms": 27
+   "median_ms": 417
   },
   {
    "section": "privacy",
    "total": 1,
    "ok": 1,
-   "median_ms": 29
+   "median_ms": 389
   },
   {
    "section": "terms",
    "total": 1,
    "ok": 1,
-   "median_ms": 368
+   "median_ms": 364
   },
   {
    "section": "refund",
    "total": 1,
    "ok": 1,
-   "median_ms": 489
+   "median_ms": 375
   },
   {
    "section": "llms.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 292
+   "median_ms": 367
   },
   {
    "section": "llms-full.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 323
+   "median_ms": 455
   },
   {
    "section": "party",
    "total": 1,
    "ok": 1,
-   "median_ms": 34
+   "median_ms": 125
   },
   {
    "section": "glossary",
    "total": 1,
    "ok": 1,
-   "median_ms": 122
+   "median_ms": 150
   },
   {
    "section": "colophon",
    "total": 1,
    "ok": 1,
-   "median_ms": 67
+   "median_ms": 171
   },
   {
    "section": "changelog",
    "total": 1,
    "ok": 1,
-   "median_ms": 23
+   "median_ms": 141
   },
   {
    "section": "buddha",
    "total": 1,
    "ok": 1,
-   "median_ms": 41
+   "median_ms": 127
   }
  ]
 }
