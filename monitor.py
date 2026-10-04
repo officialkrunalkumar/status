@@ -20,6 +20,7 @@ rows would otherwise grow to megabytes now that there are ~36 checks per run.
 Stdlib only — no dependencies, so the Actions run stays fast.
 """
 
+import argparse
 import json
 import re
 import socket
@@ -164,6 +165,20 @@ SWEEP_HOURS = 20      # re-sweep the whole sitemap at most this often
 CERT_WARN_DAYS = 14   # "degraded" when the certificate expires sooner
 UA = "status-monitor (+https://github.com/officialkrunalkumar/status)"
 DATA = Path(__file__).resolve().parent / "data"
+
+
+def parse_args(argv=None):
+    """Command-line options for local runs and debugging."""
+    parser = argparse.ArgumentParser(description="Monitor the site and write status JSON files.")
+    parser.add_argument("--check", dest="checks", action="append", default=None,
+                        help="Run only selected check keys; repeat for multiple keys.")
+    parser.add_argument("--dry-run", action="store_true",
+                        help="Collect metrics without writing JSON output files.")
+    parser.add_argument("--max-workers", type=int, default=WORKERS,
+                        help="Override the worker count used for parallel probes.")
+    parser.add_argument("--maintenance", action="store_true",
+                        help="Mark the run as a scheduled maintenance window.")
+    return parser.parse_args(argv)
 
 
 class NoRedirect(urllib.request.HTTPRedirectHandler):
@@ -453,9 +468,32 @@ def write(name, obj, compact=False):
     (DATA / name).write_text(text, encoding="utf-8")
 
 
-def main():
+def evaluate_overall(results, cert_days, maintenance_mode=False):
+    """Return the overall state along with the failing check keys."""
+    failing = [k for k, v in results.items() if not v["ok"]]
+    cert_low = cert_days is not None and cert_days < CERT_WARN_DAYS
+    if maintenance_mode:
+        if not results.get("home", {}).get("ok", False):
+            return "down", failing
+        return "degraded", failing
+    if not results["home"]["ok"]:
+        return "down", failing
+    if failing or cert_low:
+        return "degraded", failing
+    return "up", failing
+
+
+def main(argv=None):
+    args = parse_args(argv)
     now = datetime.now(timezone.utc)
     DATA.mkdir(exist_ok=True)
+
+    selected = CHECKS
+    if args.checks:
+        wanted = set(args.checks)
+        selected = [spec for spec in CHECKS if spec[0] in wanted]
+        if not selected:
+            raise SystemExit("No checks matched: " + ", ".join(args.checks))
 
     def run_one(spec):
         key, label, group, url, sev, follow, codes, contains = spec
@@ -465,10 +503,11 @@ def main():
                      "note": r["note"], "location": r["location"],
                      "_headers": r["headers"]}
 
-    with ThreadPoolExecutor(max_workers=WORKERS) as pool:
-        results = dict(pool.map(run_one, CHECKS))
+    max_workers = max(1, args.max_workers)
+    with ThreadPoolExecutor(max_workers=max_workers) as pool:
+        results = dict(pool.map(run_one, selected))
 
-    home_headers = results["home"].get("_headers")
+    home_headers = results.get("home", {}).get("_headers")
     for v in results.values():
         v.pop("_headers", None)
 
@@ -487,35 +526,31 @@ def main():
     history = [r for r in history if datetime.fromisoformat(r["t"]) >= hcut]
 
     # ---- overall state ----
-    failing = [k for k, v in results.items() if not v["ok"]]
-    cert_low = cert_days is not None and cert_days < CERT_WARN_DAYS
-    if not results["home"]["ok"]:
-        overall = "down"
-    elif failing or cert_low:
-        overall = "degraded"
-    else:
-        overall = "up"
+    overall, failing = evaluate_overall(results, cert_days, maintenance_mode=args.maintenance)
 
     incidents = update_incidents(read("incidents.json", []), now, overall, failing)
 
     # ---- full sitemap sweep, at most once per SWEEP_HOURS ----
     due, prev_sweep = sweep_due(now)
     pages = (sweep(now) or prev_sweep) if due else prev_sweep
-    if pages:
+    if pages and not args.dry_run:
         write("pages.json", pages)
 
+    home_ok = results.get("home", {}).get("ok", False)
     status = {
         "updated": now.isoformat(timespec="seconds"),
         "overall": overall,
         "site": SITE,
+        "maintenance": bool(args.maintenance),
         "groups": [{"key": k, "label": l} for k, l in GROUPS],
         "summary": {
             "total": len(results),
             "ok": len(results) - len(failing),
             "failing": failing,
-            "worst": ("critical" if not results["home"]["ok"]
+            "worst": ("critical" if not home_ok
                       else "major" if any(results[k]["sev"] == MAJOR for k in failing)
                       else "minor" if failing else None),
+            "maintenance": bool(args.maintenance),
         },
         "checks": results,
         "cert": {"days_left": cert_days, "expires": cert_date, "issuer": cert_issuer},
@@ -538,18 +573,21 @@ def main():
         "color": {"up": "#34d399", "degraded": "#fbbf24", "down": "#f87171"}[overall],
     }
 
-    write("status.json", status)
-    write("history.json", history, compact=True)
-    write("daily.json", daily, compact=True)
-    write("incidents.json", incidents)
-    write("badge.json", badge)
+    if not args.dry_run:
+        write("status.json", status)
+        write("history.json", history, compact=True)
+        write("daily.json", daily, compact=True)
+        write("incidents.json", incidents)
+        write("badge.json", badge)
 
+    home_ms = results.get("home", {}).get("ms", 0)
     print("{:%Y-%m-%d %H:%M} UTC  overall={}  {}/{} ok  home={}ms  dns={}ms  "
           "cert={}d  headers={}/{}".format(
               now, overall, status["summary"]["ok"], status["summary"]["total"],
-              results["home"]["ms"], dns_ms, cert_days,
+              home_ms, dns_ms, cert_days,
               headers["score"], headers["total"])
           + ("  FAILING: " + ", ".join(failing) if failing else "")
+          + ("  maintenance" if args.maintenance else "")
           + ("  sweep={}/{}".format(pages["ok"], pages["total"])
              if pages and due else ""))
     # Exit 0 always: the workflow decides separately whether to fail the run.

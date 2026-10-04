@@ -148,6 +148,8 @@ amber, red — so the logo doubles as the status light.
 ## Running locally
 
 ```bash
-python3 monitor.py        # runs the checks, writes data/*.json
-python3 -m http.server    # then open http://localhost:8000/
+python3 monitor.py --dry-run      # local preview without writing data/*.json
+python3 monitor.py --check home --check css
+python3 monitor.py --maintenance  # mark the run as a maintenance window
+python3 -m http.server            # then open http://localhost:8000/
 ```

@@ -26,6 +26,7 @@
     --warn: #fbbf24;
     --down: #f87171;
     --nodata: #2c3c56;
+    --ease-out: cubic-bezier(.2, .75, .25, 1);
     --mono: ui-monospace, "Cascadia Mono", Consolas, "SF Mono", Menlo, monospace;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -41,9 +42,10 @@
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
   .wrap { max-width: 940px; margin: 0 auto; padding: 2rem 1.25rem 3rem; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 
   /* ---------- KS_ mark ---------- */
-  header.top { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+  header.top { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; animation: rise-in .55s var(--ease-out) both; }
   .brand { display: flex; align-items: center; gap: .75rem; }
   .logo { width: 44px; height: 44px; flex: none; }
   .logo-text .name { font-weight: 700; font-size: 1.02rem; letter-spacing: -.01em; display: block; line-height: 1.25; }
@@ -66,16 +68,27 @@
 
   /* ---------- hero ---------- */
   .hero {
-    background: linear-gradient(180deg, var(--card-2), var(--card));
-    border: 1px solid var(--border);
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background:
+      radial-gradient(ellipse at 100% 0%, rgba(125, 211, 252, .09), transparent 48%),
+      linear-gradient(145deg, #1d2b44, var(--card) 72%);
+    border: 1px solid #34496b;
     border-radius: 16px;
     padding: 1.4rem 1.5rem;
     display: flex;
     align-items: center;
     gap: .85rem;
     flex-wrap: wrap;
+    box-shadow: 0 18px 48px rgba(0, 0, 0, .16), inset 0 1px rgba(255, 255, 255, .035);
+    animation: rise-in .65s .06s var(--ease-out) both;
   }
-  .hero .dot { width: 15px; height: 15px; border-radius: 50%; flex: none; box-shadow: 0 0 0 5px rgba(255,255,255,.05); }
+  .hero .dot {
+    width: 15px; height: 15px; border-radius: 50%; flex: none;
+    box-shadow: 0 0 0 5px rgba(255,255,255,.05);
+    animation: status-breathe 2.8s ease-in-out infinite;
+  }
   .hero h1 { font-size: 1.35rem; line-height: 1.3; }
   .hero .pill {
     margin-left: auto; font-family: var(--mono); font-size: .8rem;
@@ -84,21 +97,92 @@
   }
   .hero .sub { width: 100%; color: var(--ink-2); font-size: .9rem; }
 
+  .toolbar {
+    display: flex; flex-wrap: wrap; gap: .6rem; margin: .9rem 0 .1rem;
+    animation: rise-in .65s .12s var(--ease-out) both;
+  }
+  .control-btn {
+    appearance: none; border: 1px solid var(--border); background: rgba(125, 211, 252, .04);
+    color: var(--ink); border-radius: 999px; padding: .45rem .8rem; cursor: pointer;
+    transition: color .2s ease, background .2s ease, border-color .2s ease, transform .2s var(--ease-out), box-shadow .2s ease;
+    font: inherit; font-size: .82rem; letter-spacing: .02em;
+  }
+  .control-btn:hover { border-color: rgba(125, 211, 252, .55); background: rgba(125, 211, 252, .08); transform: translateY(-1px); }
+  .control-btn:active { transform: translateY(0) scale(.98); }
+  .control-btn.active {
+    background: rgba(125, 211, 252, .12); border-color: rgba(125, 211, 252, .45);
+    box-shadow: inset 0 0 0 1px rgba(125, 211, 252, .18);
+  }
+  .filter-input, .filter-select {
+    min-width: 0; border: 1px solid var(--border); border-radius: 999px;
+    padding: .45rem .8rem; background: var(--card); color: var(--ink);
+    font: inherit; font-size: .82rem;
+  }
+  .filter-input { flex: 1 1 180px; }
+  .filter-select { flex: 0 1 180px; }
+  .filter-input::placeholder { color: var(--ink-3); }
+  .filter-input:focus, .filter-select:focus { border-color: rgba(125, 211, 252, .55); outline: 2px solid rgba(125, 211, 252, .2); }
+  .refresh-controls { display: flex; align-items: center; gap: .7rem; margin: .75rem 0; min-height: 34px; }
+  .refresh-state { display: inline-flex; align-items: center; gap: .45rem; color: var(--ink-3); font-size: .8rem; }
+  .refresh-state::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--ink-3); }
+  .refresh-state[data-state="loading"] { color: var(--accent); }
+  .refresh-state[data-state="loading"]::before {
+    background: transparent; border: 2px solid rgba(125, 211, 252, .25); border-top-color: var(--accent);
+    animation: spin .75s linear infinite;
+  }
+  .refresh-state[data-state="success"]::before { background: var(--up); }
+  .refresh-state[data-state="error"] { color: var(--warn); }
+  .refresh-state[data-state="error"]::before { background: var(--warn); }
+  .refresh-state[data-state="stale"] { color: var(--warn); }
+  .refresh-state[data-state="stale"]::before { background: var(--warn); }
+  .control-btn:disabled { cursor: wait; opacity: .7; transform: none; }
+  .filter-result { color: var(--ink-3); font-size: .8rem; align-self: center; }
+  .day-detail {
+    margin-top: .8rem; padding: .8rem .9rem; border: 1px solid var(--border);
+    border-radius: 10px; background: rgba(11, 18, 34, .32); color: var(--ink-2); font-size: .84rem;
+  }
+  .day-detail h3 { color: var(--ink); font-size: .9rem; margin-bottom: .3rem; }
+  .day-detail ul { margin: .45rem 0 0 1.1rem; }
+  .day-mark { cursor: pointer; transition: opacity .15s ease, stroke .15s ease; }
+  .day-mark:hover, .day-mark:focus { stroke: var(--ink); stroke-width: 2; outline: none; }
+  .day-select { border: 0; background: none; padding: 0; color: var(--accent); font: inherit; cursor: pointer; }
+  .day-select:hover { text-decoration: underline; }
+
   /* ---------- tiles ---------- */
   .tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: .75rem; margin-top: .75rem; }
-  .tile { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: .85rem 1rem; }
+  .tile {
+    position: relative; overflow: hidden;
+    background: linear-gradient(145deg, rgba(255,255,255,.025), transparent 65%), var(--card);
+    border: 1px solid var(--border); border-radius: 12px; padding: .85rem 1rem;
+    transition: transform .22s var(--ease-out), border-color .22s ease, box-shadow .22s ease;
+  }
+  .tile::before {
+    content: ""; position: absolute; inset: 0 auto auto 1rem; width: 2rem; height: 1px;
+    background: var(--accent); opacity: .55;
+  }
+  .tile:hover { transform: translateY(-3px); border-color: rgba(125, 211, 252, .35); box-shadow: 0 10px 24px rgba(0,0,0,.14); }
   .tile .num { font-size: 1.4rem; font-weight: 700; font-variant-numeric: tabular-nums; }
   .tile .lbl { color: var(--ink-3); font-size: .76rem; text-transform: uppercase; letter-spacing: .05em; }
 
   .vitals { display: grid; grid-template-columns: repeat(auto-fit, minmax(215px, 1fr)); gap: .75rem; margin-top: .75rem; }
-  .vital { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: .85rem 1rem; }
+  .vital {
+    background: linear-gradient(145deg, rgba(255,255,255,.025), transparent 65%), var(--card);
+    border: 1px solid var(--border); border-radius: 12px; padding: .85rem 1rem;
+    transition: transform .22s var(--ease-out), border-color .22s ease, box-shadow .22s ease;
+  }
+  .vital:hover { transform: translateY(-2px); border-color: rgba(125, 211, 252, .3); box-shadow: 0 10px 24px rgba(0,0,0,.12); }
   .vital h3 { font-size: .74rem; font-weight: 600; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-3); margin-bottom: .4rem; }
   .vital .val { font-weight: 600; display: flex; align-items: center; gap: .5rem; }
   .vital .val .dot { width: 9px; height: 9px; border-radius: 50%; flex: none; }
   .vital .meta { color: var(--ink-2); font-size: .82rem; margin-top: .15rem; font-variant-numeric: tabular-nums; }
 
   /* ---------- sections ---------- */
-  section.panel { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 1.05rem 1.15rem; margin-top: .75rem; }
+  section.panel {
+    background: linear-gradient(145deg, rgba(255,255,255,.018), transparent 55%), var(--card);
+    border: 1px solid var(--border); border-radius: 14px; padding: 1.05rem 1.15rem; margin-top: .75rem;
+    transition: border-color .22s ease, box-shadow .22s ease;
+  }
+  section.panel:hover { border-color: rgba(125, 211, 252, .24); box-shadow: 0 12px 30px rgba(0,0,0,.1); }
   .panel-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: .75rem; }
   .panel-head h2 { font-size: .8rem; font-weight: 600; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-3); }
   .panel-head .count { font-family: var(--mono); font-size: .78rem; color: var(--ink-3); }
@@ -109,7 +193,9 @@
     display: flex; align-items: center; gap: .55rem;
     padding: .4rem .1rem; border-bottom: 1px solid rgba(42, 60, 92, .5);
     font-size: .9rem;
+    transition: background .18s ease, padding .18s var(--ease-out);
   }
+  .check:hover { background: rgba(125, 211, 252, .035); padding-left: .35rem; padding-right: .25rem; }
   .check .dot { width: 8px; height: 8px; border-radius: 50%; flex: none; }
   .check .name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--ink); }
   .check a.name:hover { color: var(--accent); }
@@ -124,19 +210,24 @@
   svg.plot { display: block; width: 100%; height: auto; }
 
   /* ---------- sweep bars ---------- */
-  .sweep-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: .5rem .9rem; }
+  .sweep-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); gap: .5rem .9rem; }
   .sweep-row { font-size: .87rem; }
   .sweep-row .top { display: flex; justify-content: space-between; gap: .5rem; }
   .sweep-row .top b { font-weight: 600; }
   .sweep-row .top span { font-family: var(--mono); font-size: .78rem; color: var(--ink-3); }
   .bar { height: 5px; border-radius: 3px; background: var(--nodata); margin-top: .25rem; overflow: hidden; }
-  .bar i { display: block; height: 100%; background: var(--up); }
+  .bar i { display: block; height: 100%; background: var(--up); transition: width .65s var(--ease-out), background .25s ease; }
 
   /* ---------- incidents ---------- */
-  .incident { display: flex; gap: .65rem; padding: .55rem 0; border-bottom: 1px solid rgba(42, 60, 92, .5); font-size: .88rem; }
-  .incident:last-child { border-bottom: 0; }
-  .incident .dot { width: 9px; height: 9px; border-radius: 50%; flex: none; margin-top: .45rem; }
-  .incident .when { color: var(--ink-3); font-size: .8rem; font-variant-numeric: tabular-nums; }
+  .incident-detail { padding: .55rem 0; border-bottom: 1px solid rgba(42, 60, 92, .5); font-size: .88rem; }
+  .incident-detail:last-child { border-bottom: 0; }
+  .incident-detail summary { display: flex; align-items: flex-start; gap: .65rem; cursor: pointer; list-style: none; color: var(--ink); }
+  .incident-detail summary::-webkit-details-marker { display: none; }
+  .incident-detail summary::after { content: "+"; color: var(--ink-3); font-family: var(--mono); margin-left: auto; }
+  .incident-detail[open] summary::after { content: "−"; }
+  .incident-detail .dot { width: 9px; height: 9px; border-radius: 50%; flex: none; margin-top: .45rem; }
+  .incident-detail .when { color: var(--ink-3); font-size: .8rem; font-variant-numeric: tabular-nums; }
+  .incident-detail .incident-more { margin: .45rem 0 0 1.1rem; color: var(--ink-2); font-size: .82rem; }
   .empty { color: var(--ink-3); font-size: .88rem; }
 
   #tooltip {
@@ -148,12 +239,41 @@
 
   details { margin-top: .8rem; color: var(--ink-2); font-size: .85rem; }
   details summary { cursor: pointer; color: var(--ink-3); }
+  details summary:hover { color: var(--accent); }
   table { border-collapse: collapse; margin-top: .5rem; width: 100%; }
   th, td { text-align: left; padding: .25rem .6rem .25rem 0; border-bottom: 1px solid var(--border); font-variant-numeric: tabular-nums; }
   th { color: var(--ink-3); font-weight: 600; }
 
   footer { margin-top: 2rem; color: var(--ink-3); font-size: .85rem; line-height: 1.7; }
-  @media (max-width: 620px) { .tiles { grid-template-columns: repeat(2, 1fr); } }
+  @keyframes rise-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes status-breathe {
+    0%, 100% { box-shadow: 0 0 0 5px rgba(255,255,255,.05), 0 0 0 0 rgba(255,255,255,0); }
+    50% { box-shadow: 0 0 0 5px rgba(255,255,255,.07), 0 0 0 8px rgba(255,255,255,.035); }
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @media (max-width: 620px) {
+    .wrap { padding: 1.25rem 1rem 2rem; }
+    header.top { margin-bottom: 1rem; }
+    .hero { padding: 1.1rem; gap: .7rem; }
+    .hero h1 { font-size: 1.16rem; }
+    .hero .pill { margin-left: 0; }
+    .tiles { grid-template-columns: repeat(2, 1fr); }
+    .checks { grid-template-columns: 1fr; }
+    .refresh-controls { align-items: flex-start; flex-direction: column; }
+    .filter-select { flex: 1 1 100%; }
+    section.panel { padding: .9rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      scroll-behavior: auto !important;
+      animation-duration: .01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: .01ms !important;
+    }
+  }
 </style>
 </head>
 <body>
@@ -193,6 +313,21 @@
     <p class="sub" id="updated"></p>
   </div>
 
+  <div class="toolbar" aria-label="Check filters">
+    <button class="control-btn active" data-filter="all" aria-pressed="true" type="button">All checks</button>
+    <button class="control-btn" data-filter="failing" aria-pressed="false" type="button">Failing only</button>
+    <button class="control-btn" data-filter="critical" aria-pressed="false" type="button">Critical health</button>
+    <input class="filter-input" id="check-search" type="search" placeholder="Search checks…" aria-label="Search checks" />
+    <select class="filter-select" id="group-filter" aria-label="Filter checks by group">
+      <option value="all">All sections</option>
+    </select>
+    <span class="filter-result" id="filter-result" aria-live="polite"></span>
+  </div>
+  <div class="refresh-controls">
+    <button class="control-btn" id="refresh-button" type="button" title="Fetch the latest published results; this does not start a new monitoring run.">↻ Refresh data</button>
+    <p class="refresh-state" id="refresh-state" data-state="loading" role="status" aria-live="polite">Loading latest published data…</p>
+  </div>
+
   <div class="tiles" id="uptime-tiles"></div>
 
   <div class="vitals" id="vitals"></div>
@@ -203,6 +338,7 @@
     <div class="panel-head"><h2>Daily uptime — last 30 days</h2><span class="count" id="days-count"></span></div>
     <div id="days-chart"></div>
     <p class="chart-note" id="days-summary"></p>
+    <div class="day-detail" id="day-detail" hidden aria-live="polite"></div>
     <details>
       <summary>Daily data table</summary>
       <table id="days-table">
@@ -252,12 +388,13 @@
 (function () {
   'use strict';
 
-  var COLOR = { up: 'var(--up)', degraded: 'var(--warn)', down: 'var(--down)' };
-  var HEX = { up: '#34d399', degraded: '#fbbf24', down: '#f87171' };
+  var COLOR = { up: 'var(--up)', degraded: 'var(--warn)', down: 'var(--down)', maintenance: 'var(--warn)' };
+  var HEX = { up: '#34d399', degraded: '#fbbf24', down: '#f87171', maintenance: '#fbbf24' };
   var LABEL = {
     up: 'All systems operational',
     degraded: 'Degraded — partial issue detected',
-    down: 'Major outage — site unreachable'
+    down: 'Major outage — site unreachable',
+    maintenance: 'Maintenance window — monitoring reduced'
   };
   var STALE_MS = 30 * 60 * 1000;
   var tooltip = document.getElementById('tooltip');
@@ -293,18 +430,19 @@
   // ---------------------------------------------------------------- header
 
   function renderHero(s) {
-    $('overall-dot').style.background = COLOR[s.overall];
-    $('overall-text').textContent = LABEL[s.overall];
+    var state = s && s.maintenance ? 'maintenance' : (s && s.overall) ? s.overall : 'up';
+    var stale = Date.now() - new Date(s.updated).getTime() > STALE_MS;
+    $('overall-dot').style.background = COLOR[state] || COLOR.up;
+    $('overall-text').textContent = LABEL[state] || LABEL.up;
     // The mark's cursor carries the current state — the logo doubles as the
     // status light, which is why it is a KS_ and not just a KS.
-    $('ks-cursor').setAttribute('fill', HEX[s.overall]);
+    $('ks-cursor').setAttribute('fill', HEX[state] || HEX.up);
 
     var sum = s.summary || { ok: 0, total: 0 };
     $('overall-count').textContent = sum.ok + '/' + sum.total + ' checks passing';
     $('updated').textContent =
       'Last checked ' + fmtRel(s.updated) + ' (' + new Date(s.updated).toLocaleString() + ')';
-    $('stale-banner').style.display =
-      (Date.now() - new Date(s.updated).getTime() > STALE_MS) ? 'block' : 'none';
+    $('stale-banner').style.display = stale ? 'block' : 'none';
   }
 
   function renderTiles(s) {
@@ -371,10 +509,23 @@
     var host = $('check-groups');
     host.innerHTML = '';
     var groups = s.groups || [];
+    var filter = checkFilter;
+    var query = checkQuery.trim().toLowerCase();
+    var groupFilter = checkGroup;
+    var shown = 0;
 
     groups.forEach(function (g) {
-      var keys = Object.keys(s.checks).filter(function (k) { return s.checks[k].group === g.key; });
+      var keys = Object.keys(s.checks).filter(function (k) {
+        var check = s.checks[k];
+        if (check.group !== g.key || (groupFilter !== 'all' && check.group !== groupFilter)) return false;
+        if (query && [k, check.label, check.url, check.note, check.group]
+          .join(' ').toLowerCase().indexOf(query) === -1) return false;
+        if (filter === 'failing') return !s.checks[k].ok;
+        if (filter === 'critical') return s.checks[k].sev === 'critical';
+        return true;
+      });
       if (!keys.length) return;
+      shown += keys.length;
       // Failing checks float to the top of their group so an incident is
       // visible without reading every row.
       keys.sort(function (a, b) { return (s.checks[a].ok ? 1 : 0) - (s.checks[b].ok ? 1 : 0); });
@@ -410,6 +561,8 @@
       panel.appendChild(grid);
       host.appendChild(panel);
     });
+    if (!shown) host.appendChild(el('p', 'empty panel', 'No checks match these filters.'));
+    $('filter-result').textContent = shown + ' of ' + Object.keys(s.checks).length + ' checks shown';
   }
 
   // ---------------------------------------------------------------- charts
@@ -437,9 +590,10 @@
       if (p != null) { covered++; if (p < 99.5) incidents++; }
       var label = k + (p == null ? ' · no data'
         : ' · ' + p.toFixed(1) + '% · ' + d[1] + ' checks · avg ' + d[2] + ' ms');
-      parts.push('<rect x="' + (idx * 26) + '" y="0" width="' + bw + '" height="' + H +
-        '" rx="4" fill="' + fill + '" data-tip="' + label + '"><title>' + label + '</title></rect>');
-      tbody.push('<tr><td>' + k + '</td><td>' + (p == null ? '—' : p.toFixed(1) + '%') +
+      parts.push('<rect class="day-mark" x="' + (idx * 26) + '" y="0" width="' + bw + '" height="' + H +
+        '" rx="4" fill="' + fill + '" data-day="' + k + '" data-tip="' + label +
+        '" tabindex="0" role="button" aria-label="' + label + '"><title>' + label + '</title></rect>');
+      tbody.push('<tr><td><button class="day-select" type="button" data-day="' + k + '">' + k + '</button></td><td>' + (p == null ? '—' : p.toFixed(1) + '%') +
         '</td><td>' + (d ? d[1] : 0) + '</td><td>' + (d && d[2] ? d[2] + ' ms' : '—') + '</td></tr>');
     });
 
@@ -456,7 +610,73 @@
     document.querySelectorAll('#days-chart rect').forEach(function (r) {
       r.addEventListener('mousemove', function (e) { showTip(r.getAttribute('data-tip'), e.clientX, e.clientY); });
       r.addEventListener('mouseleave', hideTip);
+      r.addEventListener('click', function () { renderDayDetail(r.getAttribute('data-day')); });
+      r.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          renderDayDetail(r.getAttribute('data-day'));
+        }
+      });
     });
+    document.querySelectorAll('#days-table [data-day]').forEach(function (button) {
+      button.addEventListener('click', function () { renderDayDetail(button.getAttribute('data-day')); });
+    });
+    if (selectedDay) renderDayDetail(selectedDay);
+  }
+
+  function renderDayDetail(day) {
+    selectedDay = day;
+    var host = $('day-detail');
+    var entry = cache.daily.filter(function (d) { return d.d === day; })[0];
+    var records = entry ? entry.r : {};
+    var checks = cache.status ? cache.status.checks : {};
+    var total = 0, up = 0;
+    Object.keys(records).forEach(function (key) {
+      up += records[key][0];
+      total += records[key][1];
+    });
+
+    host.innerHTML = '';
+    host.hidden = false;
+    host.appendChild(el('h3', null, new Date(day + 'T00:00:00Z').toLocaleDateString(undefined, {
+      weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC'
+    })));
+    host.appendChild(el('p', null, total
+      ? up + '/' + total + ' successful check samples · ' + pct(100 * up / total)
+      : 'No daily check samples are available for this date.'));
+
+    var keys = Object.keys(records);
+    if (keys.length) {
+      var list = document.createElement('ul');
+      keys.sort(function (a, b) { return a.localeCompare(b); }).forEach(function (key) {
+        var sample = records[key];
+        var label = checks[key] ? checks[key].label : key;
+        list.appendChild(el('li', null, label + ': ' + sample[0] + '/' + sample[1] +
+          ' passed · avg ' + sample[2] + ' ms'));
+      });
+      host.appendChild(list);
+    }
+
+    var incidents = cache.incidents.filter(function (incident) {
+      var start = incident.start.slice(0, 10);
+      var end = (incident.end || incident.last || incident.start).slice(0, 10);
+      return start <= day && end >= day;
+    });
+    if (incidents.length) {
+      host.appendChild(el('h3', null, 'Incidents overlapping this day'));
+      var incidentList = document.createElement('ul');
+      incidents.forEach(function (incident) {
+        var names = incident.checks.map(function (key) {
+          return checks[key] ? checks[key].label : key;
+        }).join(', ');
+        incidentList.appendChild(el('li', null,
+          (incident.level === 'down' ? 'Outage' : 'Degraded') +
+          ' · ' + new Date(incident.start).toLocaleString() +
+          (incident.end ? ' to ' + new Date(incident.end).toLocaleString() : ' · ongoing') +
+          (names ? ' · ' + names : '')));
+      });
+      host.appendChild(incidentList);
+    }
   }
 
   function renderSpark(history) {
@@ -592,23 +812,33 @@
     }
 
     recent.forEach(function (inc) {
-      var row = el('div', 'incident');
+      var row = document.createElement('details');
+      row.className = 'incident-detail';
       var dot = el('span', 'dot');
-      dot.style.background = COLOR[inc.level];
-      row.appendChild(dot);
-
-      var body = el('div');
+      dot.style.background = COLOR[inc.level] || COLOR.degraded;
       var names = inc.checks.map(function (k) {
         return (checks && checks[k] ? checks[k].label : k);
       }).join(', ');
-      body.appendChild(el('p', null,
+      var summary = document.createElement('summary');
+      summary.appendChild(dot);
+      var headline = el('span', null,
         (inc.level === 'down' ? 'Outage' : 'Degraded') +
         (inc.end ? ' · ' + inc.minutes + ' min' : ' · ongoing') +
-        (names ? ' — ' + names : '')));
-      body.appendChild(el('p', 'when',
-        new Date(inc.start).toLocaleString() +
-        (inc.end ? ' → ' + new Date(inc.end).toLocaleTimeString() : ' → now')));
-      row.appendChild(body);
+        (names ? ' — ' + names : ''));
+      headline.appendChild(el('span', 'when', new Date(inc.start).toLocaleString()));
+      summary.appendChild(headline);
+      row.appendChild(summary);
+
+      var detail = el('div', 'incident-more');
+      detail.appendChild(el('p', null, 'Started: ' + new Date(inc.start).toLocaleString()));
+      detail.appendChild(el('p', null, 'Last observed: ' + new Date(inc.last || inc.start).toLocaleString()));
+      detail.appendChild(el('p', null, inc.end
+        ? 'Recovered: ' + new Date(inc.end).toLocaleString() + ' · duration ' + inc.minutes + ' minutes'
+        : 'This incident is still open.'));
+      if (inc.checks.length) {
+        detail.appendChild(el('p', null, 'Affected checks: ' + names));
+      }
+      row.appendChild(detail);
       host.appendChild(row);
     });
   }
@@ -620,10 +850,23 @@
   // banner takes over once they are genuinely too old to trust. Only a page
   // that has never rendered anything is allowed to show an error.
   var cache = { status: null, history: [], daily: [], incidents: [], pages: null };
+  var checkFilter = 'all';
+  var checkGroup = 'all';
+  var checkQuery = '';
+  var selectedDay = null;
   var rendered = false;
   var inflight = false;
+  var manualRefreshRequested = false;
   var attempts = 0;
   var retryTimer = null;
+
+  function setRefreshState(state, message) {
+    var indicator = $('refresh-state');
+    indicator.setAttribute('data-state', state);
+    indicator.textContent = message;
+    $('refresh-button').disabled = state === 'loading';
+    $('refresh-button').setAttribute('aria-busy', state === 'loading' ? 'true' : 'false');
+  }
 
   // Resolves to a { value: … } box on success and to null on any failure, so
   // "fetched an empty list" and "could not fetch" stay distinguishable.
@@ -647,6 +890,45 @@
     renderSweep(cache.pages);
   }
 
+  function syncGroupOptions(groups) {
+    var select = $('group-filter');
+    var known = {};
+    Array.prototype.forEach.call(select.options, function (option) { known[option.value] = true; });
+    groups.forEach(function (group) {
+      if (known[group.key]) return;
+      var option = document.createElement('option');
+      option.value = group.key;
+      option.textContent = group.label;
+      select.appendChild(option);
+    });
+    if (checkGroup !== 'all' && !groups.some(function (group) { return group.key === checkGroup; })) {
+      checkGroup = 'all';
+    }
+    select.value = checkGroup;
+  }
+
+  function bindFilters() {
+    document.querySelectorAll('.control-btn[data-filter]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        document.querySelectorAll('.control-btn[data-filter]').forEach(function (b) {
+          b.classList.toggle('active', b === btn);
+          b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+        });
+        checkFilter = btn.getAttribute('data-filter') || 'all';
+        if (cache.status) renderChecks(cache.status);
+      });
+    });
+    $('check-search').addEventListener('input', function (event) {
+      checkQuery = event.target.value;
+      if (cache.status) renderChecks(cache.status);
+    });
+    $('group-filter').addEventListener('change', function (event) {
+      checkGroup = event.target.value || 'all';
+      if (cache.status) renderChecks(cache.status);
+    });
+    $('refresh-button').addEventListener('click', function () { load(true); });
+  }
+
   function retry(ms) {
     clearTimeout(retryTimer);
     retryTimer = setTimeout(load, ms);
@@ -663,9 +945,17 @@
     }
   }
 
-  function load() {
-    if (inflight) return;
+  function load(manual) {
+    if (inflight) {
+      if (manual) {
+        manualRefreshRequested = true;
+        setRefreshState('loading', 'Refresh requested · finishing the current update…');
+      }
+      return;
+    }
     inflight = true;
+    var manualRun = !!manual;
+    setRefreshState('loading', manualRun ? 'Fetching the latest published data…' : 'Checking for published updates…');
     Promise.all([
       getJSON('data/status.json'),
       getJSON('data/history.json'),
@@ -674,8 +964,14 @@
       getJSON('data/pages.json')
     ]).then(function (d) {
       inflight = false;
+      manualRun = manualRun || manualRefreshRequested;
+      manualRefreshRequested = false;
       var status = keep(d[0], cache.status);
-      if (!status) { failed(); return; }
+      if (!status) {
+        setRefreshState('error', 'Could not load status data · retrying automatically');
+        failed();
+        return;
+      }
 
       cache.status    = status;
       cache.history   = keep(d[1], cache.history);
@@ -684,19 +980,34 @@
       cache.pages     = keep(d[4], cache.pages);
 
       try {
+        syncGroupOptions(status.groups || []);
         draw();
         rendered = true;
         attempts = 0;
         clearTimeout(retryTimer);
+        if (!d[0]) {
+          setRefreshState('error', 'Refresh failed · showing the last loaded status');
+        } else if (Date.now() - new Date(status.updated).getTime() > STALE_MS) {
+          setRefreshState('stale', 'Data fetched · latest monitor report is stale (' + fmtRel(status.updated) + ')');
+        } else if (!d[1] || !d[2] || !d[3]) {
+          setRefreshState('error', 'Status refreshed · some history or incident data could not be updated');
+        } else {
+          setRefreshState('success', (manualRun ? 'Refresh complete · ' : 'Data checked · ') +
+            'latest monitor check ' + fmtRel(status.updated));
+        }
       } catch (e) {
+        setRefreshState('error', 'Could not update the dashboard · showing the last loaded status');
         failed();
       }
     }, function () {
       inflight = false;
+      manualRefreshRequested = false;
+      setRefreshState('error', 'Refresh failed · showing the last loaded status');
       failed();
     });
   }
 
+  bindFilters();
   load();
   setInterval(load, 60000);
   document.addEventListener('visibilitychange', function () {
