@@ -1,44 +1,44 @@
 {
- "updated": "2026-10-08T07:27:08+00:00",
+ "updated": "2026-10-09T06:42:32+00:00",
  "total": 290,
  "ok": 290,
  "failing": [],
- "median_ms": 75,
+ "median_ms": 199,
  "slowest": [
   {
-   "url": "https://krunalkumar.dpdns.org/labs/email-security",
-   "path": "/labs/email-security",
+   "url": "https://krunalkumar.dpdns.org/labs/dos",
+   "path": "/labs/dos",
    "ok": true,
    "code": 200,
-   "ms": 327
+   "ms": 734
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/db-index",
-   "path": "/labs/db-index",
+   "url": "https://krunalkumar.dpdns.org/labs/postgres",
+   "path": "/labs/postgres",
    "ok": true,
    "code": 200,
-   "ms": 309
+   "ms": 709
   },
   {
-   "url": "https://krunalkumar.dpdns.org/games/plasma",
-   "path": "/games/plasma",
+   "url": "https://krunalkumar.dpdns.org/labs/synth",
+   "path": "/labs/synth",
    "ok": true,
    "code": 200,
-   "ms": 278
+   "ms": 699
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/why-your-phone-feels-hacked-and-probably-is-not",
-   "path": "/blog/why-your-phone-feels-hacked-and-probably-is-not",
+   "url": "https://krunalkumar.dpdns.org/labs/php",
+   "path": "/labs/php",
    "ok": true,
    "code": 200,
-   "ms": 270
+   "ms": 695
   },
   {
-   "url": "https://krunalkumar.dpdns.org/games/bastet",
-   "path": "/games/bastet",
+   "url": "https://krunalkumar.dpdns.org/blog/the-four-ms-every-business-needs",
+   "path": "/blog/the-four-ms-every-business-needs",
    "ok": true,
    "code": 200,
-   "ms": 269
+   "ms": 691
   }
  ],
  "sections": [
@@ -46,139 +46,139 @@
    "section": "labs",
    "total": 118,
    "ok": 118,
-   "median_ms": 73
+   "median_ms": 205
   },
   {
    "section": "games",
    "total": 92,
    "ok": 92,
-   "median_ms": 74
+   "median_ms": 186
   },
   {
    "section": "blog",
    "total": 60,
    "ok": 60,
-   "median_ms": 110
+   "median_ms": 220
   },
   {
    "section": "home",
    "total": 1,
    "ok": 1,
-   "median_ms": 75
+   "median_ms": 190
   },
   {
    "section": "about",
    "total": 1,
    "ok": 1,
-   "median_ms": 129
+   "median_ms": 174
   },
   {
    "section": "services",
    "total": 1,
    "ok": 1,
-   "median_ms": 117
+   "median_ms": 192
   },
   {
    "section": "project-planner",
    "total": 1,
    "ok": 1,
-   "median_ms": 112
+   "median_ms": 288
   },
   {
    "section": "projects",
    "total": 1,
    "ok": 1,
-   "median_ms": 120
+   "median_ms": 161
   },
   {
    "section": "research",
    "total": 1,
    "ok": 1,
-   "median_ms": 103
+   "median_ms": 169
   },
   {
    "section": "client-reviews",
    "total": 1,
    "ok": 1,
-   "median_ms": 70
+   "median_ms": 130
   },
   {
    "section": "internships",
    "total": 1,
    "ok": 1,
-   "median_ms": 75
+   "median_ms": 141
   },
   {
    "section": "contact",
    "total": 1,
    "ok": 1,
-   "median_ms": 72
+   "median_ms": 81
   },
   {
    "section": "verify",
    "total": 1,
    "ok": 1,
-   "median_ms": 80
+   "median_ms": 70
   },
   {
    "section": "privacy",
    "total": 1,
    "ok": 1,
-   "median_ms": 71
+   "median_ms": 73
   },
   {
    "section": "terms",
    "total": 1,
    "ok": 1,
-   "median_ms": 71
+   "median_ms": 183
   },
   {
    "section": "refund",
    "total": 1,
    "ok": 1,
-   "median_ms": 76
+   "median_ms": 231
   },
   {
    "section": "llms.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 81
+   "median_ms": 80
   },
   {
    "section": "llms-full.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 76
+   "median_ms": 207
   },
   {
    "section": "party",
    "total": 1,
    "ok": 1,
-   "median_ms": 70
+   "median_ms": 171
   },
   {
    "section": "glossary",
    "total": 1,
    "ok": 1,
-   "median_ms": 72
+   "median_ms": 278
   },
   {
    "section": "colophon",
    "total": 1,
    "ok": 1,
-   "median_ms": 79
+   "median_ms": 176
   },
   {
    "section": "changelog",
    "total": 1,
    "ok": 1,
-   "median_ms": 109
+   "median_ms": 222
   },
   {
    "section": "buddha",
    "total": 1,
    "ok": 1,
-   "median_ms": 72
+   "median_ms": 196
   }
  ]
 }
