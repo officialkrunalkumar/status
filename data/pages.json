@@ -1,44 +1,44 @@
 {
- "updated": "2026-10-10T08:53:29+00:00",
+ "updated": "2026-10-11T07:26:24+00:00",
  "total": 290,
  "ok": 290,
  "failing": [],
- "median_ms": 151,
+ "median_ms": 95,
  "slowest": [
   {
-   "url": "https://krunalkumar.dpdns.org/blog/ai-driven-human-assisted",
-   "path": "/blog/ai-driven-human-assisted",
+   "url": "https://krunalkumar.dpdns.org/buddha",
+   "path": "/buddha",
    "ok": true,
    "code": 200,
-   "ms": 314
+   "ms": 547
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/the-interview-questions-i-ask",
-   "path": "/blog/the-interview-questions-i-ask",
+   "url": "https://krunalkumar.dpdns.org/labs/chat",
+   "path": "/labs/chat",
    "ok": true,
    "code": 200,
-   "ms": 304
+   "ms": 500
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/security-compliance-explained",
-   "path": "/blog/security-compliance-explained",
+   "url": "https://krunalkumar.dpdns.org/labs/leak",
+   "path": "/labs/leak",
    "ok": true,
    "code": 200,
-   "ms": 300
+   "ms": 487
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/typing-certificate",
-   "path": "/labs/typing-certificate",
+   "url": "https://krunalkumar.dpdns.org/changelog",
+   "path": "/changelog",
    "ok": true,
    "code": 200,
-   "ms": 293
+   "ms": 472
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/unicode",
-   "path": "/labs/unicode",
+   "url": "https://krunalkumar.dpdns.org/blog/why-your-automation-broke",
+   "path": "/blog/why-your-automation-broke",
    "ok": true,
    "code": 200,
-   "ms": 292
+   "ms": 457
   }
  ],
  "sections": [
@@ -46,139 +46,139 @@
    "section": "labs",
    "total": 118,
    "ok": 118,
-   "median_ms": 157
+   "median_ms": 90
   },
   {
    "section": "games",
    "total": 92,
    "ok": 92,
-   "median_ms": 142
+   "median_ms": 93
   },
   {
    "section": "blog",
    "total": 60,
    "ok": 60,
-   "median_ms": 167
+   "median_ms": 150
   },
   {
    "section": "home",
    "total": 1,
    "ok": 1,
-   "median_ms": 167
+   "median_ms": 260
   },
   {
    "section": "about",
    "total": 1,
    "ok": 1,
-   "median_ms": 174
+   "median_ms": 236
   },
   {
    "section": "services",
    "total": 1,
    "ok": 1,
-   "median_ms": 153
+   "median_ms": 235
   },
   {
    "section": "project-planner",
    "total": 1,
    "ok": 1,
-   "median_ms": 251
+   "median_ms": 229
   },
   {
    "section": "projects",
    "total": 1,
    "ok": 1,
-   "median_ms": 139
+   "median_ms": 236
   },
   {
    "section": "research",
    "total": 1,
    "ok": 1,
-   "median_ms": 160
+   "median_ms": 224
   },
   {
    "section": "client-reviews",
    "total": 1,
    "ok": 1,
-   "median_ms": 80
+   "median_ms": 135
   },
   {
    "section": "internships",
    "total": 1,
    "ok": 1,
-   "median_ms": 88
+   "median_ms": 115
   },
   {
    "section": "contact",
    "total": 1,
    "ok": 1,
-   "median_ms": 74
+   "median_ms": 86
   },
   {
    "section": "verify",
    "total": 1,
    "ok": 1,
-   "median_ms": 88
+   "median_ms": 90
   },
   {
    "section": "privacy",
    "total": 1,
    "ok": 1,
-   "median_ms": 212
+   "median_ms": 188
   },
   {
    "section": "terms",
    "total": 1,
    "ok": 1,
-   "median_ms": 194
+   "median_ms": 116
   },
   {
    "section": "refund",
    "total": 1,
    "ok": 1,
-   "median_ms": 158
+   "median_ms": 108
   },
   {
    "section": "llms.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 85
+   "median_ms": 86
   },
   {
    "section": "llms-full.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 283
+   "median_ms": 88
   },
   {
    "section": "party",
    "total": 1,
    "ok": 1,
-   "median_ms": 145
+   "median_ms": 222
   },
   {
    "section": "glossary",
    "total": 1,
    "ok": 1,
-   "median_ms": 180
+   "median_ms": 448
   },
   {
    "section": "colophon",
    "total": 1,
    "ok": 1,
-   "median_ms": 75
+   "median_ms": 443
   },
   {
    "section": "changelog",
    "total": 1,
    "ok": 1,
-   "median_ms": 159
+   "median_ms": 472
   },
   {
    "section": "buddha",
    "total": 1,
    "ok": 1,
-   "median_ms": 160
+   "median_ms": 547
   }
  ]
 }
