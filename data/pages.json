@@ -1,44 +1,44 @@
 {
- "updated": "2026-10-13T07:48:53+00:00",
+ "updated": "2026-10-14T04:43:30+00:00",
  "total": 290,
  "ok": 290,
  "failing": [],
- "median_ms": 115,
+ "median_ms": 190,
  "slowest": [
   {
-   "url": "https://krunalkumar.dpdns.org/labs/big-o",
-   "path": "/labs/big-o",
+   "url": "https://krunalkumar.dpdns.org/labs/sbom-inspector",
+   "path": "/labs/sbom-inspector",
    "ok": true,
    "code": 200,
-   "ms": 1054
+   "ms": 330
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/compiler",
-   "path": "/labs/compiler",
+   "url": "https://krunalkumar.dpdns.org/blog/upi-fraud-how-the-money-actually-leaves",
+   "path": "/blog/upi-fraud-how-the-money-actually-leaves",
    "ok": true,
    "code": 200,
-   "ms": 892
+   "ms": 324
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/contrast",
-   "path": "/labs/contrast",
+   "url": "https://krunalkumar.dpdns.org/blog/digital-arrest-scam-explained",
+   "path": "/blog/digital-arrest-scam-explained",
    "ok": true,
    "code": 200,
-   "ms": 884
+   "ms": 297
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/http-versions",
-   "path": "/labs/http-versions",
+   "url": "https://krunalkumar.dpdns.org/labs/qr-payloads",
+   "path": "/labs/qr-payloads",
    "ok": true,
    "code": 200,
-   "ms": 857
+   "ms": 293
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/docker-layers",
-   "path": "/labs/docker-layers",
+   "url": "https://krunalkumar.dpdns.org/glossary",
+   "path": "/glossary",
    "ok": true,
    "code": 200,
-   "ms": 835
+   "ms": 279
   }
  ],
  "sections": [
@@ -46,85 +46,85 @@
    "section": "labs",
    "total": 118,
    "ok": 118,
-   "median_ms": 123
+   "median_ms": 193
   },
   {
    "section": "games",
    "total": 92,
    "ok": 92,
-   "median_ms": 90
+   "median_ms": 188
   },
   {
    "section": "blog",
    "total": 60,
    "ok": 60,
-   "median_ms": 179
+   "median_ms": 203
   },
   {
    "section": "home",
    "total": 1,
    "ok": 1,
-   "median_ms": 236
+   "median_ms": 177
   },
   {
    "section": "about",
    "total": 1,
    "ok": 1,
-   "median_ms": 188
+   "median_ms": 170
   },
   {
    "section": "services",
    "total": 1,
    "ok": 1,
-   "median_ms": 179
+   "median_ms": 174
   },
   {
    "section": "project-planner",
    "total": 1,
    "ok": 1,
-   "median_ms": 167
+   "median_ms": 237
   },
   {
    "section": "projects",
    "total": 1,
    "ok": 1,
-   "median_ms": 199
+   "median_ms": 156
   },
   {
    "section": "research",
    "total": 1,
    "ok": 1,
-   "median_ms": 159
+   "median_ms": 145
   },
   {
    "section": "client-reviews",
    "total": 1,
    "ok": 1,
-   "median_ms": 107
+   "median_ms": 129
   },
   {
    "section": "internships",
    "total": 1,
    "ok": 1,
-   "median_ms": 84
+   "median_ms": 130
   },
   {
    "section": "contact",
    "total": 1,
    "ok": 1,
-   "median_ms": 75
+   "median_ms": 117
   },
   {
    "section": "verify",
    "total": 1,
    "ok": 1,
-   "median_ms": 182
+   "median_ms": 93
   },
   {
    "section": "privacy",
    "total": 1,
    "ok": 1,
-   "median_ms": 265
+   "median_ms": 71
   },
   {
    "section": "terms",
@@ -136,49 +136,49 @@
    "section": "refund",
    "total": 1,
    "ok": 1,
-   "median_ms": 91
+   "median_ms": 76
   },
   {
    "section": "llms.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 121
+   "median_ms": 84
   },
   {
    "section": "llms-full.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 96
+   "median_ms": 222
   },
   {
    "section": "party",
    "total": 1,
    "ok": 1,
-   "median_ms": 77
+   "median_ms": 68
   },
   {
    "section": "glossary",
    "total": 1,
    "ok": 1,
-   "median_ms": 77
+   "median_ms": 279
   },
   {
    "section": "colophon",
    "total": 1,
    "ok": 1,
-   "median_ms": 87
+   "median_ms": 190
   },
   {
    "section": "changelog",
    "total": 1,
    "ok": 1,
-   "median_ms": 193
+   "median_ms": 231
   },
   {
    "section": "buddha",
    "total": 1,
    "ok": 1,
-   "median_ms": 100
+   "median_ms": 73
   }
  ]
 }
