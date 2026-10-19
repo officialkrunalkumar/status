@@ -1,44 +1,44 @@
 {
- "updated": "2026-10-18T17:36:41+00:00",
+ "updated": "2026-10-19T17:02:29+00:00",
  "total": 290,
  "ok": 290,
  "failing": [],
- "median_ms": 120,
+ "median_ms": 164,
  "slowest": [
   {
-   "url": "https://krunalkumar.dpdns.org/games/aim-trainer",
-   "path": "/games/aim-trainer",
+   "url": "https://krunalkumar.dpdns.org/client-reviews",
+   "path": "/client-reviews",
    "ok": true,
    "code": 200,
-   "ms": 563
+   "ms": 424
   },
   {
-   "url": "https://krunalkumar.dpdns.org/games/password-duel",
-   "path": "/games/password-duel",
+   "url": "https://krunalkumar.dpdns.org/labs/invoice-maker",
+   "path": "/labs/invoice-maker",
    "ok": true,
    "code": 200,
-   "ms": 562
+   "ms": 397
   },
   {
-   "url": "https://krunalkumar.dpdns.org/games/phishing-or-not",
-   "path": "/games/phishing-or-not",
+   "url": "https://krunalkumar.dpdns.org/labs/image-tools",
+   "path": "/labs/image-tools",
    "ok": true,
    "code": 200,
-   "ms": 556
+   "ms": 357
   },
   {
-   "url": "https://krunalkumar.dpdns.org/games/cmatrix",
-   "path": "/games/cmatrix",
+   "url": "https://krunalkumar.dpdns.org/blog/the-life-of-the-buddha",
+   "path": "/blog/the-life-of-the-buddha",
    "ok": true,
    "code": 200,
-   "ms": 553
+   "ms": 324
   },
   {
-   "url": "https://krunalkumar.dpdns.org/games/cbonsai",
-   "path": "/games/cbonsai",
+   "url": "https://krunalkumar.dpdns.org/blog/automating-email-replies-with-n8n",
+   "path": "/blog/automating-email-replies-with-n8n",
    "ok": true,
    "code": 200,
-   "ms": 553
+   "ms": 314
   }
  ],
  "sections": [
@@ -46,139 +46,139 @@
    "section": "labs",
    "total": 118,
    "ok": 118,
-   "median_ms": 114
+   "median_ms": 164
   },
   {
    "section": "games",
    "total": 92,
    "ok": 92,
-   "median_ms": 58
+   "median_ms": 150
   },
   {
    "section": "blog",
    "total": 60,
    "ok": 60,
-   "median_ms": 161
+   "median_ms": 204
   },
   {
    "section": "home",
    "total": 1,
    "ok": 1,
-   "median_ms": 28
+   "median_ms": 174
   },
   {
    "section": "about",
    "total": 1,
    "ok": 1,
-   "median_ms": 384
+   "median_ms": 128
   },
   {
    "section": "services",
    "total": 1,
    "ok": 1,
-   "median_ms": 376
+   "median_ms": 178
   },
   {
    "section": "project-planner",
    "total": 1,
    "ok": 1,
-   "median_ms": 421
+   "median_ms": 160
   },
   {
    "section": "projects",
    "total": 1,
    "ok": 1,
-   "median_ms": 392
+   "median_ms": 133
   },
   {
    "section": "research",
    "total": 1,
    "ok": 1,
-   "median_ms": 375
+   "median_ms": 131
   },
   {
    "section": "client-reviews",
    "total": 1,
    "ok": 1,
-   "median_ms": 182
+   "median_ms": 424
   },
   {
    "section": "internships",
    "total": 1,
    "ok": 1,
-   "median_ms": 133
+   "median_ms": 135
   },
   {
    "section": "contact",
    "total": 1,
    "ok": 1,
-   "median_ms": 150
+   "median_ms": 116
   },
   {
    "section": "verify",
    "total": 1,
    "ok": 1,
-   "median_ms": 132
+   "median_ms": 91
   },
   {
    "section": "privacy",
    "total": 1,
    "ok": 1,
-   "median_ms": 123
+   "median_ms": 198
   },
   {
    "section": "terms",
    "total": 1,
    "ok": 1,
-   "median_ms": 136
+   "median_ms": 126
   },
   {
    "section": "refund",
    "total": 1,
    "ok": 1,
-   "median_ms": 141
+   "median_ms": 134
   },
   {
    "section": "llms.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 134
+   "median_ms": 90
   },
   {
    "section": "llms-full.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 180
+   "median_ms": 144
   },
   {
    "section": "party",
    "total": 1,
    "ok": 1,
-   "median_ms": 28
+   "median_ms": 130
   },
   {
    "section": "glossary",
    "total": 1,
    "ok": 1,
-   "median_ms": 241
+   "median_ms": 274
   },
   {
    "section": "colophon",
    "total": 1,
    "ok": 1,
-   "median_ms": 233
+   "median_ms": 189
   },
   {
    "section": "changelog",
    "total": 1,
    "ok": 1,
-   "median_ms": 210
+   "median_ms": 185
   },
   {
    "section": "buddha",
    "total": 1,
    "ok": 1,
-   "median_ms": 27
+   "median_ms": 149
   }
  ]
 }
