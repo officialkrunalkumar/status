@@ -1,44 +1,44 @@
 {
- "updated": "2026-10-19T17:02:29+00:00",
+ "updated": "2026-10-20T15:09:27+00:00",
  "total": 290,
  "ok": 290,
  "failing": [],
- "median_ms": 164,
+ "median_ms": 210,
  "slowest": [
   {
-   "url": "https://krunalkumar.dpdns.org/client-reviews",
-   "path": "/client-reviews",
+   "url": "https://krunalkumar.dpdns.org/blog/how-to-read-a-job-description",
+   "path": "/blog/how-to-read-a-job-description",
    "ok": true,
    "code": 200,
-   "ms": 424
+   "ms": 416
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/invoice-maker",
-   "path": "/labs/invoice-maker",
+   "url": "https://krunalkumar.dpdns.org/blog/passwords-passkeys-and-what-actually-protects-you",
+   "path": "/blog/passwords-passkeys-and-what-actually-protects-you",
    "ok": true,
    "code": 200,
-   "ms": 397
+   "ms": 341
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/image-tools",
-   "path": "/labs/image-tools",
+   "url": "https://krunalkumar.dpdns.org/games/assembly-puzzles",
+   "path": "/games/assembly-puzzles",
    "ok": true,
    "code": 200,
-   "ms": 357
+   "ms": 319
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/the-life-of-the-buddha",
-   "path": "/blog/the-life-of-the-buddha",
+   "url": "https://krunalkumar.dpdns.org/games/typing-trainer",
+   "path": "/games/typing-trainer",
    "ok": true,
    "code": 200,
-   "ms": 324
+   "ms": 306
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/automating-email-replies-with-n8n",
-   "path": "/blog/automating-email-replies-with-n8n",
+   "url": "https://krunalkumar.dpdns.org/labs/tls-handshake",
+   "path": "/labs/tls-handshake",
    "ok": true,
    "code": 200,
-   "ms": 314
+   "ms": 301
   }
  ],
  "sections": [
@@ -46,139 +46,139 @@
    "section": "labs",
    "total": 118,
    "ok": 118,
-   "median_ms": 164
+   "median_ms": 213
   },
   {
    "section": "games",
    "total": 92,
    "ok": 92,
-   "median_ms": 150
+   "median_ms": 201
   },
   {
    "section": "blog",
    "total": 60,
    "ok": 60,
-   "median_ms": 204
+   "median_ms": 225
   },
   {
    "section": "home",
    "total": 1,
    "ok": 1,
-   "median_ms": 174
+   "median_ms": 128
   },
   {
    "section": "about",
    "total": 1,
    "ok": 1,
-   "median_ms": 128
+   "median_ms": 120
   },
   {
    "section": "services",
    "total": 1,
    "ok": 1,
-   "median_ms": 178
+   "median_ms": 99
   },
   {
    "section": "project-planner",
    "total": 1,
    "ok": 1,
-   "median_ms": 160
+   "median_ms": 236
   },
   {
    "section": "projects",
    "total": 1,
    "ok": 1,
-   "median_ms": 133
+   "median_ms": 123
   },
   {
    "section": "research",
    "total": 1,
    "ok": 1,
-   "median_ms": 131
+   "median_ms": 97
   },
   {
    "section": "client-reviews",
    "total": 1,
    "ok": 1,
-   "median_ms": 424
+   "median_ms": 76
   },
   {
    "section": "internships",
    "total": 1,
    "ok": 1,
-   "median_ms": 135
+   "median_ms": 68
   },
   {
    "section": "contact",
    "total": 1,
    "ok": 1,
-   "median_ms": 116
+   "median_ms": 70
   },
   {
    "section": "verify",
    "total": 1,
    "ok": 1,
-   "median_ms": 91
+   "median_ms": 82
   },
   {
    "section": "privacy",
    "total": 1,
    "ok": 1,
-   "median_ms": 198
+   "median_ms": 180
   },
   {
    "section": "terms",
    "total": 1,
    "ok": 1,
-   "median_ms": 126
+   "median_ms": 190
   },
   {
    "section": "refund",
    "total": 1,
    "ok": 1,
-   "median_ms": 134
+   "median_ms": 197
   },
   {
    "section": "llms.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 90
+   "median_ms": 72
   },
   {
    "section": "llms-full.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 144
+   "median_ms": 232
   },
   {
    "section": "party",
    "total": 1,
    "ok": 1,
-   "median_ms": 130
+   "median_ms": 197
   },
   {
    "section": "glossary",
    "total": 1,
    "ok": 1,
-   "median_ms": 274
+   "median_ms": 276
   },
   {
    "section": "colophon",
    "total": 1,
    "ok": 1,
-   "median_ms": 189
+   "median_ms": 186
   },
   {
    "section": "changelog",
    "total": 1,
    "ok": 1,
-   "median_ms": 185
+   "median_ms": 217
   },
   {
    "section": "buddha",
    "total": 1,
    "ok": 1,
-   "median_ms": 149
+   "median_ms": 245
   }
  ]
 }
