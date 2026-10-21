@@ -1,44 +1,44 @@
 {
- "updated": "2026-10-20T15:09:27+00:00",
+ "updated": "2026-10-21T15:35:30+00:00",
  "total": 290,
  "ok": 290,
  "failing": [],
- "median_ms": 210,
+ "median_ms": 85,
  "slowest": [
   {
-   "url": "https://krunalkumar.dpdns.org/blog/how-to-read-a-job-description",
-   "path": "/blog/how-to-read-a-job-description",
+   "url": "https://krunalkumar.dpdns.org/blog/i-open-sourced-my-ai-sdr",
+   "path": "/blog/i-open-sourced-my-ai-sdr",
    "ok": true,
    "code": 200,
-   "ms": 416
+   "ms": 2282
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/passwords-passkeys-and-what-actually-protects-you",
-   "path": "/blog/passwords-passkeys-and-what-actually-protects-you",
+   "url": "https://krunalkumar.dpdns.org/client-reviews",
+   "path": "/client-reviews",
    "ok": true,
    "code": 200,
-   "ms": 341
+   "ms": 2233
   },
   {
-   "url": "https://krunalkumar.dpdns.org/games/assembly-puzzles",
-   "path": "/games/assembly-puzzles",
+   "url": "https://krunalkumar.dpdns.org/internships",
+   "path": "/internships",
    "ok": true,
    "code": 200,
-   "ms": 319
+   "ms": 2219
   },
   {
-   "url": "https://krunalkumar.dpdns.org/games/typing-trainer",
-   "path": "/games/typing-trainer",
+   "url": "https://krunalkumar.dpdns.org/contact",
+   "path": "/contact",
    "ok": true,
    "code": 200,
-   "ms": 306
+   "ms": 2206
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/tls-handshake",
-   "path": "/labs/tls-handshake",
+   "url": "https://krunalkumar.dpdns.org/verify",
+   "path": "/verify",
    "ok": true,
    "code": 200,
-   "ms": 301
+   "ms": 2189
   }
  ],
  "sections": [
@@ -46,139 +46,139 @@
    "section": "labs",
    "total": 118,
    "ok": 118,
-   "median_ms": 213
+   "median_ms": 82
   },
   {
    "section": "games",
    "total": 92,
    "ok": 92,
-   "median_ms": 201
+   "median_ms": 81
   },
   {
    "section": "blog",
    "total": 60,
    "ok": 60,
-   "median_ms": 225
+   "median_ms": 141
   },
   {
    "section": "home",
    "total": 1,
    "ok": 1,
-   "median_ms": 128
+   "median_ms": 206
   },
   {
    "section": "about",
    "total": 1,
    "ok": 1,
-   "median_ms": 120
+   "median_ms": 210
   },
   {
    "section": "services",
    "total": 1,
    "ok": 1,
-   "median_ms": 99
+   "median_ms": 152
   },
   {
    "section": "project-planner",
    "total": 1,
    "ok": 1,
-   "median_ms": 236
+   "median_ms": 176
   },
   {
    "section": "projects",
    "total": 1,
    "ok": 1,
-   "median_ms": 123
+   "median_ms": 178
   },
   {
    "section": "research",
    "total": 1,
    "ok": 1,
-   "median_ms": 97
+   "median_ms": 132
   },
   {
    "section": "client-reviews",
    "total": 1,
    "ok": 1,
-   "median_ms": 76
+   "median_ms": 2233
   },
   {
    "section": "internships",
    "total": 1,
    "ok": 1,
-   "median_ms": 68
+   "median_ms": 2219
   },
   {
    "section": "contact",
    "total": 1,
    "ok": 1,
-   "median_ms": 70
+   "median_ms": 2206
   },
   {
    "section": "verify",
    "total": 1,
    "ok": 1,
-   "median_ms": 82
+   "median_ms": 2189
   },
   {
    "section": "privacy",
    "total": 1,
    "ok": 1,
-   "median_ms": 180
+   "median_ms": 2142
   },
   {
    "section": "terms",
    "total": 1,
    "ok": 1,
-   "median_ms": 190
+   "median_ms": 2111
   },
   {
    "section": "refund",
    "total": 1,
    "ok": 1,
-   "median_ms": 197
+   "median_ms": 69
   },
   {
    "section": "llms.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 72
+   "median_ms": 134
   },
   {
    "section": "llms-full.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 232
+   "median_ms": 73
   },
   {
    "section": "party",
    "total": 1,
    "ok": 1,
-   "median_ms": 197
+   "median_ms": 126
   },
   {
    "section": "glossary",
    "total": 1,
    "ok": 1,
-   "median_ms": 276
+   "median_ms": 106
   },
   {
    "section": "colophon",
    "total": 1,
    "ok": 1,
-   "median_ms": 186
+   "median_ms": 183
   },
   {
    "section": "changelog",
    "total": 1,
    "ok": 1,
-   "median_ms": 217
+   "median_ms": 119
   },
   {
    "section": "buddha",
    "total": 1,
    "ok": 1,
-   "median_ms": 245
+   "median_ms": 69
   }
  ]
 }
