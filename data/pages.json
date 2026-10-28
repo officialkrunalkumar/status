@@ -1,44 +1,87 @@
 {
- "updated": "2026-10-27T12:24:09+00:00",
+ "updated": "2026-10-28T14:11:17+00:00",
  "total": 290,
- "ok": 290,
- "failing": [],
- "median_ms": 95,
+ "ok": 284,
+ "failing": [
+  {
+   "url": "https://krunalkumar.dpdns.org/glossary",
+   "path": "/glossary",
+   "ok": false,
+   "code": null,
+   "ms": 15018
+  },
+  {
+   "url": "https://krunalkumar.dpdns.org/games/gomoku",
+   "path": "/games/gomoku",
+   "ok": false,
+   "code": null,
+   "ms": 15183
+  },
+  {
+   "url": "https://krunalkumar.dpdns.org/blog/how-to-brief-a-security-consultant",
+   "path": "/blog/how-to-brief-a-security-consultant",
+   "ok": false,
+   "code": null,
+   "ms": 15010
+  },
+  {
+   "url": "https://krunalkumar.dpdns.org/blog/how-to-read-a-privacy-policy-in-five-minutes",
+   "path": "/blog/how-to-read-a-privacy-policy-in-five-minutes",
+   "ok": false,
+   "code": null,
+   "ms": 15017
+  },
+  {
+   "url": "https://krunalkumar.dpdns.org/games/cipher-escape",
+   "path": "/games/cipher-escape",
+   "ok": false,
+   "code": null,
+   "ms": 15081
+  },
+  {
+   "url": "https://krunalkumar.dpdns.org/blog/what-a-vpn-does-and-does-not-do",
+   "path": "/blog/what-a-vpn-does-and-does-not-do",
+   "ok": false,
+   "code": null,
+   "ms": 15014
+  }
+ ],
+ "median_ms": 97,
  "slowest": [
   {
-   "url": "https://krunalkumar.dpdns.org/labs/typing-certificate",
-   "path": "/labs/typing-certificate",
-   "ok": true,
-   "code": 200,
-   "ms": 574
+   "url": "https://krunalkumar.dpdns.org/games/gomoku",
+   "path": "/games/gomoku",
+   "ok": false,
+   "code": null,
+   "ms": 15183
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/exif",
-   "path": "/labs/exif",
-   "ok": true,
-   "code": 200,
-   "ms": 537
+   "url": "https://krunalkumar.dpdns.org/games/cipher-escape",
+   "path": "/games/cipher-escape",
+   "ok": false,
+   "code": null,
+   "ms": 15081
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/unicode",
-   "path": "/labs/unicode",
-   "ok": true,
-   "code": 200,
-   "ms": 501
+   "url": "https://krunalkumar.dpdns.org/glossary",
+   "path": "/glossary",
+   "ok": false,
+   "code": null,
+   "ms": 15018
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/upi-fraud",
-   "path": "/labs/upi-fraud",
-   "ok": true,
-   "code": 200,
-   "ms": 478
+   "url": "https://krunalkumar.dpdns.org/blog/how-to-read-a-privacy-policy-in-five-minutes",
+   "path": "/blog/how-to-read-a-privacy-policy-in-five-minutes",
+   "ok": false,
+   "code": null,
+   "ms": 15017
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/url-inspector",
-   "path": "/labs/url-inspector",
-   "ok": true,
-   "code": 200,
-   "ms": 466
+   "url": "https://krunalkumar.dpdns.org/blog/what-a-vpn-does-and-does-not-do",
+   "path": "/blog/what-a-vpn-does-and-does-not-do",
+   "ok": false,
+   "code": null,
+   "ms": 15014
   }
  ],
  "sections": [
@@ -46,139 +89,139 @@
    "section": "labs",
    "total": 118,
    "ok": 118,
-   "median_ms": 106
+   "median_ms": 123
   },
   {
    "section": "games",
    "total": 92,
-   "ok": 92,
-   "median_ms": 44
+   "ok": 90,
+   "median_ms": 45
   },
   {
    "section": "blog",
    "total": 60,
-   "ok": 60,
-   "median_ms": 132
+   "ok": 57,
+   "median_ms": 174
   },
   {
    "section": "home",
    "total": 1,
    "ok": 1,
-   "median_ms": 181
+   "median_ms": 148
   },
   {
    "section": "about",
    "total": 1,
    "ok": 1,
-   "median_ms": 143
+   "median_ms": 216
   },
   {
    "section": "services",
    "total": 1,
    "ok": 1,
-   "median_ms": 143
+   "median_ms": 98
   },
   {
    "section": "project-planner",
    "total": 1,
    "ok": 1,
-   "median_ms": 138
+   "median_ms": 175
   },
   {
    "section": "projects",
    "total": 1,
    "ok": 1,
-   "median_ms": 189
+   "median_ms": 110
   },
   {
    "section": "research",
    "total": 1,
    "ok": 1,
-   "median_ms": 152
+   "median_ms": 196
   },
   {
    "section": "client-reviews",
    "total": 1,
    "ok": 1,
-   "median_ms": 143
+   "median_ms": 43
   },
   {
    "section": "internships",
    "total": 1,
    "ok": 1,
-   "median_ms": 140
+   "median_ms": 427
   },
   {
    "section": "contact",
    "total": 1,
    "ok": 1,
-   "median_ms": 124
+   "median_ms": 431
   },
   {
    "section": "verify",
    "total": 1,
    "ok": 1,
-   "median_ms": 153
+   "median_ms": 492
   },
   {
    "section": "privacy",
    "total": 1,
    "ok": 1,
-   "median_ms": 198
+   "median_ms": 439
   },
   {
    "section": "terms",
    "total": 1,
    "ok": 1,
-   "median_ms": 146
+   "median_ms": 453
   },
   {
    "section": "refund",
    "total": 1,
    "ok": 1,
-   "median_ms": 151
+   "median_ms": 400
   },
   {
    "section": "llms.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 142
+   "median_ms": 389
   },
   {
    "section": "llms-full.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 190
+   "median_ms": 40
   },
   {
    "section": "party",
    "total": 1,
    "ok": 1,
-   "median_ms": 156
+   "median_ms": 37
   },
   {
    "section": "glossary",
    "total": 1,
-   "ok": 1,
-   "median_ms": 228
+   "ok": 0,
+   "median_ms": null
   },
   {
    "section": "colophon",
    "total": 1,
    "ok": 1,
-   "median_ms": 172
+   "median_ms": 304
   },
   {
    "section": "changelog",
    "total": 1,
    "ok": 1,
-   "median_ms": 167
+   "median_ms": 258
   },
   {
    "section": "buddha",
    "total": 1,
    "ok": 1,
-   "median_ms": 171
+   "median_ms": 241
   }
  ]
 }
