@@ -8,5 +8,15 @@
   "checks": [
    "gameshell"
   ]
+ },
+ {
+  "start": "2026-11-01T19:09:24+00:00",
+  "last": "2026-11-01T19:09:24+00:00",
+  "end": null,
+  "minutes": null,
+  "level": "degraded",
+  "checks": [
+   "www"
+  ]
  }
 ]
