@@ -1,44 +1,44 @@
 {
- "updated": "2026-11-02T19:40:25+00:00",
+ "updated": "2026-11-03T16:47:54+00:00",
  "total": 290,
  "ok": 290,
  "failing": [],
- "median_ms": 95,
+ "median_ms": 102,
  "slowest": [
   {
-   "url": "https://krunalkumar.dpdns.org/games/love-calculator",
-   "path": "/games/love-calculator",
+   "url": "https://krunalkumar.dpdns.org/labs/cpu-simulator",
+   "path": "/labs/cpu-simulator",
    "ok": true,
    "code": 200,
-   "ms": 456
+   "ms": 5116
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/the-four-ms-every-business-needs",
-   "path": "/blog/the-four-ms-every-business-needs",
+   "url": "https://krunalkumar.dpdns.org/labs/shader-playground",
+   "path": "/labs/shader-playground",
    "ok": true,
    "code": 200,
-   "ms": 390
+   "ms": 5094
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/how-i-vibe-coded-my-website",
-   "path": "/blog/how-i-vibe-coded-my-website",
+   "url": "https://krunalkumar.dpdns.org/labs/archive-inspector",
+   "path": "/labs/archive-inspector",
    "ok": true,
    "code": 200,
-   "ms": 354
+   "ms": 5085
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/the-mentee-mistakes-that-cost-the-most-time",
-   "path": "/blog/the-mentee-mistakes-that-cost-the-most-time",
+   "url": "https://krunalkumar.dpdns.org/labs/pcap-analyzer",
+   "path": "/labs/pcap-analyzer",
    "ok": true,
    "code": 200,
-   "ms": 315
+   "ms": 5037
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/the-real-cost-of-a-manual-process",
-   "path": "/blog/the-real-cost-of-a-manual-process",
+   "url": "https://krunalkumar.dpdns.org/labs/registry-viewer",
+   "path": "/labs/registry-viewer",
    "ok": true,
    "code": 200,
-   "ms": 313
+   "ms": 5023
   }
  ],
  "sections": [
@@ -46,139 +46,139 @@
    "section": "labs",
    "total": 118,
    "ok": 118,
-   "median_ms": 94
+   "median_ms": 123
   },
   {
    "section": "games",
    "total": 92,
    "ok": 92,
-   "median_ms": 90
+   "median_ms": 92
   },
   {
    "section": "blog",
    "total": 60,
    "ok": 60,
-   "median_ms": 120
+   "median_ms": 192
   },
   {
    "section": "home",
    "total": 1,
    "ok": 1,
-   "median_ms": 99
+   "median_ms": 4493
   },
   {
    "section": "about",
    "total": 1,
    "ok": 1,
-   "median_ms": 79
+   "median_ms": 4474
   },
   {
    "section": "services",
    "total": 1,
    "ok": 1,
-   "median_ms": 95
+   "median_ms": 4470
   },
   {
    "section": "project-planner",
    "total": 1,
    "ok": 1,
-   "median_ms": 85
+   "median_ms": 4488
   },
   {
    "section": "projects",
    "total": 1,
    "ok": 1,
-   "median_ms": 185
+   "median_ms": 4486
   },
   {
    "section": "research",
    "total": 1,
    "ok": 1,
-   "median_ms": 191
+   "median_ms": 4460
   },
   {
    "section": "client-reviews",
    "total": 1,
    "ok": 1,
-   "median_ms": 81
+   "median_ms": 88
   },
   {
    "section": "internships",
    "total": 1,
    "ok": 1,
-   "median_ms": 81
+   "median_ms": 86
   },
   {
    "section": "contact",
    "total": 1,
    "ok": 1,
-   "median_ms": 91
+   "median_ms": 81
   },
   {
    "section": "verify",
    "total": 1,
    "ok": 1,
-   "median_ms": 120
+   "median_ms": 82
   },
   {
    "section": "privacy",
    "total": 1,
    "ok": 1,
-   "median_ms": 79
+   "median_ms": 97
   },
   {
    "section": "terms",
    "total": 1,
    "ok": 1,
-   "median_ms": 76
+   "median_ms": 92
   },
   {
    "section": "refund",
    "total": 1,
    "ok": 1,
-   "median_ms": 87
+   "median_ms": 94
   },
   {
    "section": "llms.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 84
+   "median_ms": 106
   },
   {
    "section": "llms-full.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 221
+   "median_ms": 85
   },
   {
    "section": "party",
    "total": 1,
    "ok": 1,
-   "median_ms": 278
+   "median_ms": 99
   },
   {
    "section": "glossary",
    "total": 1,
    "ok": 1,
-   "median_ms": 75
+   "median_ms": 81
   },
   {
    "section": "colophon",
    "total": 1,
    "ok": 1,
-   "median_ms": 204
+   "median_ms": 74
   },
   {
    "section": "changelog",
    "total": 1,
    "ok": 1,
-   "median_ms": 76
+   "median_ms": 83
   },
   {
    "section": "buddha",
    "total": 1,
    "ok": 1,
-   "median_ms": 89
+   "median_ms": 82
   }
  ]
 }
