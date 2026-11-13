@@ -1,44 +1,44 @@
 {
- "updated": "2026-11-12T19:46:43+00:00",
+ "updated": "2026-11-13T21:38:11+00:00",
  "total": 290,
  "ok": 290,
  "failing": [],
- "median_ms": 186,
+ "median_ms": 69,
  "slowest": [
   {
-   "url": "https://krunalkumar.dpdns.org/blog/india-it-act-explained",
-   "path": "/blog/india-it-act-explained",
+   "url": "https://krunalkumar.dpdns.org/games/are-you-a-robot",
+   "path": "/games/are-you-a-robot",
    "ok": true,
    "code": 200,
-   "ms": 410
+   "ms": 235
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/what-a-security-review-actually-finds",
-   "path": "/blog/what-a-security-review-actually-finds",
+   "url": "https://krunalkumar.dpdns.org/games/asteroids",
+   "path": "/games/asteroids",
    "ok": true,
    "code": 200,
-   "ms": 400
+   "ms": 219
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/security-compliance-explained",
-   "path": "/blog/security-compliance-explained",
+   "url": "https://krunalkumar.dpdns.org/blog/first-week-of-an-automation-engagement",
+   "path": "/blog/first-week-of-an-automation-engagement",
    "ok": true,
    "code": 200,
-   "ms": 399
+   "ms": 218
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/how-cybercrime-cases-are-solved",
-   "path": "/blog/how-cybercrime-cases-are-solved",
+   "url": "https://krunalkumar.dpdns.org/labs/oauth-flow",
+   "path": "/labs/oauth-flow",
    "ok": true,
    "code": 200,
-   "ms": 381
+   "ms": 206
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/the-real-cost-of-a-manual-process",
-   "path": "/blog/the-real-cost-of-a-manual-process",
+   "url": "https://krunalkumar.dpdns.org/games/pacman",
+   "path": "/games/pacman",
    "ok": true,
    "code": 200,
-   "ms": 369
+   "ms": 175
   }
  ],
  "sections": [
@@ -46,139 +46,139 @@
    "section": "labs",
    "total": 118,
    "ok": 118,
-   "median_ms": 185
+   "median_ms": 71
   },
   {
    "section": "games",
    "total": 92,
    "ok": 92,
-   "median_ms": 178
+   "median_ms": 64
   },
   {
    "section": "blog",
    "total": 60,
    "ok": 60,
-   "median_ms": 214
+   "median_ms": 87
   },
   {
    "section": "home",
    "total": 1,
    "ok": 1,
-   "median_ms": 119
+   "median_ms": 77
   },
   {
    "section": "about",
    "total": 1,
    "ok": 1,
-   "median_ms": 93
+   "median_ms": 39
   },
   {
    "section": "services",
    "total": 1,
    "ok": 1,
-   "median_ms": 114
+   "median_ms": 39
   },
   {
    "section": "project-planner",
    "total": 1,
    "ok": 1,
-   "median_ms": 236
+   "median_ms": 109
   },
   {
    "section": "projects",
    "total": 1,
    "ok": 1,
-   "median_ms": 86
+   "median_ms": 69
   },
   {
    "section": "research",
    "total": 1,
    "ok": 1,
-   "median_ms": 341
+   "median_ms": 14
   },
   {
    "section": "client-reviews",
    "total": 1,
    "ok": 1,
-   "median_ms": 142
+   "median_ms": 30
   },
   {
    "section": "internships",
    "total": 1,
    "ok": 1,
-   "median_ms": 150
+   "median_ms": 26
   },
   {
    "section": "contact",
    "total": 1,
    "ok": 1,
-   "median_ms": 111
+   "median_ms": 20
   },
   {
    "section": "verify",
    "total": 1,
    "ok": 1,
-   "median_ms": 80
+   "median_ms": 17
   },
   {
    "section": "privacy",
    "total": 1,
    "ok": 1,
-   "median_ms": 152
+   "median_ms": 111
   },
   {
    "section": "terms",
    "total": 1,
    "ok": 1,
-   "median_ms": 49
+   "median_ms": 48
   },
   {
    "section": "refund",
    "total": 1,
    "ok": 1,
-   "median_ms": 233
+   "median_ms": 60
   },
   {
    "section": "llms.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 45
+   "median_ms": 34
   },
   {
    "section": "llms-full.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 237
+   "median_ms": 86
   },
   {
    "section": "party",
    "total": 1,
    "ok": 1,
-   "median_ms": 182
+   "median_ms": 47
   },
   {
    "section": "glossary",
    "total": 1,
    "ok": 1,
-   "median_ms": 361
+   "median_ms": 149
   },
   {
    "section": "colophon",
    "total": 1,
    "ok": 1,
-   "median_ms": 188
+   "median_ms": 63
   },
   {
    "section": "changelog",
    "total": 1,
    "ok": 1,
-   "median_ms": 174
+   "median_ms": 77
   },
   {
    "section": "buddha",
    "total": 1,
    "ok": 1,
-   "median_ms": 190
+   "median_ms": 104
   }
  ]
 }
