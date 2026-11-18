@@ -1,44 +1,44 @@
 {
- "updated": "2026-11-17T20:03:30+00:00",
+ "updated": "2026-11-18T19:00:57+00:00",
  "total": 290,
  "ok": 290,
  "failing": [],
- "median_ms": 123,
+ "median_ms": 182,
  "slowest": [
   {
-   "url": "https://krunalkumar.dpdns.org/blog/my-career-story-from-classroom-to-research-and-ai",
-   "path": "/blog/my-career-story-from-classroom-to-research-and-ai",
+   "url": "https://krunalkumar.dpdns.org/blog/what-consent-actually-means-under-dpdp",
+   "path": "/blog/what-consent-actually-means-under-dpdp",
    "ok": true,
    "code": 200,
-   "ms": 503
+   "ms": 355
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/what-running-internship-cohorts-taught-me-about-mentorship",
-   "path": "/blog/what-running-internship-cohorts-taught-me-about-mentorship",
+   "url": "https://krunalkumar.dpdns.org/colophon",
+   "path": "/colophon",
    "ok": true,
    "code": 200,
-   "ms": 497
+   "ms": 347
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/how-to-stand-out-in-an-internship-interview",
-   "path": "/blog/how-to-stand-out-in-an-internship-interview",
+   "url": "https://krunalkumar.dpdns.org/games/name-in-binary",
+   "path": "/games/name-in-binary",
    "ok": true,
    "code": 200,
-   "ms": 472
+   "ms": 345
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/smart-feedback-how-to-give-and-receive-it",
-   "path": "/blog/smart-feedback-how-to-give-and-receive-it",
+   "url": "https://krunalkumar.dpdns.org/games/asciijump",
+   "path": "/games/asciijump",
    "ok": true,
    "code": 200,
-   "ms": 451
+   "ms": 333
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/automating-email-replies-with-n8n",
-   "path": "/blog/automating-email-replies-with-n8n",
+   "url": "https://krunalkumar.dpdns.org/labs/ansi-escapes",
+   "path": "/labs/ansi-escapes",
    "ok": true,
    "code": 200,
-   "ms": 447
+   "ms": 320
   }
  ],
  "sections": [
@@ -46,139 +46,139 @@
    "section": "labs",
    "total": 118,
    "ok": 118,
-   "median_ms": 140
+   "median_ms": 184
   },
   {
    "section": "games",
    "total": 92,
    "ok": 92,
-   "median_ms": 67
+   "median_ms": 179
   },
   {
    "section": "blog",
    "total": 60,
    "ok": 60,
-   "median_ms": 156
+   "median_ms": 190
   },
   {
    "section": "home",
    "total": 1,
    "ok": 1,
-   "median_ms": 126
+   "median_ms": 44
   },
   {
    "section": "about",
    "total": 1,
    "ok": 1,
-   "median_ms": 119
+   "median_ms": 44
   },
   {
    "section": "services",
    "total": 1,
    "ok": 1,
-   "median_ms": 111
+   "median_ms": 72
   },
   {
    "section": "project-planner",
    "total": 1,
    "ok": 1,
-   "median_ms": 29
+   "median_ms": 202
   },
   {
    "section": "projects",
    "total": 1,
    "ok": 1,
-   "median_ms": 124
+   "median_ms": 43
   },
   {
    "section": "research",
    "total": 1,
    "ok": 1,
-   "median_ms": 122
+   "median_ms": 47
   },
   {
    "section": "client-reviews",
    "total": 1,
    "ok": 1,
-   "median_ms": 139
+   "median_ms": 43
   },
   {
    "section": "internships",
    "total": 1,
    "ok": 1,
-   "median_ms": 128
+   "median_ms": 44
   },
   {
    "section": "contact",
    "total": 1,
    "ok": 1,
-   "median_ms": 133
+   "median_ms": 44
   },
   {
    "section": "verify",
    "total": 1,
    "ok": 1,
-   "median_ms": 136
+   "median_ms": 67
   },
   {
    "section": "privacy",
    "total": 1,
    "ok": 1,
-   "median_ms": 135
+   "median_ms": 244
   },
   {
    "section": "terms",
    "total": 1,
    "ok": 1,
-   "median_ms": 48
+   "median_ms": 195
   },
   {
    "section": "refund",
    "total": 1,
    "ok": 1,
-   "median_ms": 35
+   "median_ms": 181
   },
   {
    "section": "llms.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 151
+   "median_ms": 47
   },
   {
    "section": "llms-full.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 76
+   "median_ms": 245
   },
   {
    "section": "party",
    "total": 1,
    "ok": 1,
-   "median_ms": 169
+   "median_ms": 223
   },
   {
    "section": "glossary",
    "total": 1,
    "ok": 1,
-   "median_ms": 180
+   "median_ms": 214
   },
   {
    "section": "colophon",
    "total": 1,
    "ok": 1,
-   "median_ms": 161
+   "median_ms": 347
   },
   {
    "section": "changelog",
    "total": 1,
    "ok": 1,
-   "median_ms": 119
+   "median_ms": 184
   },
   {
    "section": "buddha",
    "total": 1,
    "ok": 1,
-   "median_ms": 98
+   "median_ms": 168
   }
  ]
 }
