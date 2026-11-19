@@ -1,44 +1,44 @@
 {
- "updated": "2026-11-18T19:00:57+00:00",
+ "updated": "2026-11-19T17:44:11+00:00",
  "total": 290,
  "ok": 290,
  "failing": [],
- "median_ms": 182,
+ "median_ms": 204,
  "slowest": [
-  {
-   "url": "https://krunalkumar.dpdns.org/blog/what-consent-actually-means-under-dpdp",
-   "path": "/blog/what-consent-actually-means-under-dpdp",
-   "ok": true,
-   "code": 200,
-   "ms": 355
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/colophon",
-   "path": "/colophon",
-   "ok": true,
-   "code": 200,
-   "ms": 347
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/games/name-in-binary",
-   "path": "/games/name-in-binary",
-   "ok": true,
-   "code": 200,
-   "ms": 345
-  },
-  {
-   "url": "https://krunalkumar.dpdns.org/games/asciijump",
-   "path": "/games/asciijump",
-   "ok": true,
-   "code": 200,
-   "ms": 333
-  },
   {
    "url": "https://krunalkumar.dpdns.org/labs/ansi-escapes",
    "path": "/labs/ansi-escapes",
    "ok": true,
    "code": 200,
-   "ms": 320
+   "ms": 380
+  },
+  {
+   "url": "https://krunalkumar.dpdns.org/labs/ruby",
+   "path": "/labs/ruby",
+   "ok": true,
+   "code": 200,
+   "ms": 376
+  },
+  {
+   "url": "https://krunalkumar.dpdns.org/blog/what-running-internship-cohorts-taught-me-about-mentorship",
+   "path": "/blog/what-running-internship-cohorts-taught-me-about-mentorship",
+   "ok": true,
+   "code": 200,
+   "ms": 366
+  },
+  {
+   "url": "https://krunalkumar.dpdns.org/labs/image-tools",
+   "path": "/labs/image-tools",
+   "ok": true,
+   "code": 200,
+   "ms": 362
+  },
+  {
+   "url": "https://krunalkumar.dpdns.org/games/boids",
+   "path": "/games/boids",
+   "ok": true,
+   "code": 200,
+   "ms": 347
   }
  ],
  "sections": [
@@ -46,139 +46,139 @@
    "section": "labs",
    "total": 118,
    "ok": 118,
-   "median_ms": 184
+   "median_ms": 202
   },
   {
    "section": "games",
    "total": 92,
    "ok": 92,
-   "median_ms": 179
+   "median_ms": 196
   },
   {
    "section": "blog",
    "total": 60,
    "ok": 60,
-   "median_ms": 190
+   "median_ms": 228
   },
   {
    "section": "home",
    "total": 1,
    "ok": 1,
-   "median_ms": 44
+   "median_ms": 107
   },
   {
    "section": "about",
    "total": 1,
    "ok": 1,
-   "median_ms": 44
+   "median_ms": 80
   },
   {
    "section": "services",
    "total": 1,
    "ok": 1,
-   "median_ms": 72
+   "median_ms": 78
   },
   {
    "section": "project-planner",
    "total": 1,
    "ok": 1,
-   "median_ms": 202
+   "median_ms": 209
   },
   {
    "section": "projects",
    "total": 1,
    "ok": 1,
-   "median_ms": 43
+   "median_ms": 77
   },
   {
    "section": "research",
    "total": 1,
    "ok": 1,
-   "median_ms": 47
+   "median_ms": 89
   },
   {
    "section": "client-reviews",
    "total": 1,
    "ok": 1,
-   "median_ms": 43
+   "median_ms": 146
   },
   {
    "section": "internships",
    "total": 1,
    "ok": 1,
-   "median_ms": 44
+   "median_ms": 92
   },
   {
    "section": "contact",
    "total": 1,
    "ok": 1,
-   "median_ms": 44
+   "median_ms": 132
   },
   {
    "section": "verify",
    "total": 1,
    "ok": 1,
-   "median_ms": 67
+   "median_ms": 118
   },
   {
    "section": "privacy",
    "total": 1,
    "ok": 1,
-   "median_ms": 244
+   "median_ms": 263
   },
   {
    "section": "terms",
    "total": 1,
    "ok": 1,
-   "median_ms": 195
+   "median_ms": 214
   },
   {
    "section": "refund",
    "total": 1,
    "ok": 1,
-   "median_ms": 181
+   "median_ms": 202
   },
   {
    "section": "llms.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 47
+   "median_ms": 100
   },
   {
    "section": "llms-full.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 245
+   "median_ms": 266
   },
   {
    "section": "party",
    "total": 1,
    "ok": 1,
-   "median_ms": 223
+   "median_ms": 200
   },
   {
    "section": "glossary",
    "total": 1,
    "ok": 1,
-   "median_ms": 214
+   "median_ms": 276
   },
   {
    "section": "colophon",
    "total": 1,
    "ok": 1,
-   "median_ms": 347
+   "median_ms": 229
   },
   {
    "section": "changelog",
    "total": 1,
    "ok": 1,
-   "median_ms": 184
+   "median_ms": 248
   },
   {
    "section": "buddha",
    "total": 1,
    "ok": 1,
-   "median_ms": 168
+   "median_ms": 221
   }
  ]
 }
