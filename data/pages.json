@@ -1,44 +1,44 @@
 {
- "updated": "2026-11-21T18:11:22+00:00",
+ "updated": "2026-11-22T18:51:39+00:00",
  "total": 290,
  "ok": 290,
  "failing": [],
- "median_ms": 174,
+ "median_ms": 113,
  "slowest": [
   {
-   "url": "https://krunalkumar.dpdns.org/labs/ansi-escapes",
-   "path": "/labs/ansi-escapes",
+   "url": "https://krunalkumar.dpdns.org/labs/cpp",
+   "path": "/labs/cpp",
    "ok": true,
    "code": 200,
-   "ms": 319
+   "ms": 273
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/media-forensics",
-   "path": "/labs/media-forensics",
+   "url": "https://krunalkumar.dpdns.org/blog/how-i-vibe-coded-my-website",
+   "path": "/blog/how-i-vibe-coded-my-website",
    "ok": true,
    "code": 200,
-   "ms": 297
+   "ms": 266
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/timing-attack",
-   "path": "/labs/timing-attack",
+   "url": "https://krunalkumar.dpdns.org/labs/ransomware-anatomy",
+   "path": "/labs/ransomware-anatomy",
    "ok": true,
    "code": 200,
-   "ms": 291
+   "ms": 266
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/cryptography",
-   "path": "/labs/cryptography",
+   "url": "https://krunalkumar.dpdns.org/labs/cap-theorem",
+   "path": "/labs/cap-theorem",
    "ok": true,
    "code": 200,
-   "ms": 287
+   "ms": 251
   },
   {
-   "url": "https://krunalkumar.dpdns.org/colophon",
-   "path": "/colophon",
+   "url": "https://krunalkumar.dpdns.org/games/trek",
+   "path": "/games/trek",
    "ok": true,
    "code": 200,
-   "ms": 283
+   "ms": 241
   }
  ],
  "sections": [
@@ -46,139 +46,139 @@
    "section": "labs",
    "total": 118,
    "ok": 118,
-   "median_ms": 178
+   "median_ms": 118
   },
   {
    "section": "games",
    "total": 92,
    "ok": 92,
-   "median_ms": 167
+   "median_ms": 109
   },
   {
    "section": "blog",
    "total": 60,
    "ok": 60,
-   "median_ms": 190
+   "median_ms": 122
   },
   {
    "section": "home",
    "total": 1,
    "ok": 1,
-   "median_ms": 42
+   "median_ms": 151
   },
   {
    "section": "about",
    "total": 1,
    "ok": 1,
-   "median_ms": 46
+   "median_ms": 163
   },
   {
    "section": "services",
    "total": 1,
    "ok": 1,
-   "median_ms": 42
+   "median_ms": 148
   },
   {
    "section": "project-planner",
    "total": 1,
    "ok": 1,
-   "median_ms": 183
+   "median_ms": 192
   },
   {
    "section": "projects",
    "total": 1,
    "ok": 1,
-   "median_ms": 42
+   "median_ms": 132
   },
   {
    "section": "research",
    "total": 1,
    "ok": 1,
-   "median_ms": 54
+   "median_ms": 129
   },
   {
    "section": "client-reviews",
    "total": 1,
    "ok": 1,
-   "median_ms": 48
+   "median_ms": 131
   },
   {
    "section": "internships",
    "total": 1,
    "ok": 1,
-   "median_ms": 35
+   "median_ms": 125
   },
   {
    "section": "contact",
    "total": 1,
    "ok": 1,
-   "median_ms": 39
+   "median_ms": 156
   },
   {
    "section": "verify",
    "total": 1,
    "ok": 1,
-   "median_ms": 37
+   "median_ms": 114
   },
   {
    "section": "privacy",
    "total": 1,
    "ok": 1,
-   "median_ms": 192
+   "median_ms": 131
   },
   {
    "section": "terms",
    "total": 1,
    "ok": 1,
-   "median_ms": 175
+   "median_ms": 102
   },
   {
    "section": "refund",
    "total": 1,
    "ok": 1,
-   "median_ms": 155
+   "median_ms": 98
   },
   {
    "section": "llms.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 42
+   "median_ms": 55
   },
   {
    "section": "llms-full.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 216
+   "median_ms": 141
   },
   {
    "section": "party",
    "total": 1,
    "ok": 1,
-   "median_ms": 181
+   "median_ms": 94
   },
   {
    "section": "glossary",
    "total": 1,
    "ok": 1,
-   "median_ms": 278
+   "median_ms": 50
   },
   {
    "section": "colophon",
    "total": 1,
    "ok": 1,
-   "median_ms": 283
+   "median_ms": 100
   },
   {
    "section": "changelog",
    "total": 1,
    "ok": 1,
-   "median_ms": 175
+   "median_ms": 139
   },
   {
    "section": "buddha",
    "total": 1,
    "ok": 1,
-   "median_ms": 176
+   "median_ms": 110
   }
  ]
 }
