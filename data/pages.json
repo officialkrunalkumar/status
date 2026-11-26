@@ -1,44 +1,44 @@
 {
- "updated": "2026-11-24T23:52:41+00:00",
+ "updated": "2026-11-26T01:44:36+00:00",
  "total": 290,
  "ok": 290,
  "failing": [],
- "median_ms": 126,
+ "median_ms": 121,
  "slowest": [
   {
-   "url": "https://krunalkumar.dpdns.org/blog/how-to-stand-out-in-an-internship-interview",
-   "path": "/blog/how-to-stand-out-in-an-internship-interview",
+   "url": "https://krunalkumar.dpdns.org/labs/ansi-escapes",
+   "path": "/labs/ansi-escapes",
    "ok": true,
    "code": 200,
-   "ms": 487
+   "ms": 301
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/how-to-succeed-in-software-development",
-   "path": "/blog/how-to-succeed-in-software-development",
+   "url": "https://krunalkumar.dpdns.org/labs/media-forensics",
+   "path": "/labs/media-forensics",
    "ok": true,
    "code": 200,
-   "ms": 486
+   "ms": 273
   },
   {
-   "url": "https://krunalkumar.dpdns.org/client-reviews",
-   "path": "/client-reviews",
+   "url": "https://krunalkumar.dpdns.org/games/atc",
+   "path": "/games/atc",
    "ok": true,
    "code": 200,
-   "ms": 479
+   "ms": 268
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/smart-feedback-how-to-give-and-receive-it",
-   "path": "/blog/smart-feedback-how-to-give-and-receive-it",
+   "url": "https://krunalkumar.dpdns.org/blog/what-deepfake-detection-can-and-cannot-do",
+   "path": "/blog/what-deepfake-detection-can-and-cannot-do",
    "ok": true,
    "code": 200,
-   "ms": 478
+   "ms": 261
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/what-is-a-fork-bomb",
-   "path": "/blog/what-is-a-fork-bomb",
+   "url": "https://krunalkumar.dpdns.org/labs/malware-triage",
+   "path": "/labs/malware-triage",
    "ok": true,
    "code": 200,
-   "ms": 472
+   "ms": 261
   }
  ],
  "sections": [
@@ -46,139 +46,139 @@
    "section": "labs",
    "total": 118,
    "ok": 118,
-   "median_ms": 126
+   "median_ms": 121
   },
   {
    "section": "games",
    "total": 92,
    "ok": 92,
-   "median_ms": 122
+   "median_ms": 115
   },
   {
    "section": "blog",
    "total": 60,
    "ok": 60,
-   "median_ms": 136
+   "median_ms": 135
   },
   {
    "section": "home",
    "total": 1,
    "ok": 1,
-   "median_ms": 291
+   "median_ms": 93
   },
   {
    "section": "about",
    "total": 1,
    "ok": 1,
-   "median_ms": 298
+   "median_ms": 94
   },
   {
    "section": "services",
    "total": 1,
    "ok": 1,
-   "median_ms": 287
+   "median_ms": 102
   },
   {
    "section": "project-planner",
    "total": 1,
    "ok": 1,
-   "median_ms": 289
+   "median_ms": 145
   },
   {
    "section": "projects",
    "total": 1,
    "ok": 1,
-   "median_ms": 290
+   "median_ms": 99
   },
   {
    "section": "research",
    "total": 1,
    "ok": 1,
-   "median_ms": 283
+   "median_ms": 109
   },
   {
    "section": "client-reviews",
    "total": 1,
    "ok": 1,
-   "median_ms": 479
+   "median_ms": 132
   },
   {
    "section": "internships",
    "total": 1,
    "ok": 1,
-   "median_ms": 392
+   "median_ms": 137
   },
   {
    "section": "contact",
    "total": 1,
    "ok": 1,
-   "median_ms": 123
+   "median_ms": 144
   },
   {
    "section": "verify",
    "total": 1,
    "ok": 1,
-   "median_ms": 126
+   "median_ms": 124
   },
   {
    "section": "privacy",
    "total": 1,
    "ok": 1,
-   "median_ms": 121
+   "median_ms": 219
   },
   {
    "section": "terms",
    "total": 1,
    "ok": 1,
-   "median_ms": 116
+   "median_ms": 156
   },
   {
    "section": "refund",
    "total": 1,
    "ok": 1,
-   "median_ms": 120
+   "median_ms": 202
   },
   {
    "section": "llms.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 120
+   "median_ms": 122
   },
   {
    "section": "llms-full.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 180
+   "median_ms": 122
   },
   {
    "section": "party",
    "total": 1,
    "ok": 1,
-   "median_ms": 160
+   "median_ms": 110
   },
   {
    "section": "glossary",
    "total": 1,
    "ok": 1,
-   "median_ms": 163
+   "median_ms": 75
   },
   {
    "section": "colophon",
    "total": 1,
    "ok": 1,
-   "median_ms": 118
+   "median_ms": 98
   },
   {
    "section": "changelog",
    "total": 1,
    "ok": 1,
-   "median_ms": 118
+   "median_ms": 108
   },
   {
    "section": "buddha",
    "total": 1,
    "ok": 1,
-   "median_ms": 193
+   "median_ms": 128
   }
  ]
 }

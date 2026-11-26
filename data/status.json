@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T17:59:35+00:00",
+ "updated": "2026-11-26T01:44:36+00:00",
  "overall": "degraded",
  "site": "https://krunalkumar.dpdns.org",
  "maintenance": false,
@@ -50,7 +50,7 @@
    "sev": "critical",
    "ok": true,
    "code": 200,
-   "ms": 203,
+   "ms": 216,
    "note": null,
    "location": null
   },
@@ -61,7 +61,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 240,
+   "ms": 205,
    "note": null,
    "location": null
   },
@@ -72,7 +72,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 264,
+   "ms": 224,
    "note": null,
    "location": null
   },
@@ -83,7 +83,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 203,
+   "ms": 211,
    "note": null,
    "location": null
   },
@@ -94,7 +94,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 204,
+   "ms": 325,
    "note": null,
    "location": null
   },
@@ -105,7 +105,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 299,
+   "ms": 201,
    "note": null,
    "location": null
   },
@@ -116,7 +116,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 263,
+   "ms": 229,
    "note": null,
    "location": null
   },
@@ -127,7 +127,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 261,
+   "ms": 253,
    "note": null,
    "location": null
   },
@@ -138,7 +138,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 253,
+   "ms": 245,
    "note": null,
    "location": null
   },
@@ -149,7 +149,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 479,
+   "ms": 229,
    "note": null,
    "location": null
   },
@@ -160,7 +160,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 339,
+   "ms": 186,
    "note": null,
    "location": null
   },
@@ -171,7 +171,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 217,
+   "ms": 173,
    "note": null,
    "location": null
   },
@@ -182,7 +182,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 274,
+   "ms": 164,
    "note": null,
    "location": null
   },
@@ -193,7 +193,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 315,
+   "ms": 159,
    "note": null,
    "location": null
   },
@@ -204,7 +204,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 282,
+   "ms": 141,
    "note": null,
    "location": null
   },
@@ -215,7 +215,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 205,
+   "ms": 67,
    "note": null,
    "location": null
   },
@@ -226,7 +226,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 471,
+   "ms": 201,
    "note": null,
    "location": null
   },
@@ -237,7 +237,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 473,
+   "ms": 187,
    "note": null,
    "location": null
   },
@@ -248,7 +248,7 @@
    "sev": "minor",
    "ok": true,
    "code": 200,
-   "ms": 445,
+   "ms": 185,
    "note": null,
    "location": null
   },
@@ -259,7 +259,7 @@
    "sev": "minor",
    "ok": true,
    "code": 200,
-   "ms": 510,
+   "ms": 201,
    "note": null,
    "location": null
   },
@@ -270,7 +270,7 @@
    "sev": "minor",
    "ok": true,
    "code": 200,
-   "ms": 440,
+   "ms": 186,
    "note": null,
    "location": null
   },
@@ -281,7 +281,7 @@
    "sev": "minor",
    "ok": true,
    "code": 200,
-   "ms": 512,
+   "ms": 166,
    "note": null,
    "location": null
   },
@@ -292,7 +292,7 @@
    "sev": "minor",
    "ok": true,
    "code": 200,
-   "ms": 442,
+   "ms": 155,
    "note": null,
    "location": null
   },
@@ -303,7 +303,7 @@
    "sev": "minor",
    "ok": true,
    "code": 200,
-   "ms": 330,
+   "ms": 125,
    "note": null,
    "location": null
   },
@@ -314,7 +314,7 @@
    "sev": "minor",
    "ok": true,
    "code": 200,
-   "ms": 254,
+   "ms": 45,
    "note": null,
    "location": null
   },
@@ -325,7 +325,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 262,
+   "ms": 64,
    "note": null,
    "location": null
   },
@@ -336,7 +336,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 216,
+   "ms": 157,
    "note": null,
    "location": null
   },
@@ -347,7 +347,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 225,
+   "ms": 144,
    "note": null,
    "location": null
   },
@@ -358,7 +358,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 270,
+   "ms": 134,
    "note": null,
    "location": null
   },
@@ -369,7 +369,7 @@
    "sev": "minor",
    "ok": true,
    "code": 200,
-   "ms": 263,
+   "ms": 127,
    "note": null,
    "location": null
   },
@@ -380,7 +380,7 @@
    "sev": "major",
    "ok": true,
    "code": 200,
-   "ms": 130,
+   "ms": 129,
    "note": null,
    "location": null
   },
@@ -391,7 +391,7 @@
    "sev": "minor",
    "ok": true,
    "code": 200,
-   "ms": 143,
+   "ms": 116,
    "note": null,
    "location": null
   },
@@ -402,7 +402,7 @@
    "sev": "major",
    "ok": true,
    "code": 308,
-   "ms": 167,
+   "ms": 104,
    "note": null,
    "location": "https://krunalkumar.dpdns.org/"
   },
@@ -413,7 +413,7 @@
    "sev": "minor",
    "ok": false,
    "code": null,
-   "ms": 358,
+   "ms": 349,
    "note": "URLError",
    "location": null
   },
@@ -424,7 +424,7 @@
    "sev": "minor",
    "ok": true,
    "code": 308,
-   "ms": 201,
+   "ms": 177,
    "note": null,
    "location": "https://krunalkumar.dpdns.org/"
   },
@@ -441,12 +441,12 @@
   }
  },
  "cert": {
-  "days_left": 38,
+  "days_left": 37,
   "expires": "2027-01-02",
   "issuer": "Let's Encrypt"
  },
  "dns": {
-  "ms": 168,
+  "ms": 149,
   "addresses": [
    "216.198.79.1"
   ]
@@ -474,7 +474,7 @@
  },
  "response": {
   "p50": 203,
-  "p95": 307,
+  "p95": 216,
   "n": 3
  },
  "open_incident": true
