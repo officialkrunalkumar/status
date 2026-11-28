@@ -1,44 +1,44 @@
 {
- "updated": "2026-11-27T02:23:31+00:00",
+ "updated": "2026-11-28T02:37:49+00:00",
  "total": 290,
  "ok": 290,
  "failing": [],
- "median_ms": 111,
+ "median_ms": 106,
  "slowest": [
   {
-   "url": "https://krunalkumar.dpdns.org/labs/regex-engine",
-   "path": "/labs/regex-engine",
+   "url": "https://krunalkumar.dpdns.org/labs/sqlite-browser",
+   "path": "/labs/sqlite-browser",
    "ok": true,
    "code": 200,
-   "ms": 472
+   "ms": 319
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/cryptography",
-   "path": "/labs/cryptography",
+   "url": "https://krunalkumar.dpdns.org/labs/web-layers",
+   "path": "/labs/web-layers",
    "ok": true,
    "code": 200,
-   "ms": 428
+   "ms": 306
   },
   {
-   "url": "https://krunalkumar.dpdns.org/labs/os-algorithms",
-   "path": "/labs/os-algorithms",
+   "url": "https://krunalkumar.dpdns.org/labs/registry-viewer",
+   "path": "/labs/registry-viewer",
    "ok": true,
    "code": 200,
-   "ms": 428
+   "ms": 299
   },
   {
-   "url": "https://krunalkumar.dpdns.org/blog/scoping-work-before-you-quote-it",
-   "path": "/blog/scoping-work-before-you-quote-it",
+   "url": "https://krunalkumar.dpdns.org/labs/shader-playground",
+   "path": "/labs/shader-playground",
    "ok": true,
    "code": 200,
-   "ms": 416
+   "ms": 298
   },
   {
-   "url": "https://krunalkumar.dpdns.org/party",
-   "path": "/party",
+   "url": "https://krunalkumar.dpdns.org/labs/ansi-escapes",
+   "path": "/labs/ansi-escapes",
    "ok": true,
    "code": 200,
-   "ms": 415
+   "ms": 291
   }
  ],
  "sections": [
@@ -46,139 +46,139 @@
    "section": "labs",
    "total": 118,
    "ok": 118,
-   "median_ms": 112
+   "median_ms": 111
   },
   {
    "section": "games",
    "total": 92,
    "ok": 92,
-   "median_ms": 105
+   "median_ms": 94
   },
   {
    "section": "blog",
    "total": 60,
    "ok": 60,
-   "median_ms": 117
+   "median_ms": 114
   },
   {
    "section": "home",
    "total": 1,
    "ok": 1,
-   "median_ms": 258
+   "median_ms": 25
   },
   {
    "section": "about",
    "total": 1,
    "ok": 1,
-   "median_ms": 276
+   "median_ms": 47
   },
   {
    "section": "services",
    "total": 1,
    "ok": 1,
-   "median_ms": 272
+   "median_ms": 36
   },
   {
    "section": "project-planner",
    "total": 1,
    "ok": 1,
-   "median_ms": 287
+   "median_ms": 120
   },
   {
    "section": "projects",
    "total": 1,
    "ok": 1,
-   "median_ms": 253
+   "median_ms": 27
   },
   {
    "section": "research",
    "total": 1,
    "ok": 1,
-   "median_ms": 254
+   "median_ms": 34
   },
   {
    "section": "client-reviews",
    "total": 1,
    "ok": 1,
-   "median_ms": 94
+   "median_ms": 23
   },
   {
    "section": "internships",
    "total": 1,
    "ok": 1,
-   "median_ms": 92
+   "median_ms": 23
   },
   {
    "section": "contact",
    "total": 1,
    "ok": 1,
-   "median_ms": 100
+   "median_ms": 24
   },
   {
    "section": "verify",
    "total": 1,
    "ok": 1,
-   "median_ms": 100
+   "median_ms": 22
   },
   {
    "section": "privacy",
    "total": 1,
    "ok": 1,
-   "median_ms": 96
+   "median_ms": 83
   },
   {
    "section": "terms",
    "total": 1,
    "ok": 1,
-   "median_ms": 111
+   "median_ms": 121
   },
   {
    "section": "refund",
    "total": 1,
    "ok": 1,
-   "median_ms": 253
+   "median_ms": 82
   },
   {
    "section": "llms.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 257
+   "median_ms": 27
   },
   {
    "section": "llms-full.txt",
    "total": 1,
    "ok": 1,
-   "median_ms": 248
+   "median_ms": 146
   },
   {
    "section": "party",
    "total": 1,
    "ok": 1,
-   "median_ms": 415
+   "median_ms": 180
   },
   {
    "section": "glossary",
    "total": 1,
    "ok": 1,
-   "median_ms": 181
+   "median_ms": 146
   },
   {
    "section": "colophon",
    "total": 1,
    "ok": 1,
-   "median_ms": 191
+   "median_ms": 125
   },
   {
    "section": "changelog",
    "total": 1,
    "ok": 1,
-   "median_ms": 97
+   "median_ms": 129
   },
   {
    "section": "buddha",
    "total": 1,
    "ok": 1,
-   "median_ms": 102
+   "median_ms": 136
   }
  ]
 }
